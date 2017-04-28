@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Concilia BR 381 - Programa Judicial para Remoção e Reassentamento humanizados de Famílias do Anel Rodoviário e BR 381" />
+    <title>Concilia BR 381</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/foundation-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/jquery.bxslider.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}" />
+</head>
+<body>
+    <header>
+        <div class="top-border hide-for-medium-down"></div>
+        <div class="row">
+            <div class="columns small-12 medium-3 large-3 hide-for-medium-down" style="height: 20px;">
+                <h1><a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 0px #fff;" href="#">Concilia BR 381</a></h1>
+            </div>
+            <div class="columns small-11 medium-8 large-8 hide-for-small hide-for-medium">
+                <nav class="main-ul-nav">
+                    <div class="menu-header-menu-container">
+                        <ul id="menu-header-menu" class="menu">
+                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="#">O projeto</a></li>
+                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#">Comunidades</a></li>
+                            <li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56"><a href="#">Notícias</a></li>
+                            <li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+    <div class="footer">
+        <div class="row" style="padding: 30px 0">
+            <div class="columns small-12">
+                <img src="http://www.favelaeissoai.com.br/wp-content/themes/favela2014/img/footer-logos.gif" alt="Logomarcas">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+</body>
+
+</html>
