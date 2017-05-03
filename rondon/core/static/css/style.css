@@ -193,7 +193,7 @@ p {
 .background-middle { height: 150px; padding-top: 40px }
 .bg-m-1 { background: url("./img/bg_middle1.jpg") center }
 .bg-m-2 { background: url("./img/bg_middle2.jpg") center }
-.bg-m-3 { background: url("./img/bg_middle3.jpg") center }
+.bg-m-3 { background: url("../img/bg_middle3.jpg") center }
 .bg-m-4 { background: url("./img/bg_middle4.jpg") center }
 .bg-m-5 { background: url("./img/bg_middle5.jpg") center }
 .bg-m-6 { background: url("./img/bg_middle6.jpg") center }
@@ -443,7 +443,7 @@ header .search:hover {
     background: url(./img/bg_border_bottom_cphoto2.png) no-repeat center 0;
 }
 .b-background3 {
-    background: url(./img/bg_border_bottom_cphoto3.png) no-repeat center 0;
+    background: url(../img/bg_border_bottom_cphoto4.png) no-repeat center 0;
 }
 .b-background4 {
     background: url(./img/bg_border_bottom_cphoto4.png) no-repeat center 0;
@@ -567,7 +567,7 @@ article p { color: #888888 }
 .comunity-highlight {  }
 
 #vendo-ou-troco {
-    background: url("./img/vendo-ou-troco2.jpg");
+    /*background: url("./img/vendo-ou-troco2.jpg");*/
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;

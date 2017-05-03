@@ -4,32 +4,41 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Concilia BR 381 - Programa Judicial para Remoção e Reassentamento humanizados de Famílias do Anel Rodoviário e BR 381" />
-    <title>Concilia BR 381</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="description" content=" " />
+    <title>{% block title %} Concilia BR 381 {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/normalize.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/foundation-icons.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/jquery.bxslider.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'foundation-icons/foundation-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <!-- <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>-->
 </head>
 <body>
     <header>
         <div class="top-border hide-for-medium-down"></div>
         <div class="row">
             <div class="columns small-12 medium-3 large-3 hide-for-medium-down" style="height: 20px;">
-                <h1><a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 0px #fff;" href="#">Concilia BR 381</a></h1>
+                <h1><a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 0px #fff;margin-top: -16px;" href="{% url 'core:home' %}">Concilia BR 381</a></h1>
             </div>
             <div class="columns small-11 medium-8 large-8 hide-for-small hide-for-medium">
                 <nav class="main-ul-nav">
                     <div class="menu-header-menu-container">
                         <ul id="menu-header-menu" class="menu">
-                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="#">O projeto</a></li>
-                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#">Comunidades</a></li>
-                            <li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56"><a href="#">Notícias</a></li>
-                            <li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="#">Contato</a></li>
+                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
+                                <a href="{% url 'core:about' %}">O projeto</a>
+                            </li>
+                            <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+                                <a href="{% url 'core:community' %}">Comunidades</a>
+                            </li>
+                            <li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56">
+                                <a href="{% url 'core:news' %}">Notícias</a>
+                            </li>
+                            <li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                                <a href="{% url 'core:contact' %}">Contato</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -37,19 +46,72 @@
         </div>
     </header>
     <div class="content">
-        {% block content %} {% endblock %}
+        {% block content %}{% endblock %}
     </div>
+    <footer>
+    <div class="row">
+
+        <div class="columns small-12 medium-3">
+
+            <h5>O projeto</h5>
+            <p>Concilia BR 381 - Programa Judicial para Remoção e Reassentamento humanizados de Famílias do Anel Rodoviário e BR 381.</p>
+            <p>
+                Telefone: (31) 3282-3816
+                <br>
+                <a href="mailto:example@example.com.br">example@example.com.br</a>
+            </p>
+
+        </div>
+
+        <div class="columns small-12 medium-6">
+            <h5>Últimas notícias</h5>
+
+            <ul class="square">
+
+                <li><a href="#">Curso de avaliação de impactos de projetos socioculturais &#8211; Inscrições abertas</a></li>
+
+                <li><a href="#">Internacional das Periferias lançada na Maré, Rio de Janeiro</a></li>
+
+                <li><a href="#">Filmes premiados na 4a. Edição do Festival Imagens da Cultura Popular Urbana</a></li>
+
+                <li><a href="#">Confira os filmes finalistas do Festival Imagens da Cultura Popular Urbana</a></li>
+
+                <li><a href="#">Inscreva-se para o Seminário Identidade e Diversidade cultural nas periferias urbanas</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="columns small-12 medium-3">
+            <h5>Newsletter</h5>
+            <p>Inscreva-se para receber novidades</p>
+            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Informe seu e-mail">
+                </label>
+                <button type="submit" class="button small radius">Cadastrar</button>
+            </form>
+            <span class="social-network facebook"><a href="https://www.facebook.com/favelaeissoai" class="social-network-icon"><i class="fi-social-facebook size-32"></i></a></span>
+            <span class="social-network twitter"><a href="https://www.twitter.com/favelaeissoai" class="social-network-icon"><i class="fi-social-twitter size-32"></i></a></span>
+            <span class="social-network youtube"><a href="https://www.youtube.com/favelaeissoai" class="social-network-icon"><i class="fi-social-youtube size-32"></i></a></span>
+            <span class="social-network flickr"><a href="https://www.flickr.com/favelaeissoai" class="social-network-icon"><i class="fi-social-flickr size-32"></i></a></span>
+            <span class="social-network gplus"><a href="#" class="social-network-icon"><i class="fi-social-google-plus size-32"></i></a></span>
+        </div>
+    </div>
+</footer>
+    <div style="background: rgb(244, 244, 244); height: 1px; width: 100%;"></div>
     <div class="footer">
         <div class="row" style="padding: 30px 0">
             <div class="columns small-12">
-                <img src="http://www.favelaeissoai.com.br/wp-content/themes/favela2014/img/footer-logos.gif" alt="Logomarcas">
+                <img src="{% static 'img/footer-logos-novo.gif' %}" alt="Logomarcas">
             </div>
         </div>
     </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script type="text/javascript" src="{% static 'js/gmap3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/gmap3.infobox.js' %}"></script>
 </body>
 
 </html>
