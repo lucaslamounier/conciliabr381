@@ -20,4 +20,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^', include('rondon.core.urls', namespace='core')),
     url(r'^admin/', admin.site.urls),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]

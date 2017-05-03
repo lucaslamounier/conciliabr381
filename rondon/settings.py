@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # libs
     'widget_tweaks',
+    'tinymce',
     # apps
     'rondon.core',
+    'rondon.content',
 
 ]
 
@@ -132,7 +134,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
-
 # E-mail
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
@@ -149,6 +150,23 @@ MESSAGE_TAGS = {
     messages_constants.ERROR: 'danger',
 }
 
+# TinyMCE
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': 'table,spellchecker,paste,searchreplace',
+    'theme': "advanced",
+    'relative_urls': False,
+    'width': '100%',
+    'min_height': 600,
+    'mode': 'exact',
+    'skin': "o2k7",
+}
+#TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'
+#TINYMCE_JS_ROOT = os.path.join(MEDIA_ROOT, "tinymce/")
+
+TINYMCE_SPELLCHECKER = False # verificador ortografico
+TINYMCE_COMPRESSOR = True # Comprime os arquivos em gzip, para melhor desempenho.
+
+# Local Settings
 try:
     from .local_settings import *
 except ImportError:
