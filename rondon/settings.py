@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'tinymce',
     # apps
-    'rondon.core',
-    'rondon.content',
+    'core',
+    'content',
 
 ]
 
@@ -154,10 +154,10 @@ MESSAGE_TAGS = {
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': 'table,spellchecker,paste,searchreplace',
     'theme': "advanced",
-    'relative_urls': False,
+    'relative_urls': True,
     'width': '100%',
     'min_height': 600,
-    'mode': 'exact',
+    'mode': 'textareas',
     'skin': "o2k7",
 }
 #TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'

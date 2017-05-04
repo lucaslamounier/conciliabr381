@@ -17,8 +17,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+admin.site.site_title = "Concilia BR 381"
+admin.site.site_header = "Concilia BR 381"
+admin.site.index_title = 'Painel administrador do site'
+
 urlpatterns = [
-    url(r'^', include('rondon.core.urls', namespace='core')),
+    url(r'^', include('core.urls', namespace='core')),
     url(r'^admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
 ]
