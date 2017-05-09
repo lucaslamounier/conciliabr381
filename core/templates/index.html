@@ -1,7 +1,118 @@
-{% extends "base.html" %} {% block content %}
-<section id="big-map" class="hide-for-small">
-    <div id="flatads-main-map"></div>
+{% extends "base.html" %}
+
+
+{% block content %}
+    <section id="big-map" class="hide-for-small" style="background-color: whitesmoke; height: 225px;">
+    <div id="flatads-main-map" style="height: 410px;" style="display: none;"></div>
+    <div class="destaques" style="display: none;">
+              <div style="margin-top: 10%;">
+                  <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#quote-carousel" data-slide-to="1"></li>
+                      <li data-target="#quote-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner">
+
+                      <!-- Quote 1 -->
+                      <div class="item active">
+                        <blockquote>
+                          <div class="row">
+                            <div class="col-sm-3 text-center">
+                              <!--<img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">-->
+                              <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
+                            </div>
+                            <div class="col-sm-9">
+                              <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                              <small>Someone famous</small>
+                            </div>
+                          </div>
+                        </blockquote>
+                      </div>
+                      <!-- Quote 2 -->
+                      <div class="item">
+                        <blockquote>
+                          <div class="row">
+                            <div class="col-sm-3 text-center">
+                              <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
+                            </div>
+                            <div class="col-sm-9">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                              <small>Someone famous</small>
+                            </div>
+                          </div>
+                        </blockquote>
+                      </div>
+                      <!-- Quote 3 -->
+                      <div class="item">
+                        <blockquote>
+                          <div class="row">
+                            <div class="col-sm-3 text-center">
+                              <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
+                            </div>
+                            <div class="col-sm-9">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                              <small>Someone famous</small>
+                            </div>
+                          </div>
+                        </blockquote>
+                      </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                  </div>
+         </div>
+
+
+
+    </div sty>
 </section>
+
+{% block menu %}
+
+    <!--{{ block.super }}   class="columns small-11 medium-8 large-8 hide-for-small hide-for-medium" -->
+    <div class="row">
+                <!--<div>-->
+                    <nav class="main-ul-nav" style="font-weight: bold;">
+                        <div class="menu-header-menu-container" style="margin-left: 290px;">
+                            <ul id="menu-header-menu" class="menu">
+                                <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
+                                    <a href="{% url 'about' %}">O Programa</a>
+                                </li>
+                                <!--<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">-->
+                                    <!--<a href="{% url 'partners' %}">Parceiros</a>-->
+                                <!--</li>-->
+                                <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+                                    <a href="{% url 'content:comunidades' %}">Comunidades</a>
+                                </li>
+                                <li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56">
+                                    <a href="{% url 'content:noticias' %}">Notícias</a>
+                                </li>
+                                <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                                    <a href="{% url 'contact' %}">O Teste</a>
+                                </li>
+                                <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                                    <a href="{% url 'contact' %}">O Teste</a>
+                                </li>
+                                <li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                                    <a href="{% url 'contact' %}">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+             <!--</div>-->
+            <div class="top-border hide-for-medium-down"></div>
+
+
+{% endblock %}
+
 <div class="row">
     <div class="comunity-highlight-container">
         <div class="comunity-highlight">
@@ -46,15 +157,15 @@
 <div id="vendo-ou-troco" data-stellar-background-ratio="0.3" style="background: url({{STATIC_URL}}/static/img/favela.jpg)">
     <div class="row">
 
-        <div class="columns medium-7">
+        <!--<div class="columns medium-7">-->
 
-            <h3><strong>Favela</strong></h3>
-            <p>
-                Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                <a href="#" class="button radius small right success alert">Saiba mais</a>
-            </p>
+            <!--<h3><strong>Favela</strong></h3>-->
+            <!--<p>-->
+                <!--Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.-->
+                <!--<a href="#" class="button radius small right success alert">Saiba mais</a>-->
+            <!--</p>-->
 
-        </div>
+        <!--</div>-->
 
     </div>
 </div>
@@ -64,9 +175,16 @@
     var mapDiv, map, infobox;
     jQuery(document).ready(function() {
 
-        mapDiv = jQuery("#flatads-main-map");
+      $('#quote-carousel').carousel({
+        pause: true,
+        interval: 4000,
+      });
 
-        mapDiv.width("100%").height("500px").gmap3({
+
+
+
+        mapDiv = jQuery("#flatads-main-map");
+        mapDiv.width("60%").height("400px").display('none').gmap3({
             map: {
                 options: {
                     center: [-19.8782014, -43.9532259, 15],

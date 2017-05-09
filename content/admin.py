@@ -42,7 +42,7 @@ class AlbumAdmin(admin.ModelAdmin):
 
 class PhotoAdmin(admin.ModelAdmin):
 
-    list_display = ['title', 'legend', 'author', 'date_created']
+    list_display = ['title', 'legend', 'album', 'author', 'date_created']
     search_fields = ['title']
 
     def save_model(self, request, obj, form, change):

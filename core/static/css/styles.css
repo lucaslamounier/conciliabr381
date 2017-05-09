@@ -72,12 +72,16 @@ body .primary-button {
 }
 
 .logo_marca {
-    width: 167px;
-    height: 190px;
-    text-indent: -9999px;
-    position: absolute;
-    z-index: 9999;
-    display: block !important;
-    color: #28b293;
-    background-size: 144px 185px !important;
+    /* width: 167px; */
+    height: 248px;
+    /* text-indent: -9999px; */
+    /* position: absolute; */
+    /* z-index: 9999; */
+    /* display: block !important; */
+    /* color: #28b293; */
+    background-size: 164px 217px !important;
+    /* margin: 90px; */
+    width: 100%;
+    /* border: 3px solid green; */
+    padding: 0px;
 }
