@@ -93,7 +93,7 @@ class Comunidade(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('catalog:product', kwargs={'slug': self.slug})
+    def get_absolute_url(self):
+        return reverse('content:comunidade', kwargs={'pk': self.pk})
 
 

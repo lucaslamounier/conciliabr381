@@ -1,124 +1,234 @@
 {% extends "base.html" %}
-
-{% load widget_tweaks %}
-
+{% load static %}
 {% block title %} Comunidades | {{ block.super }} {% endblock %}
 
 {% block content %}
-<div class="background-middle bg-m-3" style="margin: 0"></div>
-<div class="b-background3"></div>
- <div class="row">
-        <div class="columns small-12 center-text">
-            <h1>Comunidades</h1>
-        </div>
+
+{% include "_menu_interno.html" %}
+
+<div class="row">
+    <div class="columns small-12 center-text">
+        <h1>Comunidades</h1>
     </div>
-<div class="comunity-index clearfix">
-    <div class="row_ clearfix">
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/aglomerado-morro-das-pedras/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Aglomerado-Morro-das-Pedras">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/aglomerado-morro-das-pedras/"><strong>Aglomerado Morro das Pedras</strong></a></h5>
-            <p></p>
-            <p>O Aglomerado Morro das Pedras, localizado na região oeste de Belo Horizonte, é formado por sete vilas: Antena, Santa Sofia, São Jorge I, II, III, Leonina e Pantanal. </p>
-            <p></p>
-        </div>
-
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/aglomerado-santa-lucia/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Aglomerado-Santa-Lucia">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/aglomerado-santa-lucia/"><strong>Aglomerado Santa Lúcia</strong></a></h5>
-            <p></p>
-            <p>O Aglomerado Santa Lúcia, localizado na região centro-sul de Belo Horizonte, é formado por quatro vilas: Vila Estrela, Vila Santa Rita de Cássia (Morro do Papagaio), Barragem Santa Lúcia e Vila São Bento (conhecida como Vila Esperança, Vila Carrapato ou Bicão). </p>
-            <p></p>
-        </div>
-
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/carapina-governador-valadares/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Carapina - Governador Valadares">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/carapina-governador-valadares/"><strong>Carapina (Governador Valadares)</strong></a></h5>
-            <p></p>
-            <p>Localizado sobre as encostas de uma colina que se eleva sobre a planície do Rio Doce, o Alto do Carapina se desenvolveu a partir de uma polêmica política de expansão territorial, praticada pela prefeitura local no início dos anos cinquenta.</p>
-            <p></p>
-        </div>
-    </div>
-    <div class="row_ clearfix" style="">
-
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/cidade-de-deus-sete-lagoas/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Cidade-de-Deus-Sete-Lagoas">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/cidade-de-deus-sete-lagoas/"><strong>Cidade de Deus (Sete Lagoas)</strong></a></h5>
-            <p></p>
-            <p>O Conjunto Habitacional Ondina Vasconcelos de Oliveira, mais conhecido como Cidade de Deus (nome do projeto de construção), foi inaugurado em 1998 pelo o prefeito Marcelo Cecé.</p>
-            <p></p>
-        </div>
-
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/conjunto-capitao-eduardo/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Conjunto-Capitao-Eduardo1-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Conjunto-Capitao-Eduardo">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/conjunto-capitao-eduardo/"><strong>Conjunto Capitão Eduardo</strong></a></h5>
-            <p></p>
-            <p>O Conjunto Capitão Eduardo existe desde janeiro de 1988, quando 150 famílias receberam lotes da Fazenda Capitão Eduardo, desapropriada para receber um aterro sanitário, mas que acabou virando loteamento, na região nordeste da capital.</p>
-            <p></p>
-        </div>
-
-        <div class="columns small-12 medium-6 large-4">
-
-            <div class="post-thumb">
-                <div class="post-thumb-img-wrapper">
-                    <a href="http://www.favelaeissoai.com.br/comunidades/conjunto-confisco/">
-
-                        <img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cj-Confisco-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Cj-Confisco">
-                    </a>
-                </div>
-            </div>
-
-            <h5><a href="http://www.favelaeissoai.com.br/comunidades/conjunto-confisco/"><strong>Conjunto Confisco</strong></a></h5>
-            <p></p>
-            <p>O Conjunto Confisco nasceu em 1988 e está localizado na Regional Pampulha, divisa com o município de Contagem. Segundo moradores mais antigos, o terreno era de propriedade de um homem chamado Luciano Farah.</p>
-            <p></p>
-        </div>
-
-    </div>
-
 </div>
+<section id="big-map" class="margin-50 hide-for-small">
+<div id="flatads-main-map"></div>
+
+<div class="community-infor">
+    <div class="columns small-10">
+        <p>As vaias são uma tática do Reinaldo Azevedo para ameaçar as conquistas do trabalhadores!</p>
+        <p>O panelaço é uma manobra da direita fascista para destituir a presidência da república!</p>
+        <p>O sítio de Atibaia é um complô do capitalismo selvagem para ameaçar a presidenta!</p>
+        <p>O panelaço é uma ação dos coxinhas para subverter a Constituição!</p>
+        <p>O panelaço é uma estratégia da Rede Globo para desmoralizar a presidência da república!</p>
+    </div>
+</div>
+</section>
+    <script>
+
+        var mapDiv,
+            map,
+            infobox;
+
+        jQuery(document).ready(function(){
+
+            mapDiv = jQuery("#flatads-main-map");
+
+            mapDiv.width("45%").height("350px").gmap3({
+                map:{
+                    options: {
+                        center:[-19.840888,-43.885106,12],
+                        zoom: 12,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        streetViewControl: true,
+                        scrollwheel : false,
+                        overviewMapControl: false,
+                        "styles": [
+                            {
+                                "featureType": "landscape.natural",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#e0efef"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "hue": "#1900ff"
+                                    },
+                                    {
+                                        "color": "#c0e8e8"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape.man_made",
+                                "elementType": "geometry.fill"
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "lightness": 100
+                                    },
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "water",
+                                "stylers": [
+                                    {
+                                        "color": "#7dcdcd"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "transit.line",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "lightness": 700
+                                    }
+                                ]
+                            }
+
+                        ]
+                    }
+                },
+                marker:{
+                    values: [
+                        // Vila Pica Pau
+                        {
+                            latLng:[-19.840888,-43.885106],
+                                options: {
+                                    icon: "{% static 'img/marker_concilia2.png' %}",
+                                    shadow: "{% static 'img/shadow.png' %}"
+                             },
+                             data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=38\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Santa-Lucia\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila Pica Pau</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=38\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
+                        },
+                        // Vila da Paz
+                        {
+                            latLng:[-19.869775,-43.941161],
+                                options: {
+                                    icon: "{% static 'img/marker_concilia2.png' %}",
+                                    shadow: "{% static 'img/shadow.png' %}"
+                                },
+                            data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=40\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Carapina - Governador Valadares\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Paz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=40\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
+                        },
+                        // VIla da Luz
+                        {
+                            latLng:[-19.856361,-43.893376],
+                            options: {
+                                icon: "{% static 'img/marker_concilia2.png' %}",
+                                shadow: "{% static 'img/shadow.png' %}"
+                            },
+                        data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=41\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Morro-das-Pedras\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Luz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=41\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
+                        },
+                        // Vila bom destino
+                        {
+                            latLng:[-19.824345,-43.831612],
+                            options: {
+                                icon: "{% static 'img/marker_concilia2.png' %}",
+                                shadow: "{% static 'img/shadow.png' %}"
+                            },
+                            data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=68\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Cidade-de-Deus-Sete-Lagoas\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila B</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=68\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
+                        },
+                    ],
+                    cluster:{
+                        radius: 20,
+                        // This style will be used for clusters with more than 0 markers
+                        0: {
+                            content: "<div class='cluster cluster-1'>CLUSTER_COUNT</div>",
+                            width: 62,
+                            height: 62
+                        },
+                        // This style will be used for clusters with more than 20 markers
+                        20: {
+                            content: "<div class='cluster cluster-2'>CLUSTER_COUNT</div>",
+                            width: 82,
+                            height: 82
+                        },
+                        // This style will be used for clusters with more than 50 markers
+                        50: {
+                            content: "<div class='cluster cluster-3'>CLUSTER_COUNT</div>",
+                            width: 102,
+                            height: 102
+                        },
+                        events: {
+                            click: function(cluster) {
+                                map.panTo(cluster.main.getPosition());
+                                map.setZoom(map.getZoom() + 2);
+                            }
+                        }
+                    },
+                    events: {
+                        click: function(marker, event, context){
+                            map.panTo(marker.getPosition());
+
+                            var ibOptions = {
+                                pixelOffset: new google.maps.Size(-125, -88),
+                                alignBottom: true
+                            };
+
+                            infobox.setOptions(ibOptions)
+
+                            infobox.setContent(context.data);
+                            infobox.open(map,marker);
+
+                            // if map is small
+                            var iWidth = 260;
+                            var iHeight = 300;
+                            if((mapDiv.width() / 2) < iWidth ){
+                                var offsetX = iWidth - (mapDiv.width() / 2);
+                                map.panBy(offsetX,0);
+                            }
+                            if((mapDiv.height() / 2) < iHeight ){
+                                var offsetY = -(iHeight - (mapDiv.height() / 2));
+                                map.panBy(0,offsetY);
+                            }
+
+                        }
+                    }
+                }
+            },"");
+            map = mapDiv.gmap3("get");
+
+            infobox = new InfoBox({
+                pixelOffset: new google.maps.Size(-50, -65),
+                closeBoxURL: '',
+                enableEventPropagation: true
+            });
+
+            mapDiv.delegate('.infoBox .close','click',function () {
+                infobox.close();
+            });
+
+        });
+
+    </script>
 {% endblock %}

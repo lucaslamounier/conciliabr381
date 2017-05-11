@@ -1,26 +1,71 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load widget_tweaks %}
 
-{% load widget_tweaks %}
+{% load static %}
 
 {% block title %} Parceiros | {{ block.super }} {% endblock %}
 
 {% block content %}
-<div class="background-middle bg-m-3" style="margin: 0"></div>
-<div class="b-background3"></div>
-{% block menu %} {{ block.super }} {% endblock %}
- <div class="row">
-        <div class="columns small-12 center-text">
-            <h1>Parceiros</h1>
-        </div>
- </div>
+
+{% include "_menu_interno.html" %}
+
 <div class="row">
-    <div class="medium-12 large-8 columns">
-
-        <article>
-            <h4><strong>A união de diversas instituições públicas permitiu que esse Programa de reassentamento humanizado se tornasse uma realidade.</strong></h4>
-
-        </article>
-
+    <div class="columns small-12 center-text">
+        <h1>Parceiros</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <section id="maincontent" class="twelve columns">
+            <section id="content" class="">
+                <div class="main ">
+                    <div id="post-30" class="post-30 page type-page status-publish hentry">
+                        <div style="float: left; width: 47%;">
+                            <p>
+                                <img src="{% static 'img/parceiros/jf.png' %}" width="240px" height="80px" alt="Justiça Federal">
+                                <p style="text-align: justify;">
+                                        Promotora do Programa de Conciliação para Remoção e Reassentamento Humanizado no Anel Rodoviário e BR-381 em conjunto com o Ministério Público Federal, Departamento Nacional de Infraestrutura de Transportes (Dnit), Defensoria Pública da União e Governo Federal. Articula todas as decisões judiciais do Programa, assim como a conciliação dos envolvidos, a fim de buscar soluções para os conflitos, mediante a construção de acordos.
+                                </p>
+                            </p>
+                            <p style="text-align: justify;">
+                                <img src="{% static 'img/parceiros/dpu.png' %}" width="180px" height="80px" alt="DPU"/>
+                                <p>
+                                    A Defensoria Pública da União (DPU) em Minas Gerais, presta assistência jurídica à população nos mutirões de Conciliação. Seu objetivo é garantir a remoção humanizada das famílias que ocupam faixas que impedem a realização de obras de reforma e ampliação da rodovia.
+                                </p>
+                            </p>
+                            <p style="text-align: justify;">
+                                <img src="{% static 'img/parceiros/gov.png' %}" width="280px" height="80px" alt="Governo Federal">
+                                <p>
+                                    O Governo Federal, por meio da Secretaria do Patrimônio da União – SPU, é responsável pela vistoria técnica dos terrenos e imóveis da BR-381 e Anel Rodoviário. Em parceria com os outros órgãos deverão fazer o levantamento topográfico e fornecer esclarecimentos aos moradores e proprietários das áreas atingidas, sobre os procedimentos de desapropriação, relocação ou reassentamento.
+                                </p>
+                            </p>
+                        </div>
+                        <div style="float: right; width: 47%; text-align: justify;">
+                            <p>
+                                <img src="{% static 'img/parceiros/dnit_mtpa.png' %}" width="400px" height="80px" alt="Dnit - Departamento Nacional de Infraestrutura de Transportes" />
+                                <p>
+                                Responsável pela contratação de empresas para elaboração dos projetos básico, executivo e para a execução das obras de adequação de capacidade da BR-381/MG no segmento que vai de Belo Horizonte a Governador Valadares. O trecho de 303 quilômetros foi dividido em 11 lotes para execução das obras, que incluem duplicação, melhoramentos e ampliação de capacidade e segurança.
+                                </p>
+                            </p>
+                            <p>
+                                <img src="{% static 'img/parceiros/mpf.png' %}" width="180px" height="80px" alt="MPF">
+                                <p>
+                                O Ministério Público Federal é responsável por fiscalizar as obras da duplicação da BR-381 e Anel Rodoviário. Sua função é acompanhar os pagamentos, cronogramas, e ainda os impactos nos meios de transporte da obra.
+                                </p>
+                            </p>
+                            <p>
+                                <img src="{% static 'img/parceiros/apoio_cmar.png' %}" width="180px" height="80px" alt="CMAR">
+                                <p>
+                            A Comunidade dos Moradores do Anel Rodoviário reuni representantes de diversas comunidades para buscar uma solução que venha atender o conjunto de todas as famílias que serão atingidas pelas obras do Anel Rodoviário. Hoje, o movimento conta com a participação de moradores de diversas Vilas.
+                                </p>
+                            </p>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+        </section>
     </div>
 </div>
 {% endblock %}

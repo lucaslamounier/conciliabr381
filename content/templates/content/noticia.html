@@ -5,14 +5,9 @@
 {% endblock  %}
 
 {% block content %}
-<div class="background-middle bg-m-3" style="margin: 0">
-    <div class="row">
-        <div class="columns small-12">
-            <h1>Notícias</h1>
-        </div>
-    </div>
-</div>
-<div class="b-background3"></div>
+
+{% include "_menu_interno.html" %}
+
 <div class="row">
     <div class="column small-12 large-8">
         <article>
@@ -23,15 +18,11 @@
                     <p class="content-meta-info__from">
                         <span itemprop="creator">Por {{noticia.author}} </span>
                         <meta itemprop="publisher" content="G1">
-                    <!--</p>-->
-                    <!--<p class="content-meta-info__updated">-->
+
                         <br />
                         Publicado em
                             <time itemprop="datePublished" datetime="{{noticia.published_at}}">{{noticia.published_at}}</time>
-                        <!--<span class="content-meta-info__updated-relative">-->
-                                <!--<time itemprop="dateModified" datetime="{{noticia.updated_at}}">{{noticia.updated_at}}</time>-->
-                        <!--</span>-->
-                    </p>
+                        </p>
                 </div>
             </div>
             {% if noticia.image %}

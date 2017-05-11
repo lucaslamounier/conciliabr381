@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^noticias/$', views.news, name='noticias'),
     url(r'^noticia/(?P<pk>[\w_-]+)/$', views.noticia, name='noticia'),
     url(r'^comunidades/$', views.community, name='comunidades'),
+    url(r'^comunidade/(?P<pk>[\w_-]+)/$', views.comunidade, name='comunidade'),
 ]

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
-      <nav aria-label="Page navigation">
-          <ul class="pagination" class="btn btn-primary">
+      <nav aria-label="Page navigation" style="text-align: center;">
+          <ul class="pagination" style="display: inline-block;" class="btn btn-primary">
           {% for page in paginator.page_range %}
             <li {% if page_obj.number == page %} class="active" {% endif %}>
                 <a href="?page={{page}}{{getvars}}" style="background-color: #1f4782;">{{page}}</a>

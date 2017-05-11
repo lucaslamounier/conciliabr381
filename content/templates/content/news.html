@@ -5,10 +5,9 @@
 {% block title %} Notícias | {{ block.super }} {% endblock %}
 
 {% block content %}
-<div class="background-middle bg-m-3" style="margin: 0">
 
-</div>
-<div class="b-background3"></div>
+{% include "_menu_interno.html" %}
+
 <div class="row">
         <div class="columns small-12 center-text">
             <h1>Notícias</h1>
@@ -19,5 +18,7 @@
     {% include "content/_noticias.html" %}
 {% endfor %}
 </div>
+
 {% pagination request paginator page_obj %}
+
 {% endblock %}

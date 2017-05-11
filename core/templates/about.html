@@ -1,23 +1,27 @@
-{% extends "base.html" %} {% load widget_tweaks %}
+{% extends "base.html" %}
+
 {% load static %}
-{% block title %} O Projeto | {{ block.super }} {% endblock %}
+
+{% block title %} O que é | {{ block.super }} {% endblock %}
 
 {% block content %}
 
-<div class="background-middle bg-m-3" style="margin: 0"></div>
-<div class="b-background3"></div>
+{% include "_menu_interno.html" %}
+
 <div class="row">
-        <div class="columns small-12 center-text">
-            <h1>O Programa</h1>
-        </div>
+    <div class="columns small-12 center-text">
+        <h1>O que é</h1>
+    </div>
 </div>
 <div class="row">
-    <div class="medium-12 large-8 columns">
-
-        <article>
-          <img src="{% static 'img/parceiros/anel_rodoviario3.png' %}" />
-        </article>
-
-    </div>
+    <img src="{% static 'img/parceiros/concila_conceito.png' %}" />
+</div>
+<div class="line-separator-gray"></div>
+<div class="row center-text">
+    <h2 style="color: black;font-weight: bold;">
+              O Concilia BR-381 e Anel surge da necessidade de revitalização e ampliação dos 330 km da BR-381 Norte.
+          </h2>
+    <img src="{% static 'img/parceiros/anel_rodoviario.png' %}" />
+    <!--<img src="/static/img/MAPA-BR-01.jpg" />-->
 </div>
 {% endblock %}

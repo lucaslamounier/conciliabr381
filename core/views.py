@@ -23,6 +23,21 @@ class PartnersView(TemplateView):
     template_name = 'partners.html'
 
 
+# Página de dúvidas
+class FaqView(TemplateView):
+    template_name = 'faq.html'
+
+
+# Página do conselho executivo
+class ConselhoExecutivoView(TemplateView):
+    template_name = 'conselho_executivo.html'
+
+
+# Página do manual da marca
+class ManualMarcaView(TemplateView):
+    template_name = 'manual_marca.html'
+
+
 # Página de contatos
 def contact(request):
     success = False
@@ -42,3 +57,6 @@ def contact(request):
 index = IndexView.as_view()
 about = AboutView.as_view()
 partners = PartnersView.as_view()
+duvida = FaqView.as_view()
+conselho_executivo = ConselhoExecutivoView.as_view()
+manual_marca = ManualMarcaView.as_view()

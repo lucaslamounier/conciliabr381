@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ comunidade }} | {{ block.super }}
+{% endblock  %}
+
+{% block content %}
+
+{% include "_menu_interno.html" %}
+
+<div class="row">
+    <div class="column small-12 large-8">
+        <article>
+            <h1><strong>{{ comunidade }}</strong></h1>
+        </article>
+    </div>
+</div>
+
+
+{% endblock  %}

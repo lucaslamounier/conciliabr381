@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="pt-br">
 <head>
     <!-- ################################################  -->
-    <!-- #                                                 -->
-    <!-- # WEBSITE DESENVOLVIDO POR LUCASLAMOUNIER  -->
-    <!-- #                                                 -->
+    <!-- #                                              #  -->
+    <!-- # WEBSITE DESENVOLVIDO POR LUCASLAMOUNIER      #  -->
+    <!-- #                                              #  -->
     <!-- ################################################  -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +12,25 @@
     <title>{% block title %} Concilia BR 381 {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
     <link rel="stylesheet" href="{% static 'foundation-icons/foundation-icons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 <body>
-    <header style="border-top: 5px solid #534f9c;">
+    <header style="border-top: 2px solid #534f9c;">
         <div class="row">
             <div class="col-sm-3" style="height: 20px;">
                 <div class="image-block">
                     <h1>
-                        <a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 15px #fff;margin-top: 32px;" href="{% url 'index' %}">Concilia BR 381</a>
+                        <a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 18px #fff; margin-top: 34px;"
+                           href="{% url 'index' %}">Concilia BR 381</a>
                     </h1>
                 </div>
-            </div>
-            <div class="col-sm-9">
-                <!--<h1>Concilia BR 381 e Anel Rodoviário</h1>-->
-                <!--<img class="image" src="{% static 'img/parceiros/concilia.png' %}" alt="Concilia BR 381" width="200px" title="Concilia BR 381 e Anel rodoviário" />-->
-                <!--<img class="image" src="{% static 'img/parceiros/br_381_e_anel.png' %}" alt="Concilia BR 381" width="450px" title="Concilia BR 381 e Anel rodoviário" />-->
             </div>
         </div>
     </header>
@@ -42,118 +38,60 @@
         {% block content %}{% endblock %}
 
         <footer>
-            <!--<div class="flex-container">-->
-                  <!--<div class="flex-item">flex item 1</div>-->
-                  <!--<div class="flex-item">flex item 2</div>-->
-                  <!--<div class="flex-item">flex item 3</div>-->
-            <!--</div>-->
-             <div class="row">
-
-                  <div class="col-sm-2">
-                         <p>APOIO:</p>
-                            <a href="http://www.dnit.gov.br/" title="Dnit">
-                                <img src="{% static 'img/parceiros/apoio_cmar.png' %}" alt="dnit.gov.br" width="140px"/>
-                            </a>
-                  </div>
-                  <div class="col-sm-10">
-                         <p>PARCEIROS:</p>
-                            <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                                <img src="{% static 'img/parceiros/urbel.png' %}" alt="dnit.gov.br" width="170px"/>
-                            </a>
-                            <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                                <img src="{% static 'img/parceiros/prefeitura_bh.png' %}" alt="dnit.gov.br" width="170px"/>
-                            </a>
-                            <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                                <img src="{% static 'img/parceiros/dpu.png' %}" alt="dnit.gov.br" width="140px"/>
-                            </a>
-                            <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                                <img src="{% static 'img/parceiros/mpf.png' %}" alt="dnit.gov.br" width="140px" />
-                            </a>
-
-                     </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>APOIO:</p>
+                    <a href="http://www.dnit.gov.br/" title="Dnit">
+                        <img src="{% static 'img/parceiros/apoio_cmar.png' %}" alt="dnit.gov.br" width="140px" />
+                    </a>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="col-sm-12">
-                            <p>REALIZAÇÃO:</p>
-                            <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                                <img class="image_realizacao" src="{% static 'img/parceiros/dnit_mtpa.png' %}" alt="dnit.gov.br"/>
-                            </a>
-                            <a class="image_spacing" href="http://www.cjf.jus.br" title="Justiça Federal">
-                                <img class="image_realizacao" src="{% static 'img/parceiros/jf.png' %}" alt="www.cjf.jus.br"/>
-                            </a>
-                            <a class="image_spacing" href="http://www.brasil.gov.br" title="Governo Federal">
-                                <img class="image_realizacao" src="{% static 'img/parceiros/gov.png' %}"  alt="www.brasil.gov.br" style="margin-bottom: 54px;"/>
-                            </a>
-                     </div>
+                <div class="col-sm-10">
+                    <p>PARCEIROS:</p>
+                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
+                        <img src="{% static 'img/parceiros/urbel.png' %}" alt="dnit.gov.br" width="170px" />
+                    </a>
+                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
+                        <img src="{% static 'img/parceiros/prefeitura_bh.png' %}" alt="dnit.gov.br" width="170px" />
+                    </a>
+                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
+                        <img src="{% static 'img/parceiros/dpu.png' %}" alt="dnit.gov.br" width="140px" />
+                    </a>
+                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
+                        <img src="{% static 'img/parceiros/mpf.png' %}" alt="dnit.gov.br" width="140px" />
+                    </a>
                 </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>REALIZAÇÃO:</p>
+                    <div style="margin-top: -50px;">
+                        <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
+                            <img class="image_realizacao" src="{% static 'img/parceiros/dnit_mtpa.png' %}" alt="dnit.gov.br" />
+                        </a>
+                        <a class="image_spacing" href="http://www.cjf.jus.br" title="Justiça Federal">
+                            <img class="image_realizacao" src="{% static 'img/parceiros/jf.png' %}" alt="www.cjf.jus.br" />
+                        </a>
+                        <a class="image_spacing" href="http://www.brasil.gov.br" title="Governo Federal">
+                            <img class="image_realizacao" src="{% static 'img/parceiros/gov.png' %}" alt="www.brasil.gov.br" style="margin-bottom: 35px;" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </footer>
-        <div></div>
-    <!--</div>-->
-    <!--<footer>-->
-    <!--<div class="row">-->
+        <div class="rodape_end_background">
+            <div class="row" style="color: white; text-align: center;">
+                <p style="color: white; margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR 381 e Anel</p>
+            </div>
+        </div>
+    </div>
+    <!-- Bibliotecas requeridas pelo sistema -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/gmap3.min.js' %}"></script>
+    <script src="{% static 'js/gmap3.infobox.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
-        <!--<div class="columns small-12 medium-3">-->
-
-            <!--<h5>O projeto</h5>-->
-            <!--<p>Concilia BR 381 - Programa Judicial para Remoção e Reassentamento humanizados de Famílias do Anel Rodoviário e BR 381.</p>-->
-            <!--<p>-->
-                <!--Telefone: (31) 3282-3816-->
-                <!--<br>-->
-                <!--<a href="mailto:example@example.com.br">example@example.com.br</a>-->
-            <!--</p>-->
-
-        <!--</div>-->
-
-        <!--<div class="columns small-12 medium-6">-->
-            <!--<h5>Últimas notícias</h5>-->
-
-            <!--<ul class="square">-->
-
-                <!--<li><a href="#">Curso de avaliação de impactos de projetos socioculturais &#8211; Inscrições abertas</a></li>-->
-
-                <!--<li><a href="#">Internacional das Periferias lançada na Maré, Rio de Janeiro</a></li>-->
-
-                <!--<li><a href="#">Filmes premiados na 4a. Edição do Festival Imagens da Cultura Popular Urbana</a></li>-->
-
-                <!--<li><a href="#">Confira os filmes finalistas do Festival Imagens da Cultura Popular Urbana</a></li>-->
-
-                <!--<li><a href="#">Inscreva-se para o Seminário Identidade e Diversidade cultural nas periferias urbanas</a></li>-->
-
-            <!--</ul>-->
-
-        <!--</div>-->
-
-        <!--<div class="columns small-12 medium-3">-->
-            <!--<h5>Newsletter</h5>-->
-            <!--<p>Inscreva-se para receber novidades</p>-->
-            <!--<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>-->
-                <!--<label>-->
-                    <!--<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Informe seu e-mail">-->
-                <!--</label>-->
-                <!--<button type="submit" class="button small radius">Cadastrar</button>-->
-            <!--</form>-->
-            <!--<span class="social-network facebook"><a href="https://www.facebook.com/favelaeissoai" class="social-network-icon"><i class="fi-social-facebook size-32"></i></a></span>-->
-            <!--<span class="social-network twitter"><a href="https://www.twitter.com/favelaeissoai" class="social-network-icon"><i class="fi-social-twitter size-32"></i></a></span>-->
-            <!--<span class="social-network youtube"><a href="https://www.youtube.com/favelaeissoai" class="social-network-icon"><i class="fi-social-youtube size-32"></i></a></span>-->
-            <!--<span class="social-network flickr"><a href="https://www.flickr.com/favelaeissoai" class="social-network-icon"><i class="fi-social-flickr size-32"></i></a></span>-->
-            <!--<span class="social-network gplus"><a href="#" class="social-network-icon"><i class="fi-social-google-plus size-32"></i></a></span>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</footer>-->
-    <!--<div style="background: rgb(244, 244, 244); height: 1px; width: 100%;"></div>-->
-    <!--<div class="footer">-->
-        <!--<div class="row" style="padding: 30px 0">-->
-            <!--<div class="columns small-12">-->
-                <!--<img src="{% static 'img/footer-logos-novo.gif' %}" alt="Logomarcas">-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script type="text/javascript" src="{% static 'js/gmap3.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/gmap3.infobox.js' %}"></script>
 </body>
-
 </html>
