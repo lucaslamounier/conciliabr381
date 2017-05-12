@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 {% include "_menu.html" %}
 
 <div class="top-border hide-for-medium-down"></div>
+
+<div style="text-align: center;">
+     <img src="{% static 'img/parceiros/anel_rodoviario.png' %}" width="50%"/>
+</div>
+
+<div class="top-border-gray hide-for-medium-down"></div>
 
 <div class="row">
     <div class="destaques">
@@ -78,42 +86,6 @@
 
 <div class="top-border-gray hide-for-medium-down"></div>
 
-<!--<div class="row">-->
-    <!--<div class="comunity-highlight-container">-->
-        <!--<div class="comunity-highlight">-->
-            <!--<div>-->
-                <!--<div class="columns small-12 medium-6">-->
-                    <!--<div class="post-thumb">-->
-                        <!--<div class="post-thumb-img-wrapper">-->
-                            <!--<a href="#">-->
-
-                                <!--<img width="500" height="281" src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Vila-Senhor-dos-Passos-500x281.jpg" class="attachment-comunity-banner-medium wp-post-image" alt="Vila-Senhor-dos-Passos" />-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="columns small-12 medium-6">-->
-                    <!--<h3><strong>Comunidades</strong></h3>-->
-                    <!--<p>-->
-                        <!--<p>A Vila Senhor dos Passos está localizada na região Noroeste de Belo Horizonte, entre os bairros Lagoinha e Santo André, próximo ao centro da cidade. A vila passou a ter esse nome na década de 80, com a construção da Capela Nosso Senhor dos Passos, pertencente à Paróquia Nossa Senhora da Conceição, na Lagoinha. </p>-->
-                    <!--</p>-->
-                    <!--<p class="right">-->
-                        <!--<a href="#" class="button success small radius">ver comunidade</a>-->
-                    <!--</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-
-<div class="top-border-gray hide-for-medium-down"></div>
-
-<!--<div>-->
-    <!--<div class="row">-->
-        <!--<img src="/static/img/MAPA-BR-01.jpg" />-->
-    <!--</div>-->
-<!--</div>-->
-<div class="top-border-gray hide-for-medium-down"></div>
 
 <div class="row">
     {% include "timeline.html" %}
@@ -134,14 +106,14 @@
     </div>
 </div>
 
-<script>
-    /*
-    jQuery(document).ready(function() {
-        $('#quote-carousel').carousel({
-            pause: true,
-            interval: 10000,
-        });
+<!--<script>-->
 
-    });*/
-</script>
+    <!--jQuery(document).ready(function() {-->
+        <!--$('#quote-carousel').carousel({-->
+            <!--pause: true,-->
+            <!--interval: 10000,-->
+        <!--});-->
+
+    <!--});-->
+<!--</script>-->
 {% endblock %}
