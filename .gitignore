@@ -1,4 +1,5 @@
 *.pyc
-catalog/__pycache__/*
-db.sqlite3
+core/__pycache__/*
+content/__pycache__/*
+db.*
 local_settings.py
