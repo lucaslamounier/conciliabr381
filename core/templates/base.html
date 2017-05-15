@@ -1,5 +1,6 @@
 <!DOCTYPE html> {% load static %}
 <html lang="pt-br">
+
 <head>
     <!-- ################################################  -->
     <!-- #                                              #  -->
@@ -16,84 +17,245 @@
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
     <link rel="stylesheet" href="{% static 'foundation-icons/foundation-icons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}" />
-    <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <!--<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
-<body>
-    <header style="border-top: 2px solid #534f9c;">
-        <div class="row">
-            <div class="col-sm-3" style="height: 20px;">
-                <div class="image-block">
-                    <h1>
-                        <a class="logo_marca" style="background: url({% static 'img/concilia.png' %}) no-repeat center 18px #fff; margin-top: 34px;"
-                           href="{% url 'index' %}">Concilia BR 381</a>
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="content">
-        {% block content %}{% endblock %}
 
-        <footer>
-            <div class="row">
-                <div class="col-sm-2">
-                    <p>APOIO:</p>
-                    <a href="http://www.dnit.gov.br/" title="Dnit">
-                        <img src="{% static 'img/parceiros/apoio_cmar.png' %}" alt="dnit.gov.br" width="140px" />
-                    </a>
+<body>
+
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+
+            <div class="top-border hide-for-medium-down"></div>
+
+            <nav class="tab-bar show-for-medium-down" data-topbar>
+
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Concilia BR 381</h1>
+                </section>
+
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+
+            </nav>
+
+            <aside class="left-off-canvas-menu">
+
+                <ul class="off-canvas-list">
+                    <li>
+                        <label>Concilia BR 381</label>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
+                        <a href="#">O Programa</a>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="{% url 'about' %}">O que é</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
+                                            <a href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+                                            <a href="{% url 'partners' %}">Parceiros</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
+                                            <a href="{% url 'manual_marca' %}">Manual da marca</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
+                        <a href="{% url 'content:comunidades' %}">Comunidades</a>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+
+                                        {% for comunidade in comunidades %}
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="{{ comunidade.get_absolute_url }}">{{ comunidade }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+                        <a href="{% url 'content:comunidades' %}">Imóveis</a>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="#">Item1</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
+                                            <a href="#">Item2</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+                                            <a href="#">Item3</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
+                                            <a href="#">Item4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                        <a href="{% url 'partners' %}">Imóveis2</a>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="#">Item1</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
+                                            <a href="#">Item2</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+                                            <a href="#">Item3</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
+                                            <a href="#">Item4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56">
+                        <a href="{% url 'content:noticias' %}">Notícias</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                        <a href="{% url 'faq' %}">Dúvidas</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                        <a href="{% url 'contact' %}">Contato</a>
+                    </li>
+                </ul>
+
+            </aside>
+            <header style="border-top: 2px solid #534f9c;">
+
+
+                <div class="row">
+
+                    <!--<div class="col-sm-3" style="height: 20px;">-->
+                        <!--<div class="image-block">-->
+                            <!--<h1>-->
+                                <!--<a class="logo_marca"-->
+                                   <!--style="background: url({% static 'img/concilia.png' %}) no-repeat center 18px #fff; margin-top: 34px;" href="{% url 'index' %}">-->
+                                    <!--Concilia BR 381</a>-->
+                            <!--</h1>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <div class="columns small-12 medium-3 large-3 hide-for-medium-down">
+                        <!--<h1><a href="#">Concilia BR381</a></h1>-->
+                        <div class="image-block">
+                            <h1>
+                                <a class="logo_marca"
+                                   style="background: url({% static 'img/concilia.png' %}) no-repeat center 18px #fff; margin-top: 34px;" href="{% url 'index' %}">
+                                    Concilia BR 381</a>
+                            </h1>
+                        </div>
+                    </div>
+
+
+
                 </div>
-                <div class="col-sm-10">
-                    <p>PARCEIROS:</p>
-                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                        <img src="{% static 'img/parceiros/urbel.png' %}" alt="dnit.gov.br" width="170px" />
-                    </a>
-                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                        <img src="{% static 'img/parceiros/prefeitura_bh.png' %}" alt="dnit.gov.br" width="170px" />
-                    </a>
-                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                        <img src="{% static 'img/parceiros/dpu.png' %}" alt="dnit.gov.br" width="140px" />
-                    </a>
-                    <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                        <img src="{% static 'img/parceiros/mpf.png' %}" alt="dnit.gov.br" width="140px" />
-                    </a>
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-sm-12">
-                    <p>REALIZAÇÃO:</p>
-                    <div style="margin-top: -50px;">
-                        <a class="image_spacing" href="http://www.dnit.gov.br/" title="Dnit">
-                            <img class="image_realizacao" src="{% static 'img/parceiros/dnit_mtpa.png' %}" alt="dnit.gov.br" />
-                        </a>
-                        <a class="image_spacing" href="http://www.cjf.jus.br" title="Justiça Federal">
-                            <img class="image_realizacao" src="{% static 'img/parceiros/jf.png' %}" alt="www.cjf.jus.br" />
-                        </a>
-                        <a class="image_spacing" href="http://www.brasil.gov.br" title="Governo Federal">
-                            <img class="image_realizacao" src="{% static 'img/parceiros/gov.png' %}" alt="www.brasil.gov.br" style="margin-bottom: 35px;" />
-                        </a>
+            </header>
+
+            <div class="content">
+                {% block content %}{% endblock %}
+
+                <footer>
+                    <div class="row">
+                        <div class="columns small-12">
+                            <p>Apoio:</p>
+                            <div class="col-sm-2">
+                                <a href="#" title="Dnit">
+                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/apoio_cmar.png' %}" alt="dnit.gov.br"/>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="" href="" title="">
+                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/urbel.png' %}" alt="dnit.gov.br" />
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+
+                                <a class="" href="#" title="">
+                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/prefeitura_bh.png' %}" alt="dnit.gov.br" />
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="" href="#" title="">
+                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dpu.png' %}" alt="dnit.gov.br"/>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="" href="#" title="">
+                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/mpf.png' %}" alt="dnit.gov.br"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="columns small-12">
+                            <p>Realização:</p>
+                            <div class="col-sm-4">
+                                    <a class="" href="http://www.dnit.gov.br/" title="Dnit">
+                                        <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dnit_mtpa.png' %}" alt="dnit.gov.br" />
+                                    </a>
+                             </div>
+                            <div class="col-sm-4">
+                                    <a class="" href="http://www.cjf.jus.br" title="Justiça Federal">
+                                        <img class="footer-image img-responsive" src="{% static 'img/logomarcas/jf.png' %}" alt="www.cjf.jus.br" />
+                                    </a>
+                             </div>
+                            <div class="col-sm-4">
+                                    <a class="" href="http://www.brasil.gov.br" title="Governo Federal">
+                                        <img class="footer-image img-responsive" src="{% static 'img/logomarcas/gov.png' %}" alt="www.brasil.gov.br" />
+                                    </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <div class="rodape_end_background">
+                    <div class="row" style="color: white; text-align: center;">
+                        <p style="color: white; margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR 381 e Anel</p>
                     </div>
                 </div>
             </div>
-        </footer>
-        <div class="rodape_end_background">
-            <div class="row" style="color: white; text-align: center;">
-                <p style="color: white; margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR 381 e Anel</p>
-            </div>
         </div>
+
     </div>
+
     <!-- Bibliotecas requeridas pelo sistema -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{% static 'js/jquery.timelinr-0.9.6.js' %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk">
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/gmap3.min.js' %}"></script>
+        < script src = "{% static 'js/gmap3.min.js' %}" >
+    </script>
     <script src="{% static 'js/gmap3.infobox.js' %}"></script>
     <script src="{% static 'js/foundation.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 
+    <!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+
 </body>
+
 </html>
