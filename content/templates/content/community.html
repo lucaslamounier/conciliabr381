@@ -7,8 +7,8 @@
 {% include "_menu_interno.html" %}
 
 <div class="row">
-      <article class="center-text">
-            <h1><strong>Comunidades</strong></h1>
+      <article>
+            <h1><strong>Comunidades: etapa 2017</strong></h1>
       </article>
 </div>
 <section id="big-map" class="margin-50 hide-for-small">
@@ -24,6 +24,23 @@
     </div>
 </div>
 </section>
+
+<div class="top-border-gray hide-for-medium-down"></div>
+
+ <div class="row">
+     {% for comunidade in comunidades  %}
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Conjunto-Mariquinhas-500x281.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>{{comunidade}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+ </div>
     <script>
 
         var mapDiv,
