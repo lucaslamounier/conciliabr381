@@ -1435,3 +1435,67 @@ body .primary-button {
         min-height: 70px;
     }
 }
+
+
+/* Carousel */
+.banner-img {
+    /*max-width: 750px;*/
+    width: 100%;
+    max-width: 100%;
+}
+
+#tile_banner_rotativo.chamada_com_foto .banner {
+    width: 100%;
+}
+
+
+#tile_banner_rotativo .title {
+    display: block;
+    margin: 0.450em 0 0.450em 0;
+    color: #172938;
+    font-weight: bold;
+    font-size: 2.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+}
+
+#tile_banner_rotativo .banner .faixa {
+    position: relative;
+    margin-top: -21px;
+    max-width: 100%;
+    width: 100%;
+    height: 20px;
+    border-radius: 0 0 5px 5px;
+    background: url('../img/shadow-50.png') repeat top left;
+    color: #fff;
+    float: left;
+}
+
+#tile_banner_rotativo .banner .descr {
+    display: block;
+    color: #172938;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#tile_banner_rotativo li .credito {
+    display: block;
+    color: #172938;
+    text-align: right;
+    font-style: italic;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2em;
+}
+
+
+/* End Carousel */
+
+.tile .tile-subtitle {
+    margin-bottom: 0.7em !important;
+    color: #2c67cd;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.4em;
+}
