@@ -23,6 +23,26 @@ class Album(models.Model):
         return self.name
 
 
+''' Modelo para fotos '''
+class Photo(models.Model):
+    title = models.CharField('Título', max_length=300)
+    legend = models.TextField('Legenda', blank=True, null=True)
+    date_created = models.DateTimeField('Criado em', auto_now_add=True)
+    date_modified = models.DateTimeField('Modificado em', auto_now=True)
+    image = models.ImageField(upload_to='fotos/%Y/%m')
+    album = models.ForeignKey(Album, verbose_name='Album', related_name='fotos')
+    photographer = models.CharField('Nome do Fotografo', max_length=200, null=True, blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Foto'
+        verbose_name_plural = 'Fotos'
+        ordering = ['title']
+
+    def __str__(self):
+        return self.title
+
+
 ''' Modelo para noticias '''
 class Noticia(models.Model):
     title = models.CharField('Título', max_length=500)
@@ -53,25 +73,17 @@ class Noticia(models.Model):
     def get_absolute_url(self):
         return reverse('content:noticia', kwargs={'pk': self.pk})
 
+    def has_image(self):
+        if self.image and self.image.size > 0:
+            return True
+        else:
+            return False
 
-''' Modelo para fotos '''
-class Photo(models.Model):
-    title = models.CharField('Título', max_length=300)
-    legend = models.TextField('Legenda', blank=True, null=True)
-    date_created = models.DateTimeField('Criado em', auto_now_add=True)
-    date_modified = models.DateTimeField('Modificado em', auto_now=True)
-    image = models.ImageField(upload_to='fotos/%Y/%m')
-    album = models.ForeignKey(Album, verbose_name='Album', related_name='fotos')
-    photographer = models.CharField('Nome do Fotografo', max_length=200, null=True, blank=True)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
-
-    class Meta:
-        verbose_name = 'Foto'
-        verbose_name_plural = 'Fotos'
-        ordering = ['title']
-
-    def __str__(self):
-        return self.title
+    def has_album(self):
+        if self.album:
+            return True
+        else:
+            return False
 
 
 ''' Modelo para comunidades '''

@@ -10,7 +10,7 @@ class NewsListView(generic.ListView):
     #model = Noticia
     template_name = 'content/news.html'
     context_object_name = 'noticias'
-    paginate_by = 6
+    paginate_by = 8
 
     def get_queryset(self):
         return Noticia.objects.all().order_by('-published_at')

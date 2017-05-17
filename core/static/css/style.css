@@ -1444,6 +1444,10 @@ body .primary-button {
     max-width: 100%;
 }
 
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
 #tile_banner_rotativo.chamada_com_foto .banner {
     width: 100%;
 }

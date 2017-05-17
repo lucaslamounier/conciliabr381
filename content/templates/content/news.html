@@ -19,6 +19,16 @@
 {% endfor %}
 </div>
 
+<script>
+    $('.owl-carousel-noticia').owlCarousel({
+         margin:10,
+        loop:true,
+        width: '60px',
+        items:1,
+        nav: false,
+    });
+</script>
+
 {% pagination request paginator page_obj %}
 
 {% endblock %}

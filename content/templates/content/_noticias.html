@@ -1,21 +1,34 @@
- <div class="col-md-4">
-        <div class="news-box">
+ {% if noticia %}
+<div class="columns small-12 margin-bottom-50">
+        <div>
             <h3>
-                <a href="#" style="color: #312d2d;">
+                 <a href="{% url 'content:noticia' noticia.pk %}" style="color: #312d2d;">
                     {{noticia}}
                 </a>
             </h3>
-            <h4 class="subheader">
+            <h6 class="subheader">
+                {{noticia.sub_title}}
+                <br />
                 <small>
                     <i class="fi-clock"></i>
                         Postado em {{noticia.published_at}} por {{noticia.author}}
                 </small>
-            </h4>
-            <article>
-                <p>{{noticia.sub_title}} […]</p>
+            </h6>
+            {% if noticia.has_image and not noticia.has_album %}
+                <a href="{% url 'content:noticia' noticia.pk %}">
+                    <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail banner-img" alt="{{noticia}}">
+                </a>
+            {% endif %}
+            <section>
+                <p>
+                    {{noticia.text|truncatechars_html:270|safe }}
+                </p>
+            </section>
+            <section>
                 <p class="text-right">
                     <a href="{% url 'content:noticia' noticia.pk %}" class="">Continue lendo →</a>
                 </p>
-            </article>
+            </section>
         </div>
  </div>
+ {% endif %}

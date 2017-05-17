@@ -4,6 +4,11 @@ from tinymce.widgets import TinyMCE
 from django.core.urlresolvers import reverse
 
 
+class PropertyImageInline(admin.StackedInline):
+    model = Photo
+    extra = 1
+
+
 class NoticiaAdmin(admin.ModelAdmin):
 
     list_display = ['title', 'sub_title', 'author', 'created_at', 'updated_at']
@@ -32,6 +37,7 @@ class AlbumAdmin(admin.ModelAdmin):
 
     list_display = ['name', 'author', 'date_created']
     search_fields = ['name']
+    inlines = [PropertyImageInline, ]
 
     def save_model(self, request, obj, form, change):
         obj.slug = obj.name
@@ -54,4 +60,3 @@ class PhotoAdmin(admin.ModelAdmin):
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Album, AlbumAdmin)
-admin.site.register(Photo, PhotoAdmin)
