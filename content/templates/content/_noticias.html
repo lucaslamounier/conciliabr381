@@ -14,10 +14,10 @@
                         Postado em {{noticia.published_at}} por {{noticia.author}}
                 </small>
             </h6>
-            {% if noticia.has_image and not noticia.has_album %}
-                <a href="{% url 'content:noticia' noticia.pk %}">
-                    <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail banner-img" alt="{{noticia}}">
-                </a>
+            {% if noticia.has_image %}
+               <a href="{% url 'content:noticia' noticia.pk %}">
+                   <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail banner-img" alt="{{noticia}}">
+               </a>
             {% endif %}
             <section>
                 <p>

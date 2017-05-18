@@ -3,13 +3,17 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, ListView
+from content.models import Noticia
+from django.db.models import Q
 
 User = get_user_model()
 
 
 # Página inicial
-class IndexView(TemplateView):
+class IndexView(ListView):
+    context_object_name = 'noticias_destaque'
+    queryset = Noticia.objects.filter(~Q(image='')).order_by('-published_at')[0:4]
     template_name = 'index.html'
 
 

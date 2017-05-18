@@ -1222,20 +1222,16 @@ body .primary-button {
 }
 .logo_marca {
     /* width: 167px; */
-
     height: 243px;
-    /* text-indent: -9999px; */
+    text-indent: -9999px;
     /* position: absolute; */
-    /* z-index: 9999; */
+    z-index: 9999;
     /* display: block !important; */
     /* color: #28b293; */
-
-    background-size: 164px 217px !important;
+    background-size: 185px 235px !important;
     /* margin: 90px; */
-
     width: 100%;
     /* border: 3px solid green; */
-
     padding: 0px;
 }
 
@@ -1431,8 +1427,9 @@ body .primary-button {
     }
 
     .footer-image{
-        width: 90%;
+        width: 70%;
         min-height: 70px;
+        margin: auto;
     }
 }
 

@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 admin.site.site_title = "Concilia BR 381"
 admin.site.site_header = "Concilia BR 381"
-admin.site.index_title = 'Painel administrador do site'
+admin.site.index_title = 'Painel administrativo do site'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),

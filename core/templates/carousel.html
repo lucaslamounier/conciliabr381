@@ -17,38 +17,18 @@
 <div class="row">
     <div class="columns small-12">
         <div class="owl-carousel owl-theme" id="tile_banner_rotativo">
-            <div class="item">
-                <a href="http://www.cgu.gov.br/destaques-rotativos/governo-federal-celebra-cinco-anos-da-lei-de-acesso-a-informacao/view" class="banner">
-                    <span class="credito"></span>
-                    <img class="banner-img" src="http://www.cgu.gov.br/destaques-rotativos/governo-federal-celebra-cinco-anos-da-lei-de-acesso-a-informacao/@@images/9912de46-d3e1-44bd-83cf-ca0f787e8101.png" alt="Governo Federal celebra cinco anos da Lei de Acesso à Informação"><span class="faixa"></span>
-                    <span class="title">Governo Federal celebra cinco anos da Lei de Acesso à Informação</span>
-                    <span class="descr">Redes sociais do Ministério da Transparência vão utilizar a hashtag #5anosLAI em posts e peças especiais</span>
-                </a>
-            </div>
-            <div class="item">
-                <a href="http://www.cgu.gov.br/destaques-rotativos/destaques-na-midia-artigo-201cesperanca-no-brasil201d/view" class="banner">
-                    <span class="credito"></span>
-                    <img class="banner-img" src="http://www.cgu.gov.br/destaques-rotativos/destaques-na-midia-artigo-201cesperanca-no-brasil201d/@@images/79f12007-2d15-4f89-a064-0d867cdac78a.png" alt="Destaques na Mídia: Artigo “Esperança no Brasil”, de Adam Kaufmann"><span class="faixa"></span>
-                    <span class="title">Destaques na Mídia: Artigo “Esperança no Brasil”, de Adam Kaufmann</span>
-                    <span class="descr">Autor fala sobre a importância dos acordos de leniência para o país e o papel da CGU na celebração deles</span>
-                </a>
-            </div>
-            <div class="item">
-                <a href="http://www.cgu.gov.br/destaques-rotativos/lei-de-acesso-a-informacao-avanca-em-estados-e-municipios-brasileiros-2/view" class="banner">
-                    <span class="credito"></span>
-                    <img class="banner-img" src="http://www.cgu.gov.br/destaques-rotativos/lei-de-acesso-a-informacao-avanca-em-estados-e-municipios-brasileiros-2/@@images/01eb08a6-8a78-4f9c-b17c-f297ac88b1ca.png" alt="Lei de Acesso à Informação avança em estados e municípios brasileiros"><span class="faixa"></span>
-                    <span class="title">Lei de Acesso à Informação avança em estados e municípios brasileiros</span>
-                    <span class="descr">Avaliação do Ministério da Transparência aponta que 24 estados e o DF obtiveram nota acima de 8. Já entre as capitais, 74% apresentaram resultado igual ou superior a 7</span>
-                </a>
-            </div>
-            <div class="item">
-                <a href="http://www.cgu.gov.br/destaques-rotativos/minas-gerais-celebra-acordo-de-cooperacao-com-a-secretaria-de-fazenda-do-estado/view" class="banner">
-                    <span class="credito"></span>
-                    <img class="banner-img" src="http://www.cgu.gov.br/destaques-rotativos/minas-gerais-celebra-acordo-de-cooperacao-com-a-secretaria-de-fazenda-do-estado/@@images/f81a88cc-695f-4ad1-8658-83236dc410a1.png" alt="CGU celebra acordo de cooperação com a Secretaria de Fazenda de Minas Gerais"><span class="faixa"></span>
-                    <span class="title">CGU celebra acordo de cooperação com a Secretaria de Fazenda de Minas Gerais</span>
-                    <span class="descr">Parceria busca trabalho conjunto entre órgãos no combate à corrupção e aumento da transparência pública</span>
-                </a>
-            </div>
+
+            {% for noticia in noticias_destaque %}
+                <div class="item">
+                    <a href="{% url 'content:noticia' noticia.pk %}" class="banner">
+                        <span class="credito"></span>
+                        <img class="banner-img" src="{{noticia.image.url}}" alt="{{noticia.title}}"><span class="faixa"></span>
+                        <span class="title">{{noticia.title}}</span>
+                        <span class="descr">{{noticia.sub_title}}</span>
+                    </a>
+                </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>
