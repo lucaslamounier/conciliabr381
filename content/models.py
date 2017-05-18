@@ -1,15 +1,17 @@
-# coding=utf-8
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 from django.db import models
 from tinymce.models import HTMLField
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from builtins import str
 
 
 ''' Modelo para albuns '''
 class Album(models.Model):
-    name = models.CharField('Título do album', max_length=300)
+    name = models.CharField(u'Título do album', max_length=300)
     slug = models.SlugField(editable=False)
-    description = models.CharField('Descrição do album', max_length=300, null=True, blank=True)
+    description = models.CharField(u'Descrição do album', max_length=300, null=True, blank=True)
     date_created = models.DateTimeField('Criado em', auto_now_add=True)
     date_modified = models.DateTimeField('Modificado em', auto_now=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
@@ -25,7 +27,7 @@ class Album(models.Model):
 
 ''' Modelo para fotos '''
 class Photo(models.Model):
-    title = models.CharField('Título', max_length=300)
+    title = models.CharField(u'Título', max_length=300)
     legend = models.TextField('Legenda', blank=True, null=True)
     date_created = models.DateTimeField('Criado em', auto_now_add=True)
     date_modified = models.DateTimeField('Modificado em', auto_now=True)
@@ -45,11 +47,11 @@ class Photo(models.Model):
 
 ''' Modelo para noticias '''
 class Noticia(models.Model):
-    title = models.CharField('Título', max_length=500)
-    sub_title = models.CharField('Subtítulo', max_length=500)
+    title = models.CharField(u'Título', max_length=500)
+    sub_title = models.CharField(u'Subtítulo', max_length=500)
     text = HTMLField(verbose_name='texto')
-    published_at = models.DateTimeField('Data de publicação', null=True)
-    expired_at = models.DateTimeField('Data de expiração da notícia', null=True, blank=True)
+    published_at = models.DateTimeField(u'Data de publicação', null=True)
+    expired_at = models.DateTimeField(u'Data de expiração da notícia', null=True, blank=True)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
     image = models.ImageField(
@@ -59,12 +61,12 @@ class Noticia(models.Model):
     legend_image = models.CharField('Legenda da imagem', max_length=200, null=True, blank=True)
     tag = models.CharField('Tags para facilitar a busca no site', max_length=100, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
-    notice_origin = models.CharField('Fonte da notícia', max_length=200, null=True, blank=True)
+    notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
     album = models.ForeignKey(Album, verbose_name='Album de Fotos', related_name='album_noticia', blank=True, null=True)
 
     class Meta:
-        verbose_name = 'Notícia'
-        verbose_name_plural = 'Notícias'
+        verbose_name = u'Notícia'
+        verbose_name_plural = u'Notícias'
         ordering = ['title']
 
     def __str__(self):
