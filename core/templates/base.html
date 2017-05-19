@@ -27,6 +27,8 @@
     <div class="off-canvas-wrap" data-offcanvas>
         <div class="inner-wrap">
 
+             <!-- Menu responsivo -->
+
             <div class="top-border hide-for-medium-down"></div>
             <nav class="tab-bar show-for-medium-down" data-topbar>
 
@@ -45,9 +47,7 @@
                 </section>
 
             </nav>
-
             <aside class="left-off-canvas-menu">
-
                 <ul class="off-canvas-list">
                     <li>
                         <label>Concilia BR 381</label>
@@ -150,84 +150,81 @@
                 </ul>
 
             </aside>
-            <header style="border-top: 2px solid #534f9c;">
 
-                <div class="row">
-                    <div class="columns small-12 medium-3 large-3 hide-for-medium-down">
-                        <div class="image-block">
-                            <h1>
-                                <a class="logo_marca"
-                                   style="background: url({% static 'img/concilia.png' %}) no-repeat center 0px #fff; margin-top: 0px;" href="{% url 'index' %}">
-                                    Concilia BR 381</a>
-                            </h1>
-                        </div>
-                    </div>
+             <!-- Menu -->
 
-                </div>
-            </header>
+            {% include "_menu.html" %}
 
-            <div class="content">
+            <!-- Conteúdos da página -->
+
+
+            <!--<div class="container-fluid">-->
+             <div>
+                <button onclick="topFunction()" id="BtnTopo" title="Ir para o topo">Topo</button>
                 {% block content %}{% endblock %}
 
-                <footer>
-                    <div class="row">
-                        <div class="columns small-12">
-                            <p>Apoio:</p>
-                            <div class="col-sm-2">
-                                <a href="http://comunidadecmar.blogspot.com.br" target="_blank" title="CMAR">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/apoio_cmar.png' %}" alt="CMAR" />
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
-                                <a class="" href="http://portalpbh.pbh.gov.br/pbh/ecp/comunidade.do?app=urbel" target="_blank" title="URBEL">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/urbel.png' %}" alt="URBEL" />
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
+            </div>
 
-                                <a class="" href="https://prefeitura.pbh.gov.br" target="_blank" title="Prefeitura de Belo Horizonte">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/prefeitura_bh.png' %}" alt="Prefeitura Municipal de Belo Horizonte" />
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
-                                <a class="" href="http://www.dpu.gov.br" target="_blank" title="Defensoria Pública da União">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dpu.png' %}" alt="Defensoria Pública da União" />
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
-                                <a class="" href="http://www.mpf.mp.br" target="_blank" title="Ministério Público Federal">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/mpf.png' %}" alt="Ministério Público Federal" />
-                                </a>
-                            </div>
+            <!-- Rodapé -->
+
+            <footer>
+                <div class="row">
+                    <div class="columns small-12">
+                        <p>Apoio:</p>
+                        <div class="col-sm-2">
+                            <a href="http://comunidadecmar.blogspot.com.br" target="_blank" title="CMAR">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/apoio_cmar.png' %}" alt="CMAR" />
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="" href="http://portalpbh.pbh.gov.br/pbh/ecp/comunidade.do?app=urbel" target="_blank" title="URBEL">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/urbel.png' %}" alt="URBEL" />
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <a class="" href="https://prefeitura.pbh.gov.br" target="_blank" title="Prefeitura de Belo Horizonte">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/prefeitura_bh.png' %}" alt="Prefeitura Municipal de Belo Horizonte" />
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="" href="http://www.dpu.gov.br" target="_blank" title="Defensoria Pública da União">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dpu.png' %}" alt="Defensoria Pública da União" />
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="" href="http://www.mpf.mp.br" target="_blank" title="Ministério Público Federal">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/mpf.png' %}" alt="Ministério Público Federal" />
+                            </a>
                         </div>
                     </div>
-                    <br />
-                    <div class="row">
-                        <div class="columns small-12">
-                            <p>Realização:</p>
-                            <div class="col-sm-4">
-                                <a class="" href="http://www.dnit.gov.br" target="_blank" title="DNIT - Departamento Nacional de Infraestrutura de Transporte">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dnit_mtpa.png' %}" alt="dnit.gov.br" style="width: 100%;" />
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a class="" href="http://www.cjf.jus.br" target="_blank" title="Justiça Federal">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/jf.png' %}" alt="www.cjf.jus.br" style="width: 100%;"/>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a class="" href="http://www.brasil.gov.br" target="_blank" title="Governo Federal">
-                                    <img class="footer-image img-responsive" src="{% static 'img/logomarcas/gov.png' %}" alt="www.brasil.gov.br" style="width: 100%;"/>
-                                </a>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="columns small-12">
+                        <p>Realização:</p>
+                        <div class="col-sm-4">
+                            <a class="" href="http://www.dnit.gov.br" target="_blank" title="DNIT - Departamento Nacional de Infraestrutura de Transporte">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/dnit_mtpa.png' %}" alt="dnit.gov.br" style="width: 100%;" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a class="" href="http://www.cjf.jus.br" target="_blank" title="Justiça Federal">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/jf.png' %}" alt="www.cjf.jus.br" style="width: 100%;" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a class="" href="http://www.brasil.gov.br" target="_blank" title="Governo Federal">
+                                <img class="footer-image img-responsive" src="{% static 'img/logomarcas/gov.png' %}" alt="www.brasil.gov.br" style="width: 100%;" />
+                            </a>
 
-                            </div>
                         </div>
                     </div>
-                </footer>
-                <div class="rodape_end_background">
-                    <div class="row" style="color: white; text-align: center;">
-                        <p style="color: white; margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR 381 e Anel</p>
-                    </div>
+                </div>
+            </footer>
+            <div class="rodape_end_background">
+                <div class="row" style="color: white; text-align: center;">
+                    <p style="color: white; margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR 381 e Anel</p>
                 </div>
             </div>
         </div>
@@ -242,6 +239,24 @@
     <script src="{% static 'js/gmap3.min.js' %}"></script>
     <script src="{% static 'js/foundation.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("BtnTopo").style.display = "block";
+            } else {
+                document.getElementById("BtnTopo").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>
