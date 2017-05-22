@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from django.db import models
 from tinymce.models import HTMLField
@@ -7,8 +6,10 @@ from django.core.urlresolvers import reverse
 from builtins import str
 
 
-''' Modelo para albuns '''
 class Album(models.Model):
+
+    ''' Modelo para albuns '''
+
     name = models.CharField(u'Título do album', max_length=300)
     slug = models.SlugField(editable=False)
     description = models.CharField(u'Descrição do album', max_length=300, null=True, blank=True)
@@ -25,8 +26,10 @@ class Album(models.Model):
         return self.name
 
 
-''' Modelo para fotos '''
 class Photo(models.Model):
+
+    ''' Modelo para fotos '''
+
     title = models.CharField(u'Título', max_length=300)
     legend = models.TextField('Legenda', blank=True, null=True)
     date_created = models.DateTimeField('Criado em', auto_now_add=True)
@@ -45,8 +48,10 @@ class Photo(models.Model):
         return self.title
 
 
-''' Modelo para noticias '''
 class Noticia(models.Model):
+
+    ''' Modelo para noticias '''
+
     title = models.CharField(u'Título', max_length=500)
     sub_title = models.CharField(u'Subtítulo', max_length=500)
     text = HTMLField(verbose_name='texto')
@@ -76,20 +81,29 @@ class Noticia(models.Model):
         return reverse('content:noticia', kwargs={'pk': self.pk})
 
     def has_image(self):
-        if self.image and self.image.size > 0:
-            return True
-        else:
+        try:
+            if self.image and self.image.size > 0:
+                return True
+            else:
+                return False
+        except Exception as err:
+            print(u"Não foi possivel verificar o arquivo: ", err)
             return False
 
     def has_album(self):
-        if self.album:
-            return True
-        else:
+        try:
+            if self.album:
+                return True
+            else:
+                return False
+        except Exception as err:
+            print(u"Não foi possivel verificar o arquivo: ", err)
             return False
 
 
-''' Modelo para comunidades '''
 class Comunidade(models.Model):
+
+    ''' Modelo para comunidades '''
 
     title = models.CharField('Nome da Vila ou Comunidade', max_length=500)
     about = HTMLField(verbose_name='Sobre')
@@ -109,5 +123,15 @@ class Comunidade(models.Model):
 
     def get_absolute_url(self):
         return reverse('content:comunidade', kwargs={'pk': self.pk})
+
+    def has_album(self):
+        try:
+            if self.album:
+                return True
+            else:
+                return False
+        except Exception as err:
+            print(u"Não foi possivel verificar o arquivo: ", err)
+            return False
 
 
