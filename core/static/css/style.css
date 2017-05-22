@@ -1102,7 +1102,7 @@ footer .social-network.gplus > a {
     width: 260px;
     height: 267px;
     position: absolute;
-    z-index: 9999;
+   /** z-index: 9999; */
     display: inline-block;
     background-color: white;
 }
@@ -1220,7 +1220,7 @@ body .primary-button {
 .logo_marca {
     height: 243px;
     text-indent: -9999px;
-    z-index: 9999;
+   /** z-index: 9999; */
     background-size: 195px 240px !important;
     width: 100%;
     padding: 0px;
