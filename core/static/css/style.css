@@ -190,7 +190,7 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #534f9c;
+    color: #ffbb00;
 }
 h3 {
     font-weight: normal
@@ -201,8 +201,8 @@ p {
     color: black;
 }
 .top-border {
-    background: #534f9c;
-    height: 2px
+    background: #ffbb00;
+    height: 3px;
 }
 .top-border-gray {
     background: rgb(244, 244, 244);
@@ -302,6 +302,15 @@ div.bxslider1 > div {
 }
 /* MAIN MENU */
 
+.clean{
+    padding-top: 10px;
+    /* padding-bottom: 100px; */
+    margin-bottom: 290px;
+    margin-top: 290px;
+}
+
+
+
 .main-ul-nav ul {
     margin: 0;
     padding: 0;
@@ -313,7 +322,7 @@ div.bxslider1 > div {
 }
 .main-ul-nav ul li a {
     box-shadow: 0 -4px 0 #FFFFFF inset;
-    color: #534f9c;
+    color: #ffbb00;
     display: block;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.2rem;
@@ -338,7 +347,7 @@ div.bxslider1 > div {
 }
 .main-ul-nav ul li.current-menu-item a,
 .main-ul-nav ul li:hover a {
-    box-shadow: 0 -4px 0 #5d6fae inset;
+    box-shadow: 0 -4px 0 #ffbb00 inset;
 }
 .single-comunidade .main-ul-nav ul li.menu-item-18 a {
     box-shadow: 0 -4px 0 #5d6fae inset !important;
@@ -565,8 +574,8 @@ article p {
     border-color: #28b293
 }
 .comunity-data h4.purple {
-    color: #534f9c;
-    border-color: #534f9c
+    color: #ffbb00;
+    border-color: #ffbb00
 }
 .comunity-data p {
     font-size: 0.8em;
@@ -996,7 +1005,7 @@ footer .social-network.gplus > a {
 }
 .menu-english-menu-container ul li a {
     box-shadow: 0 -4px 0 #FFFFFF inset;
-    color: #534f9c;
+    color: #ffbb00;
     display: block;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.2rem;
@@ -1116,9 +1125,8 @@ footer .social-network.gplus > a {
 
 .image-block {
     width: 260px;
-    height: 267px;
+    height: 268px;
     position: absolute;
-   /** z-index: 9999; */
     display: inline-block;
     background-color: white;
     margin-top: 56px;
@@ -1164,23 +1172,54 @@ footer .social-network.gplus > a {
 }
 
 .button-index {
-    /* background-color: #4CAF50; */
-    border: 1px solid black;
-    color: black;
+    border: 3px solid white;
+    color: white;
     padding: 15px 32px;
     /* text-align: center; */
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 30px;
     /* margin: 4px 2px; */
     cursor: pointer;
-    margin-top: 40px
+    margin-top: 40px;
+    font-weight: bold;
 }
 
 .index-button-background {
     background-color: rgba(0, 0, 255, 0.08);
-    height: 130px;
+    height: 165px;
     text-align: center;
+}
+
+.button-background381 {
+    background-image: url(../img/background-images/trecho381.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-size: 100% auto;
+}
+
+
+.button-background-comunidades {
+    background-image: url(../img/background-images/vila_pica_pau.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-size: 100% auto;
+}
+
+.button-background-programa {
+    background-image: url(../img/background-images/br381_gov_valadares.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-size: 100% auto;
+}
+
+
+a.button-index:hover {
+    color: #ffbb00;
+    text-decoration: none;
 }
 
 .text-font-17 {
@@ -1587,15 +1626,34 @@ body .primary-button {
 
     background-image: url("../img/background-images/bom_destino.jpg");
     min-height: 500px;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5;
 }
 
- /* Create the parallax scrolling effect */
+.button-parallax {
+    background-color: transparent;
+    border: 3px solid #f3f0f0;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    /* font-size: 30px; */
+    cursor: pointer;
+    margin-top: 164px;
+    width: 450px;
+    height: 111px;
+    border-radius: 0px;
+    margin-left: 40%;
+    color: white;
+}
+
+/* mouse over link */
+a.button-parallax:hover {
+    color: #ffbb00;
+    text-decoration: none;
+}
 
 
 #BtnTopo {
