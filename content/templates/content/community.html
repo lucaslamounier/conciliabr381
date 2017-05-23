@@ -11,35 +11,40 @@
       </article>
 </div>
 <section id="big-map" class="margin-50 hide-for-small">
-<div id="flatads-main-map"></div>
+    <div id="flatads-main-map"></div>
 
-<div class="community-infor">
-    <div class="columns small-10">
-        <p>As vaias são uma tática do Reinaldo Azevedo para ameaçar as conquistas do trabalhadores!</p>
-        <p>O panelaço é uma manobra da direita fascista para destituir a presidência da república!</p>
-        <p>O sítio de Atibaia é um complô do capitalismo selvagem para ameaçar a presidenta!</p>
-        <p>O panelaço é uma ação dos coxinhas para subverter a Constituição!</p>
-        <p>O panelaço é uma estratégia da Rede Globo para desmoralizar a presidência da república!</p>
+    <div class="columns small-12">
+        <h1 style="text-align: center;">Lorem Ipsum</h1>
+        <p style="text-align: center;">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem diam, semper vel orci quis, venenatis egestas erat. Phasellus molestie magna vitae feugiat lacinia. Quisque fermentum luctus lectus, vitae porta nisl fermentum non. Proin tristique nec odio finibus volutpat. Nulla at vulputate quam. In et mi iaculis, vulputate metus vel, imperdiet est. Nam sodales diam sed nulla imperdiet tristique. In a ullamcorper purus. Sed ultricies, neque vel sagittis pellentesque, ligula nunc dictum quam, eget semper metus diam vitae diam. Duis nec sem congue, laoreet sem sit amet, mollis odio. Cras feugiat tortor vel risus consectetur varius. In at euismod leo. Vestibulum a congue est.
+
+Proin lobortis diam ac sodales placerat. Vestibulum accumsan faucibus condimentum. Sed sed orci tempor, convallis est non, malesuada mauris. Sed id risus lacinia, posuere enim eget, tempus felis. Proin et urna odio. Nam mollis a lectus at ultrices. Integer lobortis tempus neque porttitor scelerisque. Aliquam lobortis placerat dictum. Ut molestie ex nibh, at efficitur lectus commodo in. Fusce blandit, ex quis fermentum semper, nibh est luctus lacus, vitae dictum nibh sapien sed ligula. Mauris ut tellus fermentum, gravida dolor non, congue turpis.
+
+Etiam laoreet porta urna vel cursus. Ut porta sit amet neque eget tincidunt. Nam interdum sed nisi vitae viverra. Cras fringilla dolor euismod fringilla suscipit. Donec eu nulla magna. Duis bibendum, augue et sodales egestas, neque orci vestibulum sem, in porta odio lectus non erat. Quisque vitae risus auctor, dictum arcu cursus, tempor quam. Sed dignissim, lectus non mattis aliquam, lorem urna venenatis lacus, efficitur maximus dolor magna et velit. Praesent blandit nec metus vitae dapibus. Maecenas euismod vitae magna et viverra. Fusce et metus nec libero rutrum rutrum. Praesent porttitor elit non quam pharetra, in luctus sapien finibus. Fusce non ultricies eros. Maecenas facilisis leo quam, nec posuere libero facilisis eu. Suspendisse fringilla malesuada elementum. Aliquam cursus tempor pulvinar.
+
+Proin auctor ex ut ante malesuada blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam convallis enim dolor, id condimentum eros porttitor at. Pellentesque ut vestibulum nisi. Aenean nisi eros, auctor quis enim nec, auctor mattis eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nunc nisi, condimentum eu odio sit amet, auctor vehicula nisl.
+
+Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis ante. Ut viverra magna a urna tincidunt, et fringilla mi egestas. In ligula velit, fermentum quis nulla ut, eleifend suscipit lacus. Morbi non felis placerat, aliquet quam et, pulvinar nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam at felis accumsan, suscipit libero consequat, pretium arcu. Aliquam consectetur leo ut facilisis eleifend. In hac habitasse platea dictumst. Donec id ultricies eros. Aliquam eleifend lacus eget tellus molestie consectetur. Donec ut magna eros.
+    </p>
     </div>
-</div>
 </section>
 
-<div class="top-border-gray hide-for-medium-down"></div>
+<!--<div class="top-border-gray hide-for-medium-down"></div>-->
 
- <div class="row">
-     {% for comunidade in comunidades  %}
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="#" target="_blank">
-          <img src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Conjunto-Mariquinhas-500x281.jpg" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p>{{comunidade}}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    {% endfor %}
- </div>
+ <!--<div class="row">-->
+     <!--{% for comunidade in comunidades  %}-->
+    <!--<div class="col-md-4">-->
+      <!--<div class="thumbnail">-->
+        <!--<a href="#" target="_blank">-->
+          <!--<img src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Conjunto-Mariquinhas-500x281.jpg" alt="Lights" style="width:100%">-->
+          <!--<div class="caption">-->
+            <!--<p>{{comunidade}}</p>-->
+          <!--</div>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--{% endfor %}-->
+ <!--</div>-->
     <script>
 
         var mapDiv,
@@ -50,12 +55,12 @@
 
             mapDiv = jQuery("#flatads-main-map");
 
-            mapDiv.width("49%").height("500px").gmap3({
+            mapDiv.width("100%").height("500px").gmap3({
                 map:{
                     options: {
-                        center:[-19.840888,-43.885106,12],
-                        zoom: 12,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        center:[-19.869775,-43.941161,12],
+                        zoom: 18,
+                        mapTypeId: google.maps.MapTypeId.SATELLITE,
                         streetViewControl: true,
                         scrollwheel : false,
                         overviewMapControl: false,

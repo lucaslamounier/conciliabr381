@@ -1,12 +1,12 @@
 <div class="row" data-layout-type="row">
 
-    <div class="columns small-12">
+    <div>
 
         <div class="tile tile-default">
             <div>
-                <p class="tile-subtitle">Notícias em destaque</p>
-                <div class="visualClear">
-                </div>
+                <!--<p class="tile-subtitle">Notícias</p>-->
+                  <h1 class="text-header-page">Notícias</h1>
+                <div class="visualClear"></div>
 
             </div>
         </div>
@@ -15,7 +15,7 @@
 
 </div>
 <div class="row">
-    <div class="columns small-12">
+    <div >
         <div class="owl-carousel owl-theme" id="tile_banner_rotativo">
 
             {% for noticia in noticias_destaque %}
@@ -40,7 +40,7 @@
         items: 1,
         margin: 10,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true
     })
 </script>
