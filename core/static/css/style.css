@@ -1397,7 +1397,6 @@ body .primary-button {
 .logo_marca {
     height: 243px;
     text-indent: -9999px;
-   /** z-index: 9999; */
     background-size: 195px 240px !important;
     width: 100%;
     padding: 0px;
@@ -1442,6 +1441,12 @@ body .primary-button {
         font-size: 18px;
     }
 
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+
 }
 
 
@@ -1470,6 +1475,12 @@ body .primary-button {
         font-size: 18px;
     }
 
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+
 }
 @media only screen and (max-width: 767px) {
 
@@ -1495,6 +1506,13 @@ body .primary-button {
         font-size: 18px;
     }
 
+
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+
 }
 @media only screen and (max-width: 479px){
     #internal-menu, #external-menu, #big-map {
@@ -1518,6 +1536,12 @@ body .primary-button {
         margin-left: 7.5em;
         color: black;
         font-size: 18px;
+    }
+
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
     }
 }
 
