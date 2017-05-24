@@ -5,7 +5,6 @@
 {% block content %}
 
 <section class="height-800">
-    <!--<div>-->
      <h1 class="text-header-page text-align-right">Construindo um caminho melhor</h1>
     <div class="col-sm-8 text-align-right">
         <img src="{% static 'img/background-images/anel_rodoviario.png' %}"  height="500px;" width="80%" title="Anel Rodoviário e BR-381" alt="Anel Rodoviário e BR-381"/>
@@ -21,16 +20,33 @@
                     belo horizonte (cmar).
                 </p>
     </div>
-    <!--</div>-->
 </section>
 
+<!-- TIMELINE -->
+
+<section></section>
 
 <!-- PARALLAX -->
 
 <section class="parallax height-500">
     <div class="row">
         <div class="col-sm-12">
-            <p></p>
+             <div class="icons-parallax">
+                    <span class="label-icones-casas"> <span class="label-icones-casas-numero">496</span>  <br /> PROCESSOS <br /> FINALIZADOS</span>
+                    <img src="{% static 'img/icones/azul.png' %}" title="Concilia BR-381 e Anel" />
+             </div>
+            <div class="icons-parallax">
+                    <span class="label-icones-casas"><span class="label-icones-casas-numero">245</span> <br /> FAMÍLIAS <br /> REALOCADAS</span>
+                    <img src="{% static 'img/icones/amarelo.png' %}" title="Concilia BR-381 e Anel" />
+             </div>
+            <div class="icons-parallax">
+                    <span class="label-icones-casas"><span class="label-icones-casas-numero">96</span> <br /> REMOÇÕES <br /> DE RISCO</span>
+                    <img src="{% static 'img/icones/verde.png' %}" title="Concilia BR-381 e Anel" />
+             </div>
+            <div class="icons-parallax">
+                    <span class="label-icones-casas"><span class="label-icones-casas-numero">274</span> <br /> ATIVIDADES <br /> REALIZADAS</span>
+                    <img src="{% static 'img/icones/magenta.png' %}" title="Concilia BR-381 e Anel" />
+             </div>
         </div>
     </div>
 </section>
@@ -42,22 +58,40 @@
     <div class="row">
         <div class="col-sm-12">
             <span class="title-noticia">Notícias</span>
-            <a href="#" class="view-all-noticia" title="Visualizar todas as notícias">
+            <a href="{% url 'content:noticias' %}" class="view-all-noticia" title="Visualizar todas as notícias">
                 <span style="color: #0091ea;">VER TODAS</span>
             </a>
         </div>
     </div>
 
     <div class="row block-noticia-itens">
-        <div class="col-sm-4">
-             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
-        </div>
-        <div class="col-sm-4">
-             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
-        </div>
-        <div class="col-sm-4">
-             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>
-        </div>
+        {% if noticias_home_page.count > 0 %}
+            {% for noticia in noticias_home_page %}
+                <div class="col-sm-4">
+                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{noticia.title}}" style="text-decoration: none;">
+                        {% if noticia.has_image %}
+                            <picture>
+                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{noticia}}" style="width:auto;">
+                            </picture>
+                         {% endif %}
+                        <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
+                        <p> {{noticia.sub_title |truncatechars_html:100}} </p>
+                    </a>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if noticias_home_page.count == 0 %}
+                <div class="col-sm-12">
+                     <p>Nenhum registro encontrado.</p>
+                </div>
+        {% endif %}
+
+        <!--<div class="col-sm-4">-->
+             <!--<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>-->
+        <!--</div>-->
+        <!--<div class="col-sm-4">-->
+             <!--<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI</p>-->
+        <!--</div>-->
     </div>
 </section>
 
@@ -111,24 +145,16 @@
 
 
 
-<script>
-    jQuery(document).ready(function() {
+<!--<script>-->
+    <!--jQuery(document).ready(function() {-->
 
+        <!--$('#quote-carousel').carousel({-->
+            <!--pause: true,-->
+            <!--interval: 10000,-->
+        <!--});-->
 
-
-
-
-        $('#quote-carousel').carousel({
-            pause: true,
-            interval: 10000,
-        });
-
-
-
-
-
-    });
-</script>
+    <!--});-->
+<!--</script>-->
 
     <!--<script>-->
 
