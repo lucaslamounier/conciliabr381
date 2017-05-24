@@ -3,6 +3,24 @@ jQuery(document).foundation();
 // Main Menu
 jQuery('.main-ul-nav li .nav-sub-menus').not(jQuery('.nav-sub-wrap .nav-sub-menus')).wrap('<div class="nsw" />');
 
+
+ window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("BtnTopo").style.display = "block";
+            } else {
+                document.getElementById("BtnTopo").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
 jQuery('.main-ul-nav li .nav-sub-wrap .nsw').each(function(index, element) {
     if (jQuery(element).children().length === 1) {
         if (jQuery(element).children().attr('class') == 'nav-sub-menus') {
@@ -32,17 +50,6 @@ jQuery('.nav-sub-menus > ul > li > .nav-sub-menus').each(function(index, element
     jQuery(element).wrap('<div class="nsw" />');
 });
 
-/*jQuery('.main-ul-nav li').each(function(index, element) {
-    var sub_ord_i = 'icon-right-open-mini';
-    if (jQuery(element).children('.nav-sub-wrap').length > 0) {
-        if (jQuery(element).parent().parent().hasClass('main-ul-nav')) {
-            sub_ord_i = 'icon-down-open-mini';
-        } else {
-            sub_ord_i = 'fi-play';
-        }
-        jQuery(element).children('a').append('<span class="sub-ord-nav"> <i class="' + sub_ord_i + '"></i> </span>');
-    }
-});*/
 
 jQuery('.main-ul-nav li').mouseenter(function() {
     jQuery(this).find('> .nav-sub-wrap').show().animate({opacity: 1}, 130);
@@ -50,69 +57,6 @@ jQuery('.main-ul-nav li').mouseenter(function() {
     jQuery(this).find('> .nav-sub-wrap').animate({opacity: 0}, 130).hide();
 });
 
-//jQuery(function(){
-//    $.stellar({
-//        horizontalScrolling: false
-//        //verticalOffset: 140
-//    });
-//    jQuery('article.readmore').readmore({
-//        speed: 75,
-//        maxHeight: 690
-//    });
-//    jQuery('span.search').click(function(){
-//        //alert('oi!');
-//        jQuery('.search-form').slideDown('fast');
-//        jQuery('.search-form input').focus();
-//    });
-//    jQuery('.search-form a').click(function(){
-//        //alert('oi!');
-//        jQuery('.search-form').slideUp('fast');
-//    });
-//
-//    var $container = jQuery('.news-items');
-//    $container.isotope({
-//        // options
-//        itemSelector: '.columns',
-//        //layoutMode: 'masonry',
-//        layoutMode: 'fitRows'
-//    });
-//
-//    var $container = jQuery('.comunity-index-');
-//    $container.isotope({
-//        // options
-//        itemSelector: '.isotope-item',
-//        layoutMode: 'fitRows'
-//        //layoutMode: 'masonry'
-//    });
-//
-//});
-
-//$(window).load(function() {
-//    jQuery('.bxslider-home').bxSlider({
-//        adaptiveHeight: true,
-//        mode: 'fade',
-//        useCSS: false,
-//        auto: true,
-//        pager: false
-//    });
-//
-//    jQuery('.bxslider1').bxSlider({
-//        slideWidth: 360,
-//        adaptiveHeight: true,
-//        preloadImages: 'all',
-//        minSlides: 1,
-//        maxSlides: 6,
-//        slideMargin: 4
-//    });
-//
-//    jQuery('.comunity-highlight_').bxSlider({
-//        auto: true,
-//        nextSelector: '#slider-next',
-//        prevSelector: '#slider-prev',
-//        nextText: 'Onward →',
-//        prevText: '← Go back'
-//    });
-//});
 
 jQuery(function($) {
 
@@ -255,18 +199,6 @@ jQuery(function($) {
 
     }
 
-    /*
-     *  document ready
-     *
-     *  This function will render each map when the document is ready (page has loaded)
-     *
-     *  @type	function
-     *  @date	8/11/2013
-     *  @since	5.0.0
-     *
-     *  @param	n/a
-     *  @return	n/a
-     */
 
     jQuery(document).ready(function(){
 

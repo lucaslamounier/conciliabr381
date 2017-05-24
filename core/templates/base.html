@@ -4,7 +4,8 @@
 <head>
     <!-- ################################################  -->
     <!-- #                                              #  -->
-    <!-- # WEBSITE DESENVOLVIDO POR LUCASLAMOUNIER      #  -->
+    <!-- # WEBSITE DESENVOLVIDO POR @LUCASLAMOUNIER     #  -->
+    <!-- #                                              #  -->
     <!-- #                                              #  -->
     <!-- ################################################  -->
     <meta charset="utf-8">
@@ -236,30 +237,12 @@
 
     <!-- Bibliotecas requeridas pelo sistema -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/jquery.timelinr-0.9.6.js' %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk"></script>
     <script src="{% static 'js/gmap3.infobox.js' %}"></script>
     <script src="{% static 'js/gmap3.min.js' %}"></script>
     <script src="{% static 'js/foundation.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("BtnTopo").style.display = "block";
-            } else {
-                document.getElementById("BtnTopo").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
 </body>
 
 </html>
