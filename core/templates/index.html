@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<section class="height-800">
+<section class="height-800 section-initial">
      <h1 class="text-header-page text-align-right">Construindo um caminho melhor</h1>
     <div class="col-sm-8 text-align-right">
         <img src="{% static 'img/background-images/anel_rodoviario.png' %}"  height="500px;" width="80%" title="Anel Rodoviário e BR-381" alt="Anel Rodoviário e BR-381"/>
@@ -24,7 +24,11 @@
 
 <!-- TIMELINE -->
 
-<section></section>
+<section>
+
+    {% include '_timeline.html' %}
+
+</section>
 
 <!-- PARALLAX -->
 
@@ -33,19 +37,19 @@
         <div class="col-sm-12">
              <div class="icons-parallax">
                     <span class="label-icones-casas"> <span class="Count label-icones-casas-numero">496</span>  <br /> PROCESSOS <br /> FINALIZADOS</span>
-                    <img src="{% static 'img/icones/azul.png' %}" title="Concilia BR-381 e Anel" />
+                    <img src="{% static 'img/icones/azul2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
                     <span class="label-icones-casas"><span class="Count label-icones-casas-numero">245</span> <br /> FAMÍLIAS <br /> REALOCADAS</span>
-                    <img src="{% static 'img/icones/amarelo.png' %}" title="Concilia BR-381 e Anel" />
+                    <img src="{% static 'img/icones/amarelo2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
                     <span class="label-icones-casas"><span class="Count label-icones-casas-numero">96</span> <br /> REMOÇÕES <br /> DE RISCO</span>
-                    <img src="{% static 'img/icones/verde.png' %}" title="Concilia BR-381 e Anel" />
+                    <img src="{% static 'img/icones/verde2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
                     <span class="label-icones-casas"><span class="Count label-icones-casas-numero">274</span> <br /> ATIVIDADES <br /> REALIZADAS</span>
-                    <img src="{% static 'img/icones/magenta.png' %}" title="Concilia BR-381 e Anel" />
+                    <img src="{% static 'img/icones/magenta2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
         </div>
     </div>

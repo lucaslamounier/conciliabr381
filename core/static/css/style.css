@@ -1637,7 +1637,7 @@ body .primary-button {
 .icons-parallax {
     display: inline-block;
     width: 239px;
-    transform: translate(0, 75%);
+    transform: translate(0, 100%);
 }
 
 .label-icones-casas-numero {
@@ -1647,10 +1647,10 @@ body .primary-button {
 .label-rodape {
     color: black;
     font-size: 1.3em;
-    font-weight: 300;
+    font-weight: bold;
     margin: 0 0 32px 0;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: -12px;
 }
 
 .hui-highlight-title {
@@ -1661,13 +1661,18 @@ body .primary-button {
     margin-top: 10px;
 }
 
+.section-initial {
+    border-bottom: 1px solid rgba(152, 148, 148, 0.05);
+    margin-bottom: 20px;
+}
+
 .label-icones-casas {
     margin: 0;
     position: absolute;
     top: 62%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     color: white;
     text-align: center;
     font-size: 1.1em;
