@@ -1646,9 +1646,11 @@ body .primary-button {
 
 .label-rodape {
     color: black;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 300;
     margin: 0 0 32px 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .hui-highlight-title {
