@@ -1105,6 +1105,16 @@ footer .social-network.gplus > a {
 }
 /* Control buttons  */
 
+.justfy-text {
+    text-align: justify;
+}
+
+.section-partners img {
+    margin-bottom: 30px;
+    height: 80px;
+    width: auto;
+}
+
 #quote-carousel .carousel-control {
     background: none;
     color: #222;
@@ -1661,7 +1671,7 @@ body .primary-button {
     margin-top: 10px;
 }
 
-.section-initial {
+.section-border-bottom {
     border-bottom: 1px solid rgba(152, 148, 148, 0.05);
     margin-bottom: 20px;
 }
