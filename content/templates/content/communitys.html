@@ -4,6 +4,13 @@
 
 {% block content %}
 
+<!-- Carregamento dos scripts do mapa -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk"></script>
+<script src="{% static 'js/gmap3.infobox.js' %}"></script>
+<script src="{% static 'js/gmap3.min.js' %}"></script>
+
+<!-- end scripts -->
 
 <div class="row">
       <article>
@@ -29,22 +36,6 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
     </div>
 </section>
 
-<!--<div class="top-border-gray hide-for-medium-down"></div>-->
-
- <!--<div class="row">-->
-     <!--{% for comunidade in comunidades  %}-->
-    <!--<div class="col-md-4">-->
-      <!--<div class="thumbnail">-->
-        <!--<a href="#" target="_blank">-->
-          <!--<img src="http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Conjunto-Mariquinhas-500x281.jpg" alt="Lights" style="width:100%">-->
-          <!--<div class="caption">-->
-            <!--<p>{{comunidade}}</p>-->
-          <!--</div>-->
-        <!--</a>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--{% endfor %}-->
- <!--</div>-->
     <script>
 
         var mapDiv,
@@ -147,8 +138,8 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
                         {
                             latLng:[-19.840888,-43.885106],
                                 options: {
-                                    icon: "{% static 'img/marker_concilia2.png' %}",
-                                    shadow: "{% static 'img/shadow.png' %}"
+                                    icon: "{% static 'img/icones/pin.png' %}",
+                                    shadow: "{% static 'img/icones/shadow.png' %}"
                              },
                              data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=38\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Santa-Lucia\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila Pica Pau</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=38\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
                         },
@@ -156,8 +147,8 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
                         {
                             latLng:[-19.869775,-43.941161],
                                 options: {
-                                    icon: "{% static 'img/marker_concilia2.png' %}",
-                                    shadow: "{% static 'img/shadow.png' %}"
+                                    icon: "{% static 'img/icones/pin.png' %}",
+                                    shadow: "{% static 'img/icones/shadow.png' %}"
                                 },
                             data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=40\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Carapina - Governador Valadares\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Paz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=40\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
                         },
@@ -165,8 +156,8 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
                         {
                             latLng:[-19.856361,-43.893376],
                             options: {
-                                icon: "{% static 'img/marker_concilia2.png' %}",
-                                shadow: "{% static 'img/shadow.png' %}"
+                                icon: "{% static 'img/icones/pin.png' %}",
+                                shadow: "{% static 'img/icones/shadow.png' %}"
                             },
                         data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=41\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Morro-das-Pedras\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Luz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=41\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
                         },
@@ -174,8 +165,8 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
                         {
                             latLng:[-19.824345,-43.831612],
                             options: {
-                                icon: "{% static 'img/marker_concilia2.png' %}",
-                                shadow: "{% static 'img/shadow.png' %}"
+                                icon: "{% static 'img/icones/pin.png' %}",
+                                shadow: "{% static 'img/icones/shadow.png' %}"
                             },
                             data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=68\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Cidade-de-Deus-Sete-Lagoas\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila B</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=68\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
                         },

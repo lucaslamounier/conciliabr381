@@ -22,7 +22,7 @@ def noticia(request, pk):
     context = {
         'noticia': news,
     }
-    return render(request, 'content/noticia.html', context)
+    return render(request, 'content/_noticia.html', context)
 
 
 # Página de comunidade
@@ -31,12 +31,12 @@ def comunidade(request, pk):
     context = {
         'comunidade': community,
     }
-    return render(request, 'content/comunidade.html', context)
+    return render(request, 'content/_comunidade.html', context)
 
 
 # Página de comunidades
 class CommunityView(TemplateView):
-    template_name = 'content/community.html'
+    template_name = 'content/communitys.html'
 
 
 news = NewsListView.as_view()

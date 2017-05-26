@@ -150,7 +150,7 @@ TL.Util = {
 		}
 
 		_date = new Date(_date_array[0], _date_array[1], _date_array[2], _date_array[3], _date_array[4], _date_array[5]);
-		_months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+		_months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 		_year = _date.getFullYear();
 		_month = _months[_date.getMonth()];
 		_day = _date.getDate();
@@ -3887,63 +3887,54 @@ TL.Language.languages = {
         api: {
             wikipedia:          "en" // the two letter code at the beginning of the Wikipedia subdomain for this language
         },
-
 		messages: {
-              loading:                        "Carregando",
-              wikipedia:                      "Wikipédia, A enciclopédia livre",
-              error: 				          "Error",
-              contract_timeline:              "Contrair Timeline",
-              return_to_title:                "Voltar para o título",
-              loading_content:                 "Carregando Conteúdo",
-              expand_timeline:                "Expandir Timeline",
-              loading_timeline:               "Carregando Timeline... ",
-              swipe_to_navigate:              "Swipe to Navigate<br><span class='tl-button'>OK</span>",
-              unknown_read_err:               "An unexpected error occurred trying to read your spreadsheet data",
-                    invalid_url_err: 								"Unable to read Timeline data. Make sure your URL is for a Google Spreadsheet or a Timeline JSON file.",
-              network_err:                    "Unable to read your Google Spreadsheet. Make sure you have published it to the web.",
-              empty_feed_err:                 "No data entries found",
-              missing_start_date_err:         "Missing start_date",
-              invalid_data_format_err:        "Header row has been modified.",
-              date_compare_err:               "Can't compare TL.Dates on different scales",
-              invalid_scale_err:              "Invalid scale",
-              invalid_date_err:               "Invalid date: month, day and year must be numbers.",
-              invalid_separator_error:        "Invalid time: misuse of : or . as separator.",
-              invalid_hour_err:               "Invalid time (hour)",
-              invalid_minute_err:             "Invalid time (minute)",
-              invalid_second_err:             "Invalid time (second)",
-              invalid_fractional_err:         "Invalid time (fractional seconds)",
-              invalid_second_fractional_err:  "Invalid time (seconds and fractional seconds)",
-              invalid_year_err:               "Invalid year",
-              flickr_notfound_err:            "Photo not found or private",
-              flickr_invalidurl_err:          "Invalid Flickr URL",
-              imgur_invalidurl_err:           "Invalid Imgur URL",
-              twitter_invalidurl_err:         "Invalid Twitter URL",
-              twitter_load_err:               "Unable to load Tweet",
-              twitterembed_invalidurl_err:    "Invalid Twitter Embed url",
-              wikipedia_load_err:             "Unable to load Wikipedia entry",
-              youtube_invalidurl_err:         "Invalid YouTube URL",
-              spotify_invalid_url:            "Invalid Spotify URL",
-              template_value_err:             "No value provided for variable",
-              invalid_rgb_err:                "Invalid RGB argument",
-              time_scale_scale_err:           "Don't know how to get date from time for scale",
-              axis_helper_no_options_err:     "Axis helper must be configured with options",
-              axis_helper_scale_err:          "No AxisHelper available for scale",
-              invalid_integer_option:       	"Invalid option value—must be a whole number."
+			loading: 			            		  "Loading",
+			wikipedia: 			            		"From Wikipedia, the free encyclopedia",
+			error: 				            			"Error",
+      contract_timeline:              "Contract Timeline",
+      return_to_title:                "Return to Title",
+      loading_content:                "Loading Content",
+      expand_timeline:                "Expand Timeline",
+      loading_timeline:               "Loading Timeline... ",
+      swipe_to_navigate:              "Swipe to Navigate<br><span class='tl-button'>OK</span>",
+      unknown_read_err:               "An unexpected error occurred trying to read your spreadsheet data",
+			invalid_url_err: 								"Unable to read Timeline data. Make sure your URL is for a Google Spreadsheet or a Timeline JSON file.",
+      network_err:                    "Unable to read your Google Spreadsheet. Make sure you have published it to the web.",
+      empty_feed_err:                 "No data entries found",
+      missing_start_date_err:         "Missing start_date",
+      invalid_data_format_err:        "Header row has been modified.",
+      date_compare_err:               "Can't compare TL.Dates on different scales",
+      invalid_scale_err:              "Invalid scale",
+      invalid_date_err:               "Invalid date: month, day and year must be numbers.",
+      invalid_separator_error:        "Invalid time: misuse of : or . as separator.",
+      invalid_hour_err:               "Invalid time (hour)",
+      invalid_minute_err:             "Invalid time (minute)",
+      invalid_second_err:             "Invalid time (second)",
+      invalid_fractional_err:         "Invalid time (fractional seconds)",
+      invalid_second_fractional_err:  "Invalid time (seconds and fractional seconds)",
+      invalid_year_err:               "Invalid year",
+      flickr_notfound_err:            "Photo not found or private",
+      flickr_invalidurl_err:          "Invalid Flickr URL",
+      imgur_invalidurl_err:           "Invalid Imgur URL",
+      twitter_invalidurl_err:         "Invalid Twitter URL",
+      twitter_load_err:               "Unable to load Tweet",
+      twitterembed_invalidurl_err:    "Invalid Twitter Embed url",
+      wikipedia_load_err:             "Unable to load Wikipedia entry",
+      youtube_invalidurl_err:         "Invalid YouTube URL",
+      spotify_invalid_url:            "Invalid Spotify URL",
+      template_value_err:             "No value provided for variable",
+      invalid_rgb_err:                "Invalid RGB argument",
+      time_scale_scale_err:           "Don't know how to get date from time for scale",
+      axis_helper_no_options_err:     "Axis helper must be configured with options",
+      axis_helper_scale_err:          "No AxisHelper available for scale",
+      invalid_integer_option:       	"Invalid option value—must be a whole number."
 		},
-		/*
 		date: {
-          month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-          month_abbr: ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
-          day: ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          day_abbr: ["Sun.","Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
-		},*/
-		date: {
-			month: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-			month_abbr: ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."],
-			day: ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
-			day_abbr: ["Dom.","Seg.", "Ter.", "Qua.", "Qui.", "Sex.", "Sáb."]
+      month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      month_abbr: ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
+      day: ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      day_abbr: ["Sun.","Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
 		},
-
 		era_labels: { // specify prefix or suffix to apply to formatted date. Blanks mean no change.
 	        positive_year: {
 	        	prefix: '',
@@ -3960,7 +3951,6 @@ TL.Language.languages = {
 			T: ['A', 'P'],
 			TT: ['AM', 'PM']
 		},
-		/*
 		dateformats: {
 			year: "yyyy",
 			month_short: "mmm",
@@ -3975,18 +3965,6 @@ TL.Language.languages = {
 			time_milliseconds: "l",
 			full_long: "mmm d',' yyyy 'at' h:MM TT",
 			full_long_small_date: "h:MM TT' <small>mmm d',' yyyy'</small>'"
-		},*/
-		dateformats: {
-			year: "yyyy",
-			month_short: "mmm",
-			month: "mmmm 'de' yyyy",
-			full_short: "d 'de' mmm",
-			full: "d 'de' mmmm',' yyyy",
-			time_short: "h:MM:ss TT",
-			time_no_seconds_short: "hh:MM TT",
-			time_no_seconds_small_date: "hh:MM TT'<br/><small>'d 'de' mmmm',' yyyy'</small>'",
-			full_long: "dddd',' d 'de' mmm',' yyyy 'às' hh:MM TT",
-			full_long_small_date: "hh:MM TT'<br/><small>'dddd',' d 'de' mmm',' yyyy'</small>'"
 		},
 		bigdateformats: {
 			fallback: [ // a list of tuples, with t[0] an order of magnitude and t[1] a format string. format string syntax may change...
