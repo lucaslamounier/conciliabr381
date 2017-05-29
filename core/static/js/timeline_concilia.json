@@ -29,8 +29,8 @@
       },
       {
         "media": {
-          "url": "",
-          "caption": "",
+          "url": "static/img/timeline-images/2013_11_01_reuniao_com_liderancas.jpg",
+          "caption": "Reunião com Lideranças do Anel Rodoviário sobre cadastramento das família",
           "credit": ""
         },
         "start_date": {
@@ -61,7 +61,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2014_11_26_inicio_trabalhos_peritagem.jpg",
           "caption": "",
           "credit": ""
         },
@@ -77,7 +77,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_01_15_visita_peritos_jud_vila_bom_destino.jpg",
           "caption": "",
           "credit": ""
         },
@@ -86,19 +86,62 @@
            "day": "15",
            "year": "2015"
         },
-        "end_date": {
+        "text": {
+          "headline": "Visita técnica dos peritos judiciais na vila bom destino",
+          "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na Vila Bom Destino."
+        }
+      },
+       {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_19_visita_peritos_jud_vila_luz.jpg",
+          "caption": "",
+          "credit": ""
+        },
+        "start_date": {
+           "month": "1",
+           "day": "19",
+           "year": "2015"
+        },
+        "text": {
+          "headline": "Visita técnica dos peritos judiciais na vila da luz",
+          "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na vila da luz."
+        }
+      },
+       {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_19_visita_tecnica_vila_da_paz.jpg",
+          "caption": "",
+          "credit": ""
+        },
+        "start_date": {
+           "month": "1",
+           "day": "19",
+           "year": "2015"
+        },
+        "text": {
+          "headline": "Visita técnica dos peritos judiciais na vila da paz",
+          "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na vila da paz."
+        }
+      },
+       {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_19_visita_tecnica_vila_pica_pau.jpg",
+          "caption": "",
+          "credit": ""
+        },
+        "start_date": {
            "month": "1",
            "day": "23",
            "year": "2015"
         },
         "text": {
-          "headline": "Visita técnica dos peritos judiciais nas comunidades",
-          "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na Vila da Paz, Vila da Luz, Vila Pica Pau, Vila Bom Destino "
+          "headline": "Visita técnica dos peritos judiciais na vila pica pau",
+          "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na vila pica pau."
         }
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_01_27_apresentacao_projeto_vila_bom_destino.jpg",
           "caption": "",
           "credit": ""
         },
@@ -107,20 +150,63 @@
            "day": "27",
            "year": "2015"
         },
-        "end_date": {
+        "text": {
+          "headline": "Apresentação do projeto Concilia BR-381 e Anel para a Vila Bom Destino",
+          "text": "Apresentação do Programa, objetivos e dinâmica dos trabalhos para a Vila Bom Destino."
+        }
+      },
+      {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_28_apresentacao_projeto_vila_da_paz.jpg",
+          "caption": "",
+          "credit": ""
+        },
+         "start_date": {
+           "month": "1",
+           "day": "28",
+           "year": "2015"
+        },
+        "text": {
+          "headline": "Apresentação do projeto Concilia BR-381 e Anel para a Vila da Paz",
+          "text": "Apresentação do Programa, objetivos e dinâmica dos trabalhos para a Vila da Paz."
+        }
+      },
+      {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_29_apresentacao_projeto_vila_pica_pau.jpg",
+          "caption": "",
+          "credit": ""
+        },
+         "start_date": {
+           "month": "1",
+           "day": "29",
+           "year": "2015"
+        },
+        "text": {
+          "headline": "Apresentação do projeto Concilia BR-381 e Anel para a Vila da Pica Pau",
+          "text": "Apresentação do Programa, objetivos e dinâmica dos trabalhos para a Vila Pica Pau."
+        }
+      },
+      {
+        "media": {
+          "url": "static/img/timeline-images/2015_01_30_apresentacao_projeto_vila_luz.jpg",
+          "caption": "",
+          "credit": ""
+        },
+         "start_date": {
            "month": "1",
            "day": "30",
            "year": "2015"
         },
         "text": {
-          "headline": "Apresentação do Concilia BR-381 e Anel para as comunidades",
-          "text": "Apresentação do Programa, objetivos e dinâmica dos trabalhos para a Vila da Paz, Vila da Luz, Vila Pica Pau e Vila Bom Destino.'"
+          "headline": "Apresentação do projeto Concilia BR-381 e Anel para a Vila da Luz",
+          "text": "Apresentação do Programa, objetivos e dinâmica dos trabalhos para a Vila da Luz."
         }
       },
       {
         "media": {
-          "url": "",
-          "caption": "",
+          "url": "static/img/timeline-images/2015_03_07_mobilizacao_vila_pica_pau.jpg",
+          "caption": "Mobilização social realizada na vila pica pau.",
           "credit": ""
         },
         "start_date": {
@@ -135,7 +221,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_03_23_inspecao_judicial_vilas.jpg",
           "caption": "",
           "credit": ""
         },
@@ -151,7 +237,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_03_23_audiencia_publica_sobre_remocao_reassentamento.jpg",
           "caption": "",
           "credit": ""
         },
@@ -167,7 +253,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_03_28_evento_mobilizacao_social_vila_paz.jpg",
           "caption": "",
           "credit": ""
         },
@@ -183,8 +269,8 @@
       },
       {
         "media": {
-          "url": "",
-          "caption": "",
+          "url": "static/img/timeline-images/2015_04_06_workshop_programa.jpg",
+          "caption": "Coordenador de Desapropriação e Reassentamento, Dr. Bruno Marques, ao fundo, falando sobre o programa.",
           "credit": ""
         },
         "start_date": {
@@ -199,7 +285,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_04_07_selagem_vila_da_paz.jpg",
           "caption": "",
           "credit": ""
         },
@@ -215,7 +301,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_05_16_manha_cultural_vila_bom_destino.jpg",
           "caption": "",
           "credit": ""
         },
@@ -225,13 +311,13 @@
            "year": "2015"
         },
         "text": {
-          "headline": "Evento de Mobilização Social na Vila Bom Destino",
+          "headline": "Evento manhã cultural na Vila Bom Destino",
           "text": "<p>Ação que tem como meta ser o marco oficial de início das atividades do Concilia BR-381 e Anel na comunidade.</p>"
         }
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_07_08_inspecao_dra_dayse_br381.jpg",
           "caption": "",
           "credit": ""
         },
@@ -247,7 +333,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_08_13_visita_corredor_geral_ministro_jorge_mucci.jpg",
           "caption": "",
           "credit": ""
         },
@@ -263,7 +349,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_08_27_reuniao_vila_humaita.jpg",
           "caption": "",
           "credit": ""
         },
@@ -279,8 +365,8 @@
       },
       {
         "media": {
-          "url": "",
-          "caption": "",
+          "url": "static/img/timeline-images/2015_09_24_reuniao_cmar_vila_sao_pau.jpg",
+          "caption": "Encontro CMAR - Vila São Paulo.",
           "credit": ""
         },
         "start_date": {
@@ -295,7 +381,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2015_11_21_mobilizacao_vila_passagem.jpg",
           "caption": "",
           "credit": ""
         },
@@ -311,8 +397,8 @@
       },
       {
         "media": {
-          "url": "",
-          "caption": "",
+          "url": "static/img/timeline-images/2015_12_09_comemoracao_1ano_acordo_programa.jpg",
+          "caption": "Bolo em comemoração de 1 ano de assinatura do acordo do programa.",
           "credit": ""
         },
         "start_date": {
@@ -327,7 +413,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_01_30_selagem_bairro_bom_destino.jpg",
           "caption": "",
           "credit": ""
         },
@@ -343,7 +429,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_04_16_memorial_morar_vila_paz.jpg",
           "caption": "",
           "credit": ""
         },
@@ -359,7 +445,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_04_09_cha_com_liderancas.jpg",
           "caption": "",
           "credit": ""
         },
@@ -375,7 +461,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_05_24_primeiro_encontro_familias_aluguel_social.jpg",
           "caption": "",
           "credit": ""
         },
@@ -391,7 +477,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_06_09_selagem_vila_luz.jpg",
           "caption": "",
           "credit": ""
         },
@@ -407,7 +493,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_06_28_apresentacao_programa_vila_amelia_moreira.jpg",
           "caption": "",
           "credit": ""
         },
@@ -423,7 +509,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_07_26_2encontro_familias_aluguel_social.jpg",
           "caption": "",
           "credit": ""
         },
@@ -439,7 +525,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_08_02_exposicao_Olhos_do_Anel.jpg",
           "caption": "",
           "credit": ""
         },
@@ -476,7 +562,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_09_25_mostra_marginal.jpg",
           "caption": "",
           "credit": ""
         },
@@ -492,7 +578,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2016_09_27_3encontro_aluguel_social.jpg",
           "caption": "",
           "credit": ""
         },
@@ -540,7 +626,7 @@
       },
       {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2017_03_16_multirao_conciliacao_nucom_br381.jpg",
           "caption": "",
           "credit": ""
         },
@@ -572,7 +658,23 @@
       },
        {
         "media": {
-          "url": "",
+          "url": "static/img/timeline-images/2017_03_04_visita_dr_andre_as_comunidades_br381_anel.jpg",
+          "caption": "",
+          "credit": ""
+        },
+        "start_date": {
+          "month": "3",
+          "day": "4",
+          "year": "2017"
+        },
+        "text": {
+          "headline": "Visita Dr Andre às comunidades no Anel Rodoviário",
+          "text": ""
+        }
+      },
+       {
+        "media": {
+          "url": "static/img/timeline-images/2017_04_26_assinatura_termo_acordo.jpg",
           "caption": "",
           "credit": ""
         },
