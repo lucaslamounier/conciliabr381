@@ -1,0 +1,85 @@
+{
+    "storymap": {
+        "slides": [{
+            "type": "overview",
+            "date": "",
+            "text": {
+                "headline": "Comunidades <small>Concilia BR-381 e Anel Rodoviário</small>",
+                "text": "<p>Mapa das comunidades participantes do programa, etapa 2017.</p>"
+            },
+            "media": {
+                    "url":  "",
+                    "credit": "",
+                    "caption": ""
+                }
+        }, {
+            "text": {
+                "headline": "Vila Pica Pau",
+                "text": "<p></p>"
+            },
+            "location": {
+                "name": "Vila Pica Pau, Belo Horizonte - MG",
+                "lat": -19.840888,
+                "lon": -43.885106,
+                "zoom": 15,
+                "line": true
+            },
+            "media": {
+                    "url": "/static/img/timeline-images/2014_11_26_inicio_trabalhos_peritagem.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+        },{
+            "text": {
+                "headline": "Vila da Paz",
+                "text": "<p></p>"
+            },
+            "location": {
+                "name": "Vila da Paz, Belo Horizonte - MG",
+                "lat": -19.869775,
+                "lon": -43.941161,
+                "zoom": 13,
+                "line": true
+            },
+            "media": {
+                    "url":    "/static/img/timeline-images/2015_01_19_visita_tecnica_vila_da_paz.jpg",
+                    "credit": "",
+                    "caption": ""
+                }
+        }, {
+            "text": {
+                "headline": "Vila da Luz",
+                "text": "<p></p>"
+            },
+            "location": {
+                    "name": "Vila da Luz, Belo Horizonte - MG",
+                    "lat": -19.856361,
+                    "lon": -43.893376,
+                    "zoom": 16,
+                    "line": true
+            },
+            "media": {
+                    "url":              "/static/img/timeline-images/2015_01_19_visita_peritos_jud_vila_luz.jpg",
+                    "credit":           "",
+                    "caption":          ""
+                }
+        }, {
+            "text": {
+                "headline": "Vila Bom Destino",
+                "text": "<p></p>"
+            },
+            "location": {
+                "name": "Vila Bom Destino, Belo Horizonte - MG",
+                "lat": -19.824345,
+                "lon": -43.831612,
+                "zoom": 12,
+                "line": true
+            },
+            "media": {
+                    "url":              "/static/img/timeline-images/2015_01_15_visita_peritos_jud_vila_bom_destino.jpg",
+                    "credit":               "",
+                    "caption":          ""
+                }
+        }]
+    }
+}

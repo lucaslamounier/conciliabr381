@@ -18,7 +18,8 @@
       </article>
 </div>
 <section id="big-map" class="margin-50 hide-for-small">
-    <div id="flatads-main-map"></div>
+    <!--<div id="flatads-main-map"></div>-->
+    <div id="mapdiv" style="width: 100%; height: 600px;"></div>
 
     <div class="columns small-12">
         <h1 style="text-align: center;">Lorem Ipsum</h1>
@@ -36,211 +37,225 @@ Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis an
     </div>
 </section>
 
-    <script>
+    <!--<script>-->
 
-        var mapDiv,
-            map,
-            infobox;
+        <!--var mapDiv,-->
+            <!--map,-->
+            <!--infobox;-->
 
-        jQuery(document).ready(function(){
+        <!--jQuery(document).ready(function(){-->
 
-            mapDiv = jQuery("#flatads-main-map");
+            <!--mapDiv = jQuery("#flatads-main-map");-->
 
-            mapDiv.width("100%").height("500px").gmap3({
-                map:{
-                    options: {
-                        center:[-19.869775,-43.941161,12],
-                        zoom: 18,
-                        mapTypeId: google.maps.MapTypeId.SATELLITE,
-                        streetViewControl: true,
-                        scrollwheel : false,
-                        overviewMapControl: false,
-                        "styles": [
-                            {
-                                "featureType": "landscape.natural",
-                                "elementType": "geometry.fill",
-                                "stylers": [
-                                    {
-                                        "visibility": "on"
-                                    },
-                                    {
-                                        "color": "#e0efef"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi",
-                                "elementType": "geometry.fill",
-                                "stylers": [
-                                    {
-                                        "visibility": "on"
-                                    },
-                                    {
-                                        "hue": "#1900ff"
-                                    },
-                                    {
-                                        "color": "#c0e8e8"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "landscape.man_made",
-                                "elementType": "geometry.fill"
-                            },
-                            {
-                                "featureType": "road",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "lightness": 100
-                                    },
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road",
-                                "elementType": "labels",
-                                "stylers": [
-                                    {
-                                        "visibility": "off"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "stylers": [
-                                    {
-                                        "color": "#7dcdcd"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "transit.line",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "visibility": "on"
-                                    },
-                                    {
-                                        "lightness": 700
-                                    }
-                                ]
-                            }
+            <!--mapDiv.width("100%").height("500px").gmap3({-->
+                <!--map:{-->
+                    <!--options: {-->
+                        <!--center:[-19.869775,-43.941161,12],-->
+                        <!--zoom: 18,-->
+                        <!--mapTypeId: google.maps.MapTypeId.SATELLITE,-->
+                        <!--streetViewControl: true,-->
+                        <!--scrollwheel : false,-->
+                        <!--overviewMapControl: false,-->
+                        <!--"styles": [-->
+                            <!--{-->
+                                <!--"featureType": "landscape.natural",-->
+                                <!--"elementType": "geometry.fill",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"visibility": "on"-->
+                                    <!--},-->
+                                    <!--{-->
+                                        <!--"color": "#e0efef"-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "poi",-->
+                                <!--"elementType": "geometry.fill",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"visibility": "on"-->
+                                    <!--},-->
+                                    <!--{-->
+                                        <!--"hue": "#1900ff"-->
+                                    <!--},-->
+                                    <!--{-->
+                                        <!--"color": "#c0e8e8"-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "landscape.man_made",-->
+                                <!--"elementType": "geometry.fill"-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "road",-->
+                                <!--"elementType": "geometry",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"lightness": 100-->
+                                    <!--},-->
+                                    <!--{-->
+                                        <!--"visibility": "simplified"-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "road",-->
+                                <!--"elementType": "labels",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"visibility": "off"-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "water",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"color": "#7dcdcd"-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--},-->
+                            <!--{-->
+                                <!--"featureType": "transit.line",-->
+                                <!--"elementType": "geometry",-->
+                                <!--"stylers": [-->
+                                    <!--{-->
+                                        <!--"visibility": "on"-->
+                                    <!--},-->
+                                    <!--{-->
+                                        <!--"lightness": 700-->
+                                    <!--}-->
+                                <!--]-->
+                            <!--}-->
 
-                        ]
-                    }
-                },
-                marker:{
-                    values: [
-                        // Vila Pica Pau
-                        {
-                            latLng:[-19.840888,-43.885106],
-                                options: {
-                                    icon: "{% static 'img/icones/pin.png' %}",
-                                    shadow: "{% static 'img/icones/shadow.png' %}"
-                             },
-                             data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=38\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Santa-Lucia\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila Pica Pau</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=38\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
-                        },
-                        // Vila da Paz
-                        {
-                            latLng:[-19.869775,-43.941161],
-                                options: {
-                                    icon: "{% static 'img/icones/pin.png' %}",
-                                    shadow: "{% static 'img/icones/shadow.png' %}"
-                                },
-                            data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=40\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Carapina - Governador Valadares\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Paz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=40\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
-                        },
-                        // VIla da Luz
-                        {
-                            latLng:[-19.856361,-43.893376],
-                            options: {
-                                icon: "{% static 'img/icones/pin.png' %}",
-                                shadow: "{% static 'img/icones/shadow.png' %}"
-                            },
-                        data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=41\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Morro-das-Pedras\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Luz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=41\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
-                        },
-                        // Vila bom destino
-                        {
-                            latLng:[-19.824345,-43.831612],
-                            options: {
-                                icon: "{% static 'img/icones/pin.png' %}",
-                                shadow: "{% static 'img/icones/shadow.png' %}"
-                            },
-                            data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=68\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Cidade-de-Deus-Sete-Lagoas\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila B</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=68\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",
-                        },
-                    ],
-                    cluster:{
-                        radius: 20,
-                        // This style will be used for clusters with more than 0 markers
-                        0: {
-                            content: "<div class='cluster cluster-1'>CLUSTER_COUNT</div>",
-                            width: 62,
-                            height: 62
-                        },
-                        // This style will be used for clusters with more than 20 markers
-                        20: {
-                            content: "<div class='cluster cluster-2'>CLUSTER_COUNT</div>",
-                            width: 82,
-                            height: 82
-                        },
-                        // This style will be used for clusters with more than 50 markers
-                        50: {
-                            content: "<div class='cluster cluster-3'>CLUSTER_COUNT</div>",
-                            width: 102,
-                            height: 102
-                        },
-                        events: {
-                            click: function(cluster) {
-                                map.panTo(cluster.main.getPosition());
-                                map.setZoom(map.getZoom() + 2);
-                            }
-                        }
-                    },
-                    events: {
-                        click: function(marker, event, context){
-                            map.panTo(marker.getPosition());
+                        <!--]-->
+                    <!--}-->
+                <!--},-->
+                <!--marker:{-->
+                    <!--values: [-->
+                        <!--// Vila Pica Pau-->
+                        <!--{-->
+                            <!--latLng:[-19.840888,-43.885106],-->
+                                <!--options: {-->
+                                    <!--icon: "{% static 'img/icones/pin.png' %}",-->
+                                    <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
+                             <!--},-->
+                             <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=38\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Santa-Lucia\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila Pica Pau</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=38\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
+                        <!--},-->
+                        <!--// Vila da Paz-->
+                        <!--{-->
+                            <!--latLng:[-19.869775,-43.941161],-->
+                                <!--options: {-->
+                                    <!--icon: "{% static 'img/icones/pin.png' %}",-->
+                                    <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
+                                <!--},-->
+                            <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=40\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Carapina - Governador Valadares\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Paz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=40\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
+                        <!--},-->
+                        <!--// VIla da Luz-->
+                        <!--{-->
+                            <!--latLng:[-19.856361,-43.893376],-->
+                            <!--options: {-->
+                                <!--icon: "{% static 'img/icones/pin.png' %}",-->
+                                <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
+                            <!--},-->
+                        <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=41\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Morro-das-Pedras\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Luz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=41\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
+                        <!--},-->
+                        <!--// Vila bom destino-->
+                        <!--{-->
+                            <!--latLng:[-19.824345,-43.831612],-->
+                            <!--options: {-->
+                                <!--icon: "{% static 'img/icones/pin.png' %}",-->
+                                <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
+                            <!--},-->
+                            <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=68\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Cidade-de-Deus-Sete-Lagoas\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila B</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=68\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
+                        <!--},-->
+                    <!--],-->
+                    <!--cluster:{-->
+                        <!--radius: 20,-->
+                        <!--// This style will be used for clusters with more than 0 markers-->
+                        <!--0: {-->
+                            <!--content: "<div class='cluster cluster-1'>CLUSTER_COUNT</div>",-->
+                            <!--width: 62,-->
+                            <!--height: 62-->
+                        <!--},-->
+                        <!--// This style will be used for clusters with more than 20 markers-->
+                        <!--20: {-->
+                            <!--content: "<div class='cluster cluster-2'>CLUSTER_COUNT</div>",-->
+                            <!--width: 82,-->
+                            <!--height: 82-->
+                        <!--},-->
+                        <!--// This style will be used for clusters with more than 50 markers-->
+                        <!--50: {-->
+                            <!--content: "<div class='cluster cluster-3'>CLUSTER_COUNT</div>",-->
+                            <!--width: 102,-->
+                            <!--height: 102-->
+                        <!--},-->
+                        <!--events: {-->
+                            <!--click: function(cluster) {-->
+                                <!--map.panTo(cluster.main.getPosition());-->
+                                <!--map.setZoom(map.getZoom() + 2);-->
+                            <!--}-->
+                        <!--}-->
+                    <!--},-->
+                    <!--events: {-->
+                        <!--click: function(marker, event, context){-->
+                            <!--map.panTo(marker.getPosition());-->
 
-                            var ibOptions = {
-                                pixelOffset: new google.maps.Size(-125, -88),
-                                alignBottom: true
-                            };
+                            <!--var ibOptions = {-->
+                                <!--pixelOffset: new google.maps.Size(-125, -88),-->
+                                <!--alignBottom: true-->
+                            <!--};-->
 
-                            infobox.setOptions(ibOptions)
+                            <!--infobox.setOptions(ibOptions)-->
 
-                            infobox.setContent(context.data);
-                            infobox.open(map,marker);
+                            <!--infobox.setContent(context.data);-->
+                            <!--infobox.open(map,marker);-->
 
-                            // if map is small
-                            var iWidth = 260;
-                            var iHeight = 300;
-                            if((mapDiv.width() / 2) < iWidth ){
-                                var offsetX = iWidth - (mapDiv.width() / 2);
-                                map.panBy(offsetX,0);
-                            }
-                            if((mapDiv.height() / 2) < iHeight ){
-                                var offsetY = -(iHeight - (mapDiv.height() / 2));
-                                map.panBy(0,offsetY);
-                            }
+                            <!--// if map is small-->
+                            <!--var iWidth = 260;-->
+                            <!--var iHeight = 300;-->
+                            <!--if((mapDiv.width() / 2) < iWidth ){-->
+                                <!--var offsetX = iWidth - (mapDiv.width() / 2);-->
+                                <!--map.panBy(offsetX,0);-->
+                            <!--}-->
+                            <!--if((mapDiv.height() / 2) < iHeight ){-->
+                                <!--var offsetY = -(iHeight - (mapDiv.height() / 2));-->
+                                <!--map.panBy(0,offsetY);-->
+                            <!--}-->
 
-                        }
-                    }
-                }
-            },"");
-            map = mapDiv.gmap3("get");
+                        <!--}-->
+                    <!--}-->
+                <!--}-->
+            <!--},"");-->
+            <!--map = mapDiv.gmap3("get");-->
 
-            infobox = new InfoBox({
-                pixelOffset: new google.maps.Size(-50, -65),
-                closeBoxURL: '',
-                enableEventPropagation: true
-            });
+            <!--infobox = new InfoBox({-->
+                <!--pixelOffset: new google.maps.Size(-50, -65),-->
+                <!--closeBoxURL: '',-->
+                <!--enableEventPropagation: true-->
+            <!--});-->
 
-            mapDiv.delegate('.infoBox .close','click',function () {
-                infobox.close();
-            });
+            <!--mapDiv.delegate('.infoBox .close','click',function () {-->
+                <!--infobox.close();-->
+            <!--});-->
 
-        });
+        <!--});-->
 
-    </script>
+    <!--</script>-->
+<script>
+        // storymap_data can be an URL or a Javascript object
+        var storymap_data = "{% static 'js/demo.json' %}";
+
+        // certain settings must be passed within a separate options object
+        var storymap_options = {
+            map_type: "osm",
+        };
+
+        var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
+        window.onresize = function(event) {
+            storymap.updateDisplay(); // this isn't automatic
+        }
+</script>
 {% endblock %}
