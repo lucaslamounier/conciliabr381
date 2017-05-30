@@ -4,13 +4,15 @@
 
 {% block content %}
 
-<section class="height-800 section-border-bottom">
-     <h1 class="text-header-page text-align-right">Construindo um caminho melhor</h1>
-    <div class="col-sm-8 text-align-right">
-        <img src="{% static 'img/background-images/mapa.jpg' %}"  height="auto" width="80%" title="Anel Rodoviário e BR-381" alt="Anel Rodoviário e BR-381"/>
+
+<section class="section-border-bottom" style="min-height: 600px;">
+     <!--<h1 class="text-header-page text-align-right">Construindo um caminho melhor</h1>-->
+     <h1 class="text-header-page text-align-right">O PROGRAMA</h1>
+    <div class="col-sm-7">
+        <img src="{% static 'img/background-images/mapa.jpg' %}" class="index-map"  height="auto" width="80%" title="Anel Rodoviário e BR-381" alt="Anel Rodoviário e BR-381"/>
     </div>
-    <div class="col-sm-4">
-                <p class="text-upper text-font-17 justfy-text">
+    <div class="col-sm-5">
+                <p class="text-upper text-font-17 justfy-text" style="margin-top: 4em; margin-right: 5em;">
                     O COncilia BR-381 e anel (Programa Judicial de Conciliação para remoção e
                     reassentamento humanizados de famílias do anel rodoviário e br-381) foi
                     criado em função da necessidade de revitalização desas rodovias. É uma
@@ -27,6 +29,7 @@
 <section>
     {% include '_timeline.html' %}
 </section>
+
 
 <!-- PARALLAX -->
 
@@ -90,6 +93,8 @@
     </div>
 </section>
 
+<!-- story map -->
+<div id="mapdiv" style="width: 100%; height: 600px;"></div>
 <!-- LINKS ÚTEIS -->
 
 <section class="section-links-uteis">
@@ -137,7 +142,20 @@
         </div>
     </div>
 </section>
+<script>
+        // storymap_data can be an URL or a Javascript object
+        var storymap_data = "{% static 'js/demo.json' %}";
 
+        // certain settings must be passed within a separate options object
+        var storymap_options = {
+            map_type: "osm",
+        };
+
+        var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
+        window.onresize = function(event) {
+            storymap.updateDisplay(); // this isn't automatic
+        }
+</script>
 <script>
 
      // NUMBER EFECTS OF SECTION PARALLAX

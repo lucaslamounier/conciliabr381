@@ -21,6 +21,12 @@
         var options = {
            hash_bookmark: false,
            dragging: true,
+           height: 200,
+           initial_zoom: 5,
+           timenav_height: 50,
+           timenav_height_percentage: 15
+
+
         };
 
         window.timeline = new TL.Timeline('timeline-embed', '{% static 'js/timeline_concilia.json' %}', options);

@@ -1330,6 +1330,7 @@ a.button-index:hover {
     text-transform: uppercase;
     color: black;
     font-weight: bold;
+    margin-right: 1.5em;
 }
 
 
@@ -1753,4 +1754,9 @@ a.button-parallax:hover {
 
 #BtnTopo:hover {
   background-color: #555;
+}
+
+.index-map {
+    margin-left: 8em;
+    height: 400px;
 }

@@ -1,13 +1,13 @@
 {
     "title": {
         "media": {
-          "url": "static/img/timeline-images/image_home_concilia.jpg",
+          "url": "static/img/timeline-images/juntos_somos_mais_fortes.jpg",
           "caption": "",
           "credit": ""
         },
         "text": {
-          "headline": "",
-          "text": "<h1>Início do programa concilia BR-381</h1>"
+          "headline": "<h1>O Concilia BR-381 e Anel</h1>",
+          "text": "<p>Acompanhe toda a trajetória do programa.</p>"
         }
     },
     "events": [
