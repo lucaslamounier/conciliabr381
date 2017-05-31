@@ -1,13 +1,15 @@
 {
+  "scale": "human",
     "title": {
         "media": {
-          "url": "static/img/timeline-images/juntos_somos_mais_fortes.jpg",
           "caption": "",
-          "credit": ""
+          "credit": "",
+          "url": "",
+          "thumbnail": ""
         },
         "text": {
-          "headline": "<h1>O Concilia BR-381 e Anel</h1>",
-          "text": "<p>Acompanhe toda a trajetória do programa.</p>"
+          "headline": "Concilia BR-381 e Anel Rodoviário",
+          "text": "Siga toda a trajetória do programa de conciliação para remoção de famílias da BR-381 e anel rodoviário, Belo Horizonte - MG"
         }
     },
     "events": [
@@ -91,7 +93,7 @@
           "text": "Visita de reconhecimento do espaço geosocial e identificação de lideranças na Vila Bom Destino."
         }
       },
-       {
+      {
         "media": {
           "url": "static/img/timeline-images/2015_01_19_visita_peritos_jud_vila_luz.jpg",
           "caption": "",
@@ -640,7 +642,7 @@
           "text": "<p>Mutirão realizado no Núcleo de Conciliação da Justiça Federal para tratar da desapropriação do lote 7 na BR-381.</p>"
         }
       },
-       {
+      {
         "media": {
           "url": "",
           "caption": "",
@@ -656,7 +658,7 @@
           "text": "<p>1ª Etapa (DNIT, URBEL, MPF e DPU).</p>"
         }
       },
-       {
+      {
         "media": {
           "url": "static/img/timeline-images/2017_03_04_visita_dr_andre_as_comunidades_br381_anel.jpg",
           "caption": "",

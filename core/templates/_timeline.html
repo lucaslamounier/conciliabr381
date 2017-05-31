@@ -19,14 +19,15 @@
         embed.style.height = getComputedStyle(document.body).height;
 
         var options = {
-           hash_bookmark: false,
-           dragging: true,
-           height: 200,
-           initial_zoom: 5,
-           timenav_height: 50,
-           timenav_height_percentage: 15
-
-
+            hash_bookmark: false,
+            initial_zoom: 2,
+            //timenav_height: 10,
+            timenav_height_percentage: 1,
+            slide_padding_lr: 50,
+            slide_default_fade: 20,
+            menubar_height: 10,
+            timenav_position: 'bottom',
+            height: 250
         };
 
         window.timeline = new TL.Timeline('timeline-embed', '{% static 'js/timeline_concilia.json' %}', options);
