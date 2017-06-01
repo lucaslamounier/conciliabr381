@@ -13,8 +13,7 @@ User = get_user_model()
 # Página inicial
 class IndexView(ListView):
     context_object_name = 'noticias_home_page'
-    #queryset = Noticia.objects.filter(~Q(image='')).order_by('-published_at')[0:3]
-    queryset = Noticia.objects.all().order_by('-published_at')[0:3]
+    queryset = Noticia.objects.filter(~Q(image='')).order_by('-published_at')[0:3]
     template_name = 'index.html'
 
 

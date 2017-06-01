@@ -1,22 +1,57 @@
 {% extends "base.html" %}
+
 {% load widget_tweaks %}
+
 {% load pagination %}
 
 {% block title %} Notícias | {{ block.super }} {% endblock %}
 
 {% block content %}
 
-<div class="row">
-       <article class="center-text">
-            <h1><strong>Notícias</strong></h1>
-        </article>
+<!--<div class="row">-->
+       <!--<article class="center-text">-->
+            <!--<h1><strong>Notícias</strong></h1>-->
+        <!--</article>-->
+    <!--</div>-->
+<section>
+    <div class="row">
+        {% include "carousel.html" %}
     </div>
-<div class="row">
-{% for noticia in noticias  %}
-    {% include "content/_noticias.html" %}
-{% endfor %}
-</div>
+</section>
 
+
+<section class="section-noticia height-500">
+     <div class="row d-flex justify-content-start">
+        {% if noticias.count > 0 %}
+            {% for noticia in noticias %}
+
+                <div class="col-sm-4">
+                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{noticia.title}}" style="text-decoration: none;">
+                        {% if noticia.has_image %}
+                            <picture>
+                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{noticia}}" style="width:auto;">
+                            </picture>
+                         {% endif %}
+                        <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
+                        <p> {{noticia.sub_title |truncatechars_html:100}} </p>
+                    </a>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <div class="row">
+                {% endif %}
+            {% endfor %}
+
+        {% endif %}
+        {% if noticias_home_page.count == 0 %}
+                <div class="col-sm-12">
+                     <p>Nenhum registro encontrado.</p>
+                </div>
+        {% endif %}
+        </div>
+</section>
+{% pagination request paginator page_obj %}
+<section class="top-border-gray"></section>
 <script>
     $('.owl-carousel-noticia').owlCarousel({
          margin:10,
@@ -27,6 +62,6 @@
     });
 </script>
 
-{% pagination request paginator page_obj %}
+
 
 {% endblock %}

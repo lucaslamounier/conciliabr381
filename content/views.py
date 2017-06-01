@@ -3,18 +3,21 @@ from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.views import generic
 from .models import Noticia, Comunidade
-
+from django.db.models import Q
 
 # Página de Notícias
 class NewsListView(generic.ListView):
-    #model = Noticia
+    model = Noticia
     template_name = 'content/news.html'
-    context_object_name = 'noticias'
+    # context_object_name = 'noticias'
     paginate_by = 8
 
-    def get_queryset(self):
-        return Noticia.objects.all().order_by('-published_at')
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        #context['noticias'] = Noticia.objects.all().order_by('-published_at')
+        context['noticias'] = Noticia.objects.filter(image='').order_by('-published_at')
+        context['noticias_carrousel'] = Noticia.objects.filter(~Q(image='')).order_by('-published_at')
+        return context
 
 # Página de Notícia
 def noticia(request, pk):

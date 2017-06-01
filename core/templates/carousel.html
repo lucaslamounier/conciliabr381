@@ -1,3 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
 <div class="row" data-layout-type="row">
 
     <div>
@@ -15,10 +20,10 @@
 
 </div>
 <div class="row">
-    <div >
-        <div class="owl-carousel owl-theme" id="tile_banner_rotativo">
+    <div class="col-sm-11">
+        <div class="owl-carousel owl-theme " id="tile_banner_rotativo">
 
-            {% for noticia in noticias_destaque %}
+            {% for noticia in noticias_carrousel %}
                 <div class="item">
                     <a href="{% url 'content:noticia' noticia.pk %}" class="banner">
                         <span class="credito"></span>
@@ -41,6 +46,7 @@
         margin: 10,
         autoplay: true,
         autoplayTimeout: 3000,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        responsiveClass:true
     })
 </script>
