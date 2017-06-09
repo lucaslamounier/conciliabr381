@@ -8,6 +8,12 @@
 .vco-media-content img {
     float: left;
 }
+
+.img-contact-right {
+    height: 480px;
+    width: auto;
+}
+
 .image_header {
     height: 265px;
     background: url("../img/background-images/favela3.jpg") center;
@@ -1303,8 +1309,8 @@ body .primary-button {
     height: 160px;
 }
 .image-timeline {
-    width: 385px;
-    height: auto;
+    width: 300px;
+    height: 225px;
 }
 .btn-contact {
     background-color: #0091ea;
@@ -1445,7 +1451,7 @@ body .primary-button {
 .icons-parallax {
     display: inline-block;
     width: 239px;
-    transform: translate(0, 100%);
+    transform: translate(0%, 200%);
 }
 .label-icones-casas-numero {
     font-size: 2.1em;
@@ -1495,7 +1501,7 @@ body .primary-button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 .button-parallax {
     background-color: transparent;
@@ -1538,8 +1544,11 @@ a.button-parallax:hover {
     background-color: #555;
 }
 .index-map {
-    margin-left: 8em;
-    height: 400px;
+    height: 500px;
+    width: 80%;
+    float: right;
+    margin-right: 50px;
+
 }
 /******************** HORIZONTAL TIMELINE **********************************/
 /* --------------------------------
@@ -2014,14 +2023,14 @@ list-style: none;
 #issues {
     height: 450px;
     overflow: hidden;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 #issues li {
-    width: 850px;
+    width: 870px;
     height: 450px;
     list-style: none;
     float: left;
-
+    margin-top: 15px;
 }
 #issues li.selected img {
     -webkit-transform: scale(1.1, 1.1);
@@ -2032,20 +2041,16 @@ list-style: none;
 }
 #issues li img {
     float: left;
-    margin: 10px 30px 10px 50px;
+    margin: 10px 30px 10px 40px;
     background: transparent;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
-    /* IE 8 */
-
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    /* IE 6 & 7 */
-
     zoom: 1;
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     -webkit-transform: scale(0.7, 0.7);
     -moz-transform: scale(0.7, 0.7);
     -o-transform: scale(0.7, 0.7);
@@ -2053,6 +2058,7 @@ list-style: none;
     transform: scale(0.7, 0.7);
 }
 #issues li h1 {
+    margin: 0;
     /*
     color: #ffcc00;
     font-size: 48px;
@@ -2063,11 +2069,12 @@ list-style: none;
 #issues li p {
     font-size: 15px;
     /* margin-right: 70px; */
-    font-weight: normal;
+    /* font-weight: normal; */
     /* line-height: 22px; */
     /* text-shadow: #000 1px 1px 2px; */
     text-align: justify;
-    padding-left: 10px;
+    /* padding-left: 10px; */
+    overflow: hidden;
 }
 #grad_left,
 #grad_right {
