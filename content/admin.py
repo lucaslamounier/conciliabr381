@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Noticia, Comunidade, Album, Photo
+from .models import Noticia, Comunidade, Album, Photo, Timeline
 from tinymce.widgets import TinyMCE
 from django.core.urlresolvers import reverse
 
@@ -57,6 +58,18 @@ class PhotoAdmin(admin.ModelAdmin):
         obj.save()
 
 
+class TimelineAdmin(admin.ModelAdmin):
+
+    list_display = ['title', 'event_date', 'author']
+    search_fields = ['title']
+
+    def save_model(self, request, obj, form, change):
+        if getattr(obj, 'author', None) is None:
+            obj.author = request.user
+        obj.save()
+
+
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Album, AlbumAdmin)
+admin.site.register(Timeline, TimelineAdmin)

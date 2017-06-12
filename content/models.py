@@ -135,3 +135,35 @@ class Comunidade(models.Model):
             return False
 
 
+class Timeline(models.Model):
+
+    """ Modelo para eventos da linha do tempo - Página index """
+
+    title = models.CharField(u'Título do evento', max_length=500)
+    event_date = models.DateField('Data do evento',  null=False, blank=True)
+    text = models.TextField(verbose_name='Texto')
+    image = models.ImageField(
+        upload_to='timeline/images', verbose_name='Imagem de apresentação',
+        null=True, blank=True
+    )
+    legend_image = models.CharField('Legenda da imagem', max_length=200, null=True, blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
+    created_at = models.DateTimeField('Criado em', auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Evento da linha do tempo'
+        verbose_name_plural = 'Eventos da linha do tempo'
+        ordering = ['-event_date']
+
+    def __str__(self):
+        return '[%s] - %s' % (self.event_date, self.title)
+
+    def has_image(self):
+        try:
+            if self.image and self.image.size > 0:
+                return True
+            else:
+                return False
+        except Exception as err:
+            print(u"Não foi possivel verificar o arquivo: ", err)
+            return False
