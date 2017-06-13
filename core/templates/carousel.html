@@ -3,26 +3,18 @@
 <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 
-<div class="row" data-layout-type="row">
-
-    <div>
-
+<div class="row">
         <div class="tile tile-default">
             <div>
-                <!--<p class="tile-subtitle">Notícias</p>-->
-                  <h1 class="text-header-page">Notícias</h1>
+                <h1 class="text-header-page">Notícias</h1>
                 <div class="visualClear"></div>
-
             </div>
         </div>
-
-    </div>
-
 </div>
+{% if noticias_carrousel.count != 0 %}
 <div class="row">
     <div class="col-sm-11">
         <div class="owl-carousel owl-theme " id="tile_banner_rotativo">
-
             {% for noticia in noticias_carrousel %}
                 <div class="item">
                     <a href="{% url 'content:noticia' noticia.pk %}" class="banner">
@@ -37,7 +29,7 @@
         </div>
     </div>
 </div>
-
+{% endif %}
 <script>
     $('.owl-carousel').owlCarousel({
         center: true,

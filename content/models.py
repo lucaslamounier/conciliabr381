@@ -153,10 +153,10 @@ class Timeline(models.Model):
     class Meta:
         verbose_name = 'Evento da linha do tempo'
         verbose_name_plural = 'Eventos da linha do tempo'
-        ordering = ['-event_date']
+        ordering = ['event_date']
 
     def __str__(self):
-        return '[%s] - %s' % (self.event_date, self.title)
+        return self.title
 
     def has_image(self):
         try:

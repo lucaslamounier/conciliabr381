@@ -10,13 +10,8 @@
 
 {% block content %}
 
-<!--<div class="row">-->
-         <!--<article>-->
-            <!--<h1><strong>Contato</strong></h1>-->
-        <!--</article>-->
- <!--</div>-->
   <section>
-       <h1 style="text-align: center;font-size: 46px;font-weight: bold;">CONTATO</h1>
+       <h1 style="text-align: left;font-size: 46px;font-weight: bold; margin-left: 1.0em;">CONTATO</h1>
           <div class="col-sm-6" style="margin-left: 2em;">
             {% if success %}
                 <div class="alert alert-success">
@@ -45,15 +40,36 @@
                   </div>
             </form>
           </div>
-          <div class="col-sm-5">
-              <h1 style="margin: 0; text-align: center;">ENVIE MENSAGEM,
-                    LIGUE OU VENHA NOS VISITAR</h1>
+          <div class="col-sm-5 center-text">
+              <h2 style="margin: 0; margin-bottom: 15px; font-weight: bold;">ENVIE MENSAGEM,
+                    LIGUE OU VENHA NOS VISITAR</h2>
               <img class="img-contact-right" src="{% static 'img/background-images/escritorio.jpg' %}"/>
           </div>
   </section>
-<section>
-        <iframe width="100%" height="400" frameborder="0" style="border:none;padding-top:50px;"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d285.73073097280263!2d-43.9330298069756!3d-19.91885644790053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699f0ed4385bb%3A0x31918fab1034d3a7!2sR.+Sapuca%C3%AD%2C+571+-+Floresta%2C+Belo+Horizonte+-+MG%2C+30150-050!5e1!3m2!1spt-BR!2sbr!4v1495723320257">
-        </iframe>
+<section class="section-contact-map ">
+        <div class="col-sm-7">
+            <iframe width="98%" height="500" frameborder="0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d285.73073097280263!2d-43.9330298069756!3d-19.91885644790053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699f0ed4385bb%3A0x31918fab1034d3a7!2sR.+Sapuca%C3%AD%2C+571+-+Floresta%2C+Belo+Horizonte+-+MG%2C+30150-050!5e1!3m2!1spt-BR!2sbr!4v1495723320257">
+            </iframe>
+         </div>
+        <div class="col-sm-4">
+            <div class="contact-container-infor">
+                <h1 style="font-size: 2.5em;font-weight: bold;">Escritório do Concilia BR-381 e Anel</h1>
+                <p>
+                    <b>E-mail:</b> xxxxxx@conciliabr381eanel.com.br<br />
+                    <b>Telefone:</b> (31) 3224-7704 <br />
+                    <b>Endereço:</b> Rua Sapucaí, 571, bairro Floresta, Belo Horizonte - MG <br />
+                    <b>CEP: </b>30150-050
+                </p>
+                <h2 class="subtitle-contact">Como chegar:</h2>
+                 <p>
+                   <img title="Metrô" class="contact-icons" src="{% static 'img/icones/traim.png' %}" />Descer na Estação Central e sair pela Rua Sapucaí <br />
+                   <img title="Ônibus" class="contact-icons" src="{% static 'img/icones/bus.png' %}" />Linhas que atendem a região: 8205 / 8106 / 9104 / 8103 / 8405 / 9210 / SC03A <br />
+                   <img title="A Pé" class="contact-icons" src="{% static 'img/icones/person-walking.svg' %}" />À 800 m da Praça Sete de Setembro, na Região Central de BH <br />
+                </p>
+                <h2 class="subtitle-contact">Pontos de referência: </h2>
+                <p>Viaduto Santa Tereza, TV Alterosa, Salumeria Centrale</p>
+            </div>
+        </div>
 </section>
 {% endblock  %}

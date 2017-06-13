@@ -10,9 +10,21 @@
 }
 
 .img-contact-right {
-    height: 480px;
+    height: 400px;
     width: auto;
 }
+
+.section-about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title-community {
+    margin-top: 50px;
+    font-size: 55px;
+    font-weight: bold;
+}
+
 
 .image_header {
     height: 265px;
@@ -363,11 +375,27 @@ a.view_all_noticia:hover {
     min-height: 600px;
 }
 .title-noticia {
-    font-size: 2.2em;
-    font-weight: 300;
+    font-size: 2.8em;
+    font-weight: 600;
     line-height: 42px;
     margin: 0 0 32px 0;
 }
+
+.section-contact-map {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #dfe6e8;
+    margin-top: 150px;
+}
+
+.contact-container-infor {
+      /*  margin-top: 6.1em;*/
+}
+.contact-infor-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* MAIN MENU */
 
 .clean {
@@ -1094,6 +1122,24 @@ footer .social-network.gplus > a {
     border-top: 1px solid #dfe6e8;
     border-bottom: 1px solid #dfe6e8;
 }
+
+
+.subtitle-text-with-image {
+      color: rgba(41, 33, 33, 0.79);
+      font-size: 2.5em;
+      font-weight: bold;
+}
+
+.contact-icons {
+    width: 40px;
+    height: 40px;
+}
+
+.subtitle-contact {
+    /*font-weight: bold;*/
+    font-size: 1.8em;
+}
+
 .justfy-text {
     text-align: justify;
 }
@@ -1309,8 +1355,8 @@ body .primary-button {
     height: 160px;
 }
 .image-timeline {
-    width: 300px;
-    height: 225px;
+    width: 270px;
+    height: 200px;
 }
 .btn-contact {
     background-color: #0091ea;
@@ -1987,11 +2033,11 @@ Main Components
     margin-bottom: 20px;
 }
 #timeline {
-  text-align: center;
-    /* width: 800px; */
-    height: 600px;
+    /* text-align: center; */
+    width: 900px;
+    height: auto;
     overflow: hidden;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     position: relative;
     background: url('../img/icons-timelinr/rodovia.gif') left 50px repeat-x;
 }
@@ -2016,21 +2062,33 @@ list-style: none;
     color: #2d2d38;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
 }
 #dates .selected {
    font-size: 28px;
 }
 #issues {
-    height: 450px;
+    width: 900px;
+    height: 350px;
     overflow: hidden;
+    /*height: 450px;
+    overflow: hidden;*/
     /*margin-top: 20px;*/
 }
 #issues li {
+
+    width: 800px;
+    height: 350px;
+    list-style: none;
+    float: left;
+
+    /*
+    margin-left: 1.4em;
     width: 870px;
     height: 450px;
     list-style: none;
     float: left;
-    margin-top: 15px;
+    margin-top: 15px;*/
 }
 #issues li.selected img {
     -webkit-transform: scale(1.1, 1.1);
@@ -2041,7 +2099,7 @@ list-style: none;
 }
 #issues li img {
     float: left;
-    margin: 10px 30px 10px 40px;
+    margin: 10px 75px 10px 0px;
     background: transparent;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
@@ -2059,12 +2117,22 @@ list-style: none;
 }
 #issues li h1 {
     margin: 0;
+    line-height: 38px;
+    padding-bottom: 10px;
+    color: #2d2d38;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
     /*
     color: #ffcc00;
     font-size: 48px;
     margin: 20px 0;
     text-shadow: #000 1px 1px 2px;
     */
+}
+
+.partners-row {
+    margin-bottom: 30px;
 }
 #issues li p {
     font-size: 15px;
@@ -2078,19 +2146,23 @@ list-style: none;
 }
 #grad_left,
 #grad_right {
-    width: 50px;
-    height: 500px;
+    width: 35px;
+    height: 400px;
     position: absolute;
     top: 0;
 }
 #grad_left {
+
     left: 0;
     background-color:  white;
-    /*background: url('../img/icons-timelinr/grad_left.png') repeat-y;*/
+     /*
+    background: url('../img/icons-timelinr/grad_left.png') repeat-y;*/
 }
 #grad_right {
+
     right: 0;
     background-color:  white;
+
     /*background: url('../img/icons-timelinr/grad_right.png') repeat-y;*/
 }
 #next,

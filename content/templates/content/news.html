@@ -8,11 +8,6 @@
 
 {% block content %}
 
-<!--<div class="row">-->
-       <!--<article class="center-text">-->
-            <!--<h1><strong>Notícias</strong></h1>-->
-        <!--</article>-->
-    <!--</div>-->
 <section>
     <div class="row">
         {% include "carousel.html" %}
@@ -26,10 +21,10 @@
             {% for noticia in noticias %}
 
                 <div class="col-sm-4">
-                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{noticia.title}}" style="text-decoration: none;">
+                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
                         {% if noticia.has_image %}
                             <picture>
-                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{noticia}}" style="width:auto;">
+                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">
                             </picture>
                          {% endif %}
                         <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
@@ -43,6 +38,7 @@
             {% endfor %}
 
         {% endif %}
+
         {% if noticias_home_page.count == 0 %}
                 <div class="col-sm-12">
                      <p>Nenhum registro encontrado.</p>

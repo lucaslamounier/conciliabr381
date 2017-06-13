@@ -3,250 +3,50 @@
 {% block title %} Comunidades | {{ block.super }} {% endblock %}
 
 {% block content %}
-
-<!-- Carregamento dos scripts do mapa -->
-
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk"></script>-->
-<!--<script src="{% static 'js/gmap3.infobox.js' %}"></script>-->
-<!--<script src="{% static 'js/gmap3.min.js' %}"></script>-->
+<!-- scripts -->
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
 <script type="text/javascript" src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
 <!-- end scripts -->
 
-<div class="row">
-      <article>
-            <h1><strong>Comunidades: etapa 2017</strong></h1>
-      </article>
-</div>
+<h1 class="title-community">Comunidades: etapa 2017</h1>
 <section id="big-map" class="margin-50 hide-for-small">
-    <!--<div id="flatads-main-map"></div>-->
-    <div id="mapdiv" style="width: 100%; height: 600px;"></div>
+    <!-- STORY MAP -->
+        <div id="mapdiv" style="width: 100%; height: 600px;"></div>
+    <!-- END STORY MAP -->
+</section>
+
+<section>
     <div class="row">
-            <div class="columns small-12">
-                <h1 style="text-align: center;">Lorem Ipsum</h1>
-                <p style="text-align: center;">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem diam, semper vel orci quis, venenatis egestas erat. Phasellus molestie magna vitae feugiat lacinia. Quisque fermentum luctus lectus, vitae porta nisl fermentum non. Proin tristique nec odio finibus volutpat. Nulla at vulputate quam. In et mi iaculis, vulputate metus vel, imperdiet est. Nam sodales diam sed nulla imperdiet tristique. In a ullamcorper purus. Sed ultricies, neque vel sagittis pellentesque, ligula nunc dictum quam, eget semper metus diam vitae diam. Duis nec sem congue, laoreet sem sit amet, mollis odio. Cras feugiat tortor vel risus consectetur varius. In at euismod leo. Vestibulum a congue est.
+         <!--<h1>Pré e Pós Morar</h1>-->
+        <h1 class="subtitle-text-with-image">Inserção social</h1>
+         <div class="col-sm-6">
+                <p class="justfy-text">Um dos diferenciais desse programa de reassentamento é o acompanhamento das famílias em todo o processo de mudança. São levadas em consideração as especificidades de cada núcleo familiar como a presença de idosos, adultos, crianças, adolescentes ou pessoas portadoras de algum tipo de deficiência.  Também é feito um trabalho social nas comunidades e os moradores são inseridos em atividades sociais e educativas de saúde, assistência social, geração de emprego e renda, cultura e educação.</p>
+         </div>
+         <div class="col-sm-6">
+            <img src="{% static 'img/comunidades_fotos/2.1.jpg' %}" />
+         </div>
+    </div>
+    <div class="row">
+        <h1 class="subtitle-text-with-image">Cadastramento e selagem </h1>
+         <div class="col-sm-6">
+              <p class="justfy-text">As famílias das comunidades beneficiadas pelo Concilia BR-381 e Anel passam pelo processo de cadastramento e selagem das moradias. Durante essa ação, as moradias recebem um selo (que dá origem ao nome do processo) com um número de identificação do imóvel. Estas e outras informações fornecerão subsídios para a Justiça Federal nas audiências de conciliação. Todas as moradias que participam do cadastramento recebem um documento de identificação e um selo afixado na porta da residência com uma sequência numérica. </p>
+              <p class="justfy-text">Durante a atividade, é feito um levantamento arquitetônico, medição dos imóveis, avaliação das benfeitorias das moradias, análise de vulnerabilidade dos moradores, cadastro social das famílias, croqui técnico e registro fotográfico. Em termos genéricos, pode-se compreender esse processo como um registro das realidades física e social identificadas em campo.  </p>
+              <p class="justfy-text">Após o trabalho de medição técnica e avaliação social, é feita a aplicação do diagnóstico social - cadastro mais extenso com informações referentes às necessidades da Vila. Com a finalização da selagem é feito o congelamento das moradias situadas às margens da rodovia. </p>
 
-        Proin lobortis diam ac sodales placerat. Vestibulum accumsan faucibus condimentum. Sed sed orci tempor, convallis est non, malesuada mauris. Sed id risus lacinia, posuere enim eget, tempus felis. Proin et urna odio. Nam mollis a lectus at ultrices. Integer lobortis tempus neque porttitor scelerisque. Aliquam lobortis placerat dictum. Ut molestie ex nibh, at efficitur lectus commodo in. Fusce blandit, ex quis fermentum semper, nibh est luctus lacus, vitae dictum nibh sapien sed ligula. Mauris ut tellus fermentum, gravida dolor non, congue turpis.
 
-        Etiam laoreet porta urna vel cursus. Ut porta sit amet neque eget tincidunt. Nam interdum sed nisi vitae viverra. Cras fringilla dolor euismod fringilla suscipit. Donec eu nulla magna. Duis bibendum, augue et sodales egestas, neque orci vestibulum sem, in porta odio lectus non erat. Quisque vitae risus auctor, dictum arcu cursus, tempor quam. Sed dignissim, lectus non mattis aliquam, lorem urna venenatis lacus, efficitur maximus dolor magna et velit. Praesent blandit nec metus vitae dapibus. Maecenas euismod vitae magna et viverra. Fusce et metus nec libero rutrum rutrum. Praesent porttitor elit non quam pharetra, in luctus sapien finibus. Fusce non ultricies eros. Maecenas facilisis leo quam, nec posuere libero facilisis eu. Suspendisse fringilla malesuada elementum. Aliquam cursus tempor pulvinar.
-
-        Proin auctor ex ut ante malesuada blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam convallis enim dolor, id condimentum eros porttitor at. Pellentesque ut vestibulum nisi. Aenean nisi eros, auctor quis enim nec, auctor mattis eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nunc nisi, condimentum eu odio sit amet, auctor vehicula nisl.
-
-        Mauris a purus felis. Integer eget nulla sagittis, sodales justo et, sagittis ante. Ut viverra magna a urna tincidunt, et fringilla mi egestas. In ligula velit, fermentum quis nulla ut, eleifend suscipit lacus. Morbi non felis placerat, aliquet quam et, pulvinar nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam at felis accumsan, suscipit libero consequat, pretium arcu. Aliquam consectetur leo ut facilisis eleifend. In hac habitasse platea dictumst. Donec id ultricies eros. Aliquam eleifend lacus eget tellus molestie consectetur. Donec ut magna eros.
-            </p>
-            </div>
+         </div>
+         <div class="col-sm-6">
+             <p>
+                <img src="{% static 'img/comunidades_fotos/2.2.jpg' %}" />
+             </p>
+              <p class="justfy-text">Os moradores são orientados a não expandir suas edificações nem realizar nenhuma modificação estética ou estrutural.</p>
+             <p class="justfy-text"> As benfeitorias feitas após a data da selagem não serão levadas em consideração na avaliação do imóvel durante as Audiências de Conciliação. Os problemas identificados durante a selagem são registrados pelos técnicos e, aqueles que necessitam de atendimentos sistematizados, são direcionados às equipes responsáveis. </p>
+         </div>
     </div>
 </section>
+
 <section class="top-border-gray"></section>
 
-    <!--<script>-->
-
-        <!--var mapDiv,-->
-            <!--map,-->
-            <!--infobox;-->
-
-        <!--jQuery(document).ready(function(){-->
-
-            <!--mapDiv = jQuery("#flatads-main-map");-->
-
-            <!--mapDiv.width("100%").height("500px").gmap3({-->
-                <!--map:{-->
-                    <!--options: {-->
-                        <!--center:[-19.869775,-43.941161,12],-->
-                        <!--zoom: 18,-->
-                        <!--mapTypeId: google.maps.MapTypeId.SATELLITE,-->
-                        <!--streetViewControl: true,-->
-                        <!--scrollwheel : false,-->
-                        <!--overviewMapControl: false,-->
-                        <!--"styles": [-->
-                            <!--{-->
-                                <!--"featureType": "landscape.natural",-->
-                                <!--"elementType": "geometry.fill",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"visibility": "on"-->
-                                    <!--},-->
-                                    <!--{-->
-                                        <!--"color": "#e0efef"-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "poi",-->
-                                <!--"elementType": "geometry.fill",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"visibility": "on"-->
-                                    <!--},-->
-                                    <!--{-->
-                                        <!--"hue": "#1900ff"-->
-                                    <!--},-->
-                                    <!--{-->
-                                        <!--"color": "#c0e8e8"-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "landscape.man_made",-->
-                                <!--"elementType": "geometry.fill"-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "road",-->
-                                <!--"elementType": "geometry",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"lightness": 100-->
-                                    <!--},-->
-                                    <!--{-->
-                                        <!--"visibility": "simplified"-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "road",-->
-                                <!--"elementType": "labels",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"visibility": "off"-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "water",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"color": "#7dcdcd"-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--},-->
-                            <!--{-->
-                                <!--"featureType": "transit.line",-->
-                                <!--"elementType": "geometry",-->
-                                <!--"stylers": [-->
-                                    <!--{-->
-                                        <!--"visibility": "on"-->
-                                    <!--},-->
-                                    <!--{-->
-                                        <!--"lightness": 700-->
-                                    <!--}-->
-                                <!--]-->
-                            <!--}-->
-
-                        <!--]-->
-                    <!--}-->
-                <!--},-->
-                <!--marker:{-->
-                    <!--values: [-->
-                        <!--// Vila Pica Pau-->
-                        <!--{-->
-                            <!--latLng:[-19.840888,-43.885106],-->
-                                <!--options: {-->
-                                    <!--icon: "{% static 'img/icones/pin.png' %}",-->
-                                    <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
-                             <!--},-->
-                             <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=38\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Santa-Lucia-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Santa-Lucia\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila Pica Pau</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=38\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
-                        <!--},-->
-                        <!--// Vila da Paz-->
-                        <!--{-->
-                            <!--latLng:[-19.869775,-43.941161],-->
-                                <!--options: {-->
-                                    <!--icon: "{% static 'img/icones/pin.png' %}",-->
-                                    <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
-                                <!--},-->
-                            <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=40\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Carapina-Governador-Valadares-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Carapina - Governador Valadares\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Paz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=40\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
-                        <!--},-->
-                        <!--// VIla da Luz-->
-                        <!--{-->
-                            <!--latLng:[-19.856361,-43.893376],-->
-                            <!--options: {-->
-                                <!--icon: "{% static 'img/icones/pin.png' %}",-->
-                                <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
-                            <!--},-->
-                        <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=41\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/05/Aglomerado-Morro-das-Pedras-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Aglomerado-Morro-das-Pedras\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila da Luz</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=41\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
-                        <!--},-->
-                        <!--// Vila bom destino-->
-                        <!--{-->
-                            <!--latLng:[-19.824345,-43.831612],-->
-                            <!--options: {-->
-                                <!--icon: "{% static 'img/icones/pin.png' %}",-->
-                                <!--shadow: "{% static 'img/icones/shadow.png' %}"-->
-                            <!--},-->
-                            <!--data: "<div class=\"marker-holder\"><div class=\"marker-content\"><div class=\"marker-image\"><a href=\"?p=68\"><img width=\"500\" height=\"281\" src=\"http://www.favelaeissoai.com.br/wp-content/uploads/2014/06/Cidade-de-Deus-Sete-Lagoas-500x281.jpg\" class=\"attachment-comunity-banner-medium wp-post-image\" alt=\"Cidade-de-Deus-Sete-Lagoas\" /></a></div><div class=\"marker-info-holder\"><div class=\"marker-info\"><div class=\"marker-info-title\">Vila B</div><div class=\"marker-info-extra\"><div class=\"marker-info-link\"><a href=\"?p=68\">Ver comunidade</a></div></div></div></div><div class=\"arrow-down\"></div><div class=\"close\"></div></div></div>",-->
-                        <!--},-->
-                    <!--],-->
-                    <!--cluster:{-->
-                        <!--radius: 20,-->
-                        <!--// This style will be used for clusters with more than 0 markers-->
-                        <!--0: {-->
-                            <!--content: "<div class='cluster cluster-1'>CLUSTER_COUNT</div>",-->
-                            <!--width: 62,-->
-                            <!--height: 62-->
-                        <!--},-->
-                        <!--// This style will be used for clusters with more than 20 markers-->
-                        <!--20: {-->
-                            <!--content: "<div class='cluster cluster-2'>CLUSTER_COUNT</div>",-->
-                            <!--width: 82,-->
-                            <!--height: 82-->
-                        <!--},-->
-                        <!--// This style will be used for clusters with more than 50 markers-->
-                        <!--50: {-->
-                            <!--content: "<div class='cluster cluster-3'>CLUSTER_COUNT</div>",-->
-                            <!--width: 102,-->
-                            <!--height: 102-->
-                        <!--},-->
-                        <!--events: {-->
-                            <!--click: function(cluster) {-->
-                                <!--map.panTo(cluster.main.getPosition());-->
-                                <!--map.setZoom(map.getZoom() + 2);-->
-                            <!--}-->
-                        <!--}-->
-                    <!--},-->
-                    <!--events: {-->
-                        <!--click: function(marker, event, context){-->
-                            <!--map.panTo(marker.getPosition());-->
-
-                            <!--var ibOptions = {-->
-                                <!--pixelOffset: new google.maps.Size(-125, -88),-->
-                                <!--alignBottom: true-->
-                            <!--};-->
-
-                            <!--infobox.setOptions(ibOptions)-->
-
-                            <!--infobox.setContent(context.data);-->
-                            <!--infobox.open(map,marker);-->
-
-                            <!--// if map is small-->
-                            <!--var iWidth = 260;-->
-                            <!--var iHeight = 300;-->
-                            <!--if((mapDiv.width() / 2) < iWidth ){-->
-                                <!--var offsetX = iWidth - (mapDiv.width() / 2);-->
-                                <!--map.panBy(offsetX,0);-->
-                            <!--}-->
-                            <!--if((mapDiv.height() / 2) < iHeight ){-->
-                                <!--var offsetY = -(iHeight - (mapDiv.height() / 2));-->
-                                <!--map.panBy(0,offsetY);-->
-                            <!--}-->
-
-                        <!--}-->
-                    <!--}-->
-                <!--}-->
-            <!--},"");-->
-            <!--map = mapDiv.gmap3("get");-->
-
-            <!--infobox = new InfoBox({-->
-                <!--pixelOffset: new google.maps.Size(-50, -65),-->
-                <!--closeBoxURL: '',-->
-                <!--enableEventPropagation: true-->
-            <!--});-->
-
-            <!--mapDiv.delegate('.infoBox .close','click',function () {-->
-                <!--infobox.close();-->
-            <!--});-->
-
-        <!--});-->
-
-    <!--</script>-->
 <script>
         // storymap_data can be an URL or a Javascript object
         var storymap_data = "{% static 'js/demo.json' %}";

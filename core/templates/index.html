@@ -6,8 +6,6 @@
 
 
 <section class="section-border-bottom" style="min-height: 600px; margin-top: 120px;">
-     <!--<h1 class="text-header-page text-align-right">Construindo um caminho melhor</h1>-->
-     <!--<h1 class="text-header-page text-align-right">O PROGRAMA</h1>-->
     <div class="col-sm-9">
         <img src="{% static 'img/background-images/mapa2.1.jpg' %}" class="index-map" title="Anel Rodoviário e BR-381" alt="Anel Rodoviário e BR-381"/>
     </div>
@@ -27,7 +25,7 @@
 <!-- TIMELINE -->
 
 <section>
-    {% include 'timeline.html' %}
+      {% include 'timeline.html' %}
 </section>
 
 
@@ -73,10 +71,10 @@
         {% if noticias_home_page.count > 0 %}
             {% for noticia in noticias_home_page %}
                 <div class="col-sm-4">
-                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{noticia.title}}" style="text-decoration: none;">
+                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
                         {% if noticia.has_image %}
                             <picture>
-                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{noticia}}" style="width:auto;">
+                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">
                             </picture>
                          {% endif %}
                         <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
