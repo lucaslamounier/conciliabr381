@@ -1135,6 +1135,11 @@ footer .social-network.gplus > a {
     height: 40px;
 }
 
+.timeline-warning {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 .subtitle-contact {
     /*font-weight: bold;*/
     font-size: 1.8em;

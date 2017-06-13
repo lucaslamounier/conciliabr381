@@ -31,8 +31,8 @@
 
 <!-- Caso nao seja encontrado nenhum item. -->
 {% if timeline_itens.count == 0 %}
-<div>
-	<h3>Nenhum evento adicionado para a linha do tempo.</h3>
+<div class="alert alert-warning timeline-warning">
+	<h3 style="font-weight: bold;color: white;">Nenhum evento adicionado para a linha do tempo.</h3>
 </div>
 {% endif %}
 </div>
