@@ -2086,7 +2086,7 @@ list-style: none;
     height: 350px;
     list-style: none;
     float: left;
-
+    padding-left: 45px;
     /*
     margin-left: 1.4em;
     width: 870px;
@@ -2142,12 +2142,13 @@ list-style: none;
 #issues li p {
     font-size: 15px;
     /* margin-right: 70px; */
-    /* font-weight: normal; */
-    /* line-height: 22px; */
+    font-weight: normal;
+    line-height: 22px;
     /* text-shadow: #000 1px 1px 2px; */
     text-align: justify;
     /* padding-left: 10px; */
     overflow: hidden;
+    padding-top: 30px;
 }
 #grad_left,
 #grad_right {
@@ -2159,16 +2160,16 @@ list-style: none;
 #grad_left {
 
     left: 0;
+    /*
     background-color:  white;
-     /*
     background: url('../img/icons-timelinr/grad_left.png') repeat-y;*/
 }
 #grad_right {
 
     right: 0;
+     /*
     background-color:  white;
-
-    /*background: url('../img/icons-timelinr/grad_right.png') repeat-y;*/
+    background: url('../img/icons-timelinr/grad_right.png') repeat-y;*/
 }
 #next,
 #prev {
