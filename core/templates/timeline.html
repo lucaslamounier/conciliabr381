@@ -15,10 +15,21 @@
 			{% for event in timeline_itens %}
 				<li id="{{event.pk}}">
 					{% if event.has_image %}
-						<img class="img-responsive image-timeline" src="{{event.image.url}}"/>
+                        <div>
+                            <img class="img-responsive image-timeline" src="{{event.image.url}}"/>
+                        </div>
+                         <div>
+                            <h1>{{event.title}}</h1>
+                            <p>{{event.text }}</p>
+                        </div>
 					{% endif %}
-						<h1>{{event.title}}</h1>
-						<p>{{event.text }}</p>
+
+                    {% if not event.has_image %}
+                        <div style="width: 870px; margin-left: 50px;">
+                            <h1>{{event.title}}</h1>
+                            <p>{{event.text }}</p>
+                        </div>
+                    {% endif %}
 				</li>
 			{% endfor %}
 		</ul>

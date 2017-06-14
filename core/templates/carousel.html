@@ -13,7 +13,8 @@
 </div>
 {% if noticias_carrousel.count != 0 %}
 <div class="row">
-    <div class="col-sm-11">
+    <!--<div class="col-sm-3"></div>-->
+    <div class="col-sm-12">
         <div class="owl-carousel owl-theme " id="tile_banner_rotativo">
             {% for noticia in noticias_carrousel %}
                 <div class="item">
@@ -28,6 +29,7 @@
 
         </div>
     </div>
+    <!--<div class="col-sm-3"></div>-->
 </div>
 {% endif %}
 <script>
