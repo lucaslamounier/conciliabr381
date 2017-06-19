@@ -1360,11 +1360,19 @@ body .primary-button {
 .footer-image {
     width: auto;
 }
+
 .footer-image-apoio {
     width: auto;
     height: 40px;
     margin: 1.5em;
 }
+
+.icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0%, 200%);
+}
+
 @media only screen and (max-width: 1024px) {
     #internal-menu,
     #external-menu,
@@ -1465,11 +1473,15 @@ body .primary-button {
         font-size: 18px;
     }
     .icons-parallax {
-        display: inline-block;
-        width: 239px;
-        transform: translate(0, 0%);
+          display: inline-block;
+          width: 230px;
+          transform: translate(0%, 0%);
+          margin-left: 2.5em;
     }
+
 }
+
+
 .tile .tile-subtitle {
     margin-bottom: 0.7em !important;
     color: #2c67cd;
@@ -1487,11 +1499,7 @@ body .primary-button {
 .top-menu-container {
     float: right;
 }
-.icons-parallax {
-    display: inline-block;
-    width: 239px;
-    transform: translate(0%, 200%);
-}
+
 .label-icones-casas-numero {
     font-size: 2.1em;
 }
@@ -1588,6 +1596,9 @@ a.button-parallax:hover {
     float: right;
     margin-right: 50px;
 }
+
+
+
 /******************** HORIZONTAL TIMELINE **********************************/
 /* --------------------------------
 

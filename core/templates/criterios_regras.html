@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    CRITÉRIOS E REGRAS | {{ block.super }}
+{% endblock  %}
+
+{% block content %}
+
+
+<section class="section-about">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;">CRITÉRIOS E REGRAS</h1>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <p>
+            Para que a execução do <b>Concilia BR-381 e Anel</b> seja viável e eficaz, é fundamental que sejam validados, por todas as partes, os critérios e regras que regerão cada uma das etapas do reassentamento das famílias que vivem na faixa de domínio da rodovia.
+        </p>
+        <p>Essas diretrizes foram consolidadas em um documento específico, que aborda, entre outros assuntos: </p>
+        <div class="col-sm-6" style="margin-left: 4em;">
+            <p>
+                <b>a)</b> Forma de acesso das famílias ao banco de imóveis; <br />
+                <b>b)</b> Critérios para a ordem de escolha dos imóveis; <br />
+                <b>c)</b> Regras para manifestação preliminar de interesse;  <br />
+                <b>d)</b> Regras para visitação dos imóveis pré-selecionados; <br />
+                <b>e)</b> Regras para a formalização da escolha; <br />
+                <b>f)</b> Regras para o agendamento da mudança; <br />
+                <b>g)</b> Regras para a realização da mudança; <br />
+                <b>h)</b> Planejamento inicial do acompanhamento pré morar; <br />
+                <b>i)</b> Planejamento inicial do acompanhamento pós morar;
+            </p>
+        </div>
+        <div class="col-sm-12">
+            <p>
+                Esse documento foi revisado e validado pelo Conselho Executivo e, em seguida, homologado na Justiça Federal. Esse documento foi revisado e validado pelo Conselho Executivo e, em seguida, homologado na Justiça Federal.
+            </p>
+            <p>
+                 <img src="{% static 'img/imagens-paginas-internas/criterios_regras_4.1.jpg' %}" />
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+         <h1>DOCUMENTO QUE DEFINE OS CRITÉRIOS E REGRAS DO PROGRAMA</h1>
+            <embed src="{% static 'files/2017-06-06_Criterios_e_Regras_versao_final.pdf' %} " width="100%" height="2100px" />
+    </div>
+</section>
+
+<div class="line-separator-gray"></div>
+{% endblock  %}

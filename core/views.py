@@ -47,6 +47,16 @@ class ManualMarcaView(TemplateView):
     template_name = 'manual_marca.html'
 
 
+# Página Plano de Providencias
+class PlanoProvidenciaView(TemplateView):
+    template_name = 'plano_providencias.html'
+
+
+# Página Criterios e regras
+class CriteriosRegrasView(TemplateView):
+    template_name = 'criterios_regras.html'
+
+
 # Página de contatos
 def contact(request):
     success = False
@@ -69,3 +79,5 @@ partners = PartnersView.as_view()
 duvida = FaqView.as_view()
 conselho_executivo = ConselhoExecutivoView.as_view()
 manual_marca = ManualMarcaView.as_view()
+plano_providencias = PlanoProvidenciaView.as_view()
+criterios_regras = CriteriosRegrasView.as_view()

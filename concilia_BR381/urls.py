@@ -31,6 +31,8 @@ urlpatterns = [
     url(r'^duvidas/$', views.duvida, name='faq'),
     url(r'^parceiros/$', views.partners, name='partners'),
     url(r'^conselho-executivo/$', views.conselho_executivo, name='conselho_executivo'),
+    url(r'^plano-de-providencias/$', views.plano_providencias, name='plano_providencias'),
+    url(r'^criterios-e-regras/$', views.criterios_regras, name='criterios_regras'),
     url(r'^manual-marca/$', views.manual_marca, name='manual_marca'),
     url(r'^conteudos/', include('content.urls', namespace='content')),
     url(r'^admin/', admin.site.urls),

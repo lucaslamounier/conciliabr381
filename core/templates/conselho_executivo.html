@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% load static %}
+
 {% load widget_tweaks %}
 
 {% block title %}
@@ -7,19 +10,42 @@
 
 {% block content %}
 
-<div class="row">
-        <article class="center-text">
-            <h1><strong>Conselho Executivo</strong></h1>
-        </article>
-</div>
-<div class="row">
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem diam, semper vel orci quis, venenatis egestas erat. Phasellus molestie magna vitae feugiat lacinia. Quisque fermentum luctus lectus, vitae porta nisl fermentum non. Proin tristique nec odio finibus volutpat. Nulla at vulputate quam. In et mi iaculis, vulputate metus vel, imperdiet est. Nam sodales diam sed nulla imperdiet tristique. In a ullamcorper purus. Sed ultricies, neque vel sagittis pellentesque, ligula nunc dictum quam, eget semper metus diam vitae diam. Duis nec sem congue, laoreet sem sit amet, mollis odio. Cras feugiat tortor vel risus consectetur varius. In at euismod leo. Vestibulum a congue est.
+<section class="section-about">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;">CONSELHO EXECUTIVO</h1>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row">
+        <p>
+            Para minimizar os conflitos e facilitar o entendimento entre os diversos atores que compõem o <b>Concilia BR-381 e Anel</b> foi criado um Conselho Executivo. Ele possui caráter deliberativo e tem como principal função buscar o consenso por meio de proposições colegiadas acerca do programa.
+        </p>
+        <p>
+            Esse grupo realiza o acompanhamento das diversas ações previstas e é responsável pelo gerenciamento do <a href="{% url 'plano_providencias' %}" target="_blank">Plano de Providências</a> - documento elaborado pelo DNIT com ações e soluções para viabilizar o reassentamento definitivo de famílias cadastradas no <b>Concilia BR-381 e Anel</b>.
+        </p>
+        <p>
+            Foram estabelecidos <a href="{% url 'criterios_regras' %}" target="_blank">critérios e regras</a> para que a execução desse programa de reassentamento seja viável e eficaz em cada uma de suas etapas. Essas normas foram elaboradas de maneira conjunta, revisadas pelos membros do Conselho Executivo e homologadas na Justiça Federal.
+        </p>
+        <p>
+            <img src="{% static 'img/imagens-paginas-internas/conselho_executivo_3.1.jpg' %}" />
+        </p>
+        <p>
+            O Conselho é composto por um representante de cada instituição parceira do Concilia BR-381 e Anel. São membros um representante do Ministério Público Federal, um representante da Defensoria Pública da União, um representante do Departamento Nacional de Infraestrutura de Transportes, um representante da Cia Urbanizadora de Belo Horizonte e um representante da Comunidade de Moradores de Áreas de Risco (CMAR).
+        </p>
+        <p>
+             O Conselho se reúne periodicamente e em situações extraordinárias. O grupo conta com o auxílio de um secretário designado pelo DNIT para auxiliar nas funções de agendamento, arquivamento de documentos e digitação de atas.
+São questões decididas pelos membros: a conciliação, o cumprimento do Acordo Judicial homologado em juízo, analisar casos excepcionais e decidir questões estratégicas. O resultado das deliberações é encaminhado ao juízo para homologação.
+        </p>
 
-Proin lobortis diam ac sodales placerat. Vestibulum accumsan faucibus condimentum. Sed sed orci tempor, convallis est non, malesuada mauris. Sed id risus lacinia, posuere enim eget, tempus felis. Proin et urna odio. Nam mollis a lectus at ultrices. Integer lobortis tempus neque porttitor scelerisque. Aliquam lobortis placerat dictum. Ut molestie ex nibh, at efficitur lectus commodo in. Fusce blandit, ex quis fermentum semper, nibh est luctus lacus, vitae dictum nibh sapien sed ligula. Mauris ut tellus fermentum, gravida dolor non, congue turpis.
+    </div>
+</section>
+<section>
+    <div class="row">
+            <embed src="{% static 'files/2017-06-06-Regimento_Interno_Conselho_Executivo.pdf' %} " width="100%" height="2100px" />
+    </div>
+</section>
+<div class="line-separator-gray"></div>
 
-Etiam laoreet porta urna vel cursus. Ut porta sit amet neque eget tincidunt. Nam interdum sed nisi vitae viverra. Cras fringilla dolor euismod fringilla suscipit. Donec eu nulla magna. Duis bibendum, augue et sodales egestas, neque orci vestibulum sem, in porta odio lectus non erat. Quisque vitae risus auctor, dictum arcu cursus, tempor quam. Sed dignissim, lectus non mattis aliquam, lorem urna venenatis lacus, efficitur maximus dolor magna et velit. Praesent blandit nec metus vitae dapibus. Maecenas euismod vitae magna et viverra. Fusce et metus nec libero rutrum rutrum. Praesent porttitor elit non quam pharetra, in luctus sapien finibus. Fusce non ultricies eros. Maecenas facilisis leo quam, nec posuere libero facilisis eu. Suspendisse fringilla malesuada elementum. Aliquam cursus tempor pulvinar.
-
-</p>
-</div>
 {% endblock  %}
