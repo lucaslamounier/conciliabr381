@@ -345,13 +345,14 @@ div.bxslider1 > div {
 }
 .view-all-noticia {
     float: right;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: bold;
     letter-spacing: normal;
     line-height: 18px;
-    margin: 0 0 14px 0;
+    margin: 20px 0 14px 0;
     text-transform: uppercase;
 }
+
 a.view_all_noticia:hover {
     color: #ffbb00;
     text-decoration: none;
@@ -1355,7 +1356,7 @@ body .primary-button {
     background-color: #0091ea;
     color: white;
 }
-/****************** MOBILE **************************/
+
 
 .footer-image {
     width: auto;
@@ -1364,7 +1365,7 @@ body .primary-button {
 .footer-image-apoio {
     width: auto;
     height: 40px;
-    margin: 1.5em;
+    margin-top: 1.5em;
 }
 
 .icons-parallax {
@@ -1372,115 +1373,6 @@ body .primary-button {
         width: 239px;
         transform: translate(0%, 200%);
 }
-
-@media only screen and (max-width: 1024px) {
-    #internal-menu,
-    #external-menu,
-    #big-map {
-        display: none !important;
-    }
-    .image-block {
-        display: none;
-    }
-    .label-icones-casas {
-        position: absolute;
-        margin-top: 10em;
-        z-index: 1;
-        margin-left: 7.5em;
-        color: black;
-        font-size: 18px;
-    }
-    .icons-parallax {
-        display: inline-block;
-        width: 239px;
-        transform: translate(0, 0%);
-    }
-}
-@media only screen and (max-width: 960px) {
-    #internal-menu,
-    #external-menu,
-    #big-map {
-        display: none !important;
-    }
-    .footer-image {
-        width: 90%;
-        min-height: 70px;
-    }
-    .image-block {
-        display: none;
-    }
-    .label-icones-casas {
-        position: absolute;
-        margin-top: 10em;
-        z-index: 1;
-        margin-left: 7.5em;
-        color: black;
-        font-size: 18px;
-    }
-    .icons-parallax {
-        display: inline-block;
-        width: 239px;
-        transform: translate(0, 0%);
-    }
-}
-@media only screen and (max-width: 767px) {
-    #internal-menu,
-    #external-menu,
-    #big-map {
-        display: none !important;
-    }
-    .footer-image {
-        width: 90%;
-        min-height: 70px;
-    }
-    .image-block {
-        display: none;
-    }
-    .label-icones-casas {
-        position: absolute;
-        margin-top: 10em;
-        z-index: 1;
-        margin-left: 7.5em;
-        color: black;
-        font-size: 18px;
-    }
-    .icons-parallax {
-        display: inline-block;
-        width: 239px;
-        transform: translate(0, 0%);
-    }
-}
-@media only screen and (max-width: 479px) {
-    #internal-menu,
-    #external-menu,
-    #big-map {
-        display: none !important;
-    }
-    .footer-image {
-        width: 70%;
-        min-height: 70px;
-        margin: auto;
-    }
-    .image-block {
-        display: none;
-    }
-    .label-icones-casas {
-        position: absolute;
-        margin-top: 10em;
-        z-index: 1;
-        margin-left: 7.5em;
-        color: black;
-        font-size: 18px;
-    }
-    .icons-parallax {
-          display: inline-block;
-          width: 230px;
-          transform: translate(0%, 0%);
-          margin-left: 2.5em;
-    }
-
-}
-
 
 .tile .tile-subtitle {
     margin-bottom: 0.7em !important;
@@ -1600,11 +1492,6 @@ a.button-parallax:hover {
 
 
 /******************** HORIZONTAL TIMELINE **********************************/
-/* --------------------------------
-
-Main Components
-
--------------------------------- */
 
 .cd-horizontal-timeline {
     opacity: 0;
@@ -1615,7 +1502,6 @@ Main Components
 }
 .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
-
     content: 'mobile';
     display: none;
 }
@@ -2175,3 +2061,159 @@ Main Components
 .partners-row {
     margin-bottom: 30px;
 }
+
+.section-index-map {
+    min-height: 600px;
+    margin-top: 120px;
+}
+
+
+/****************** MOBILE  CSS **************************/
+
+
+@media only screen and (max-width: 1024px) {
+    #internal-menu,
+    #external-menu,
+    #big-map {
+        display: none !important;
+    }
+    .image-block {
+        display: none;
+    }
+    .label-icones-casas {
+        position: absolute;
+        margin-top: 10em;
+        z-index: 1;
+        margin-left: 7.5em;
+        color: black;
+        font-size: 18px;
+    }
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    #internal-menu,
+    #external-menu,
+    #big-map {
+        display: none !important;
+    }
+    .footer-image {
+        width: 90%;
+        min-height: 70px;
+    }
+    .image-block {
+        display: none;
+    }
+    .label-icones-casas {
+        position: absolute;
+        margin-top: 10em;
+        z-index: 1;
+        margin-left: 7.5em;
+        color: black;
+        font-size: 18px;
+    }
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    #internal-menu,
+    #external-menu,
+    #big-map {
+        display: none !important;
+    }
+    .footer-image {
+        width: 90%;
+        min-height: 70px;
+    }
+    .image-block {
+        display: none;
+    }
+    .label-icones-casas {
+        position: absolute;
+        margin-top: 10em;
+        z-index: 1;
+        margin-left: 7.5em;
+        color: black;
+        font-size: 18px;
+    }
+    .icons-parallax {
+        display: inline-block;
+        width: 239px;
+        transform: translate(0, 0%);
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+
+    #internal-menu, #external-menu,  #big-map {
+        display: none !important;
+    }
+
+    .section-index-map {
+        min-height: 600px;
+        margin-top: 50px;
+    }
+
+    .footer-image {
+        width: 100%;
+        height: auto;
+        margin-top: 1.5em;
+    }
+
+    .image-block {
+        display: none;
+    }
+
+    .text-header-page {
+        font-size: 30px;
+
+    }
+
+    .index-map {
+        width: 100%;
+        float: none;
+        height: auto;
+        margin-right: 0;
+    }
+
+   .label-icones-casas {
+        margin: 0;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -30%);
+        color: white;
+        text-align: center;
+        font-size: 0.9em;
+        font-weight: bold;
+        line-height: 25px;
+    }
+    .icons-parallax {
+        display: inline-block;
+        width: 200px;
+        transform: translate(0%, 5%);
+        margin-left: 4.5em;
+    }
+
+   .footer-image-apoio {
+        width: auto;
+        height: auto;
+        margin-top: 1.5em;
+    }
+
+}
+
+/********************** END MOBILE CSS ******************************/
