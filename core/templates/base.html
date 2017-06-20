@@ -31,53 +31,56 @@
              <!-- Menu responsivo -->
 
             <div class="top-border hide-for-medium-down"></div>
-            <nav class="tab-bar show-for-medium-down" data-topbar>
+            <nav class="tab-bar mobile-tab-bar show-for-medium-down" data-topbar>
 
-                <section class="right-small">
+                <section class="right-small mobile-right-small">
                     <a href="{% url 'index' %}">
                         <img src="{% static 'img/concilia_without_text.png' %}" />
                     </a>
+
                 </section>
 
                 <section class="middle tab-bar-section">
-                    <h1 class="title">Concilia BR 381</h1>
+                    <h1 class="title" style="font-size: 1.7rem;">Concilia BR 381 e Anel</h1>
                 </section>
 
                 <section class="left-small">
-                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                    <a class="left-off-canvas-toggle menu-icon" href="#" title="menu"><span></span></a>
                 </section>
 
             </nav>
-            <aside class="left-off-canvas-menu">
+            <aside class="left-off-canvas-menu" id="menu-mobile">
                 <ul class="off-canvas-list">
-                    <li>
-                        <label>Concilia BR 381</label>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
-                        <a href="#">O Programa</a>
+                    <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <button class="button-sub-menu">O Programa </button>
+
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
                                     <ul>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="{% url 'about' %}">O que é</a>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="mobile-submenu-item" href="{% url 'about' %}">O que é</a>
                                         </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
-                                            <a href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="mobile-submenu-item" href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
                                         </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                            <a href="{% url 'partners' %}">Parceiros</a>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="mobile-submenu-item" href="{% url 'partners' %}">Parceiros</a>
                                         </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
-                                            <a href="{% url 'manual_marca' %}">Manual da marca</a>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                            <a class="mobile-submenu-item" href="{% url 'manual_marca' %}">Manual da marca</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
-                        <a href="{% url 'content:comunidades' %}">Comunidades</a>
+                    <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <button class="button-sub-menu" onclick="window.location.href='{% url 'content:comunidades' %}'">Comunidades </button>
+
+                        <!--<a href="{% url 'content:comunidades' %}">Comunidades</a>-->
+
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
@@ -85,7 +88,7 @@
 
                                         {% for comunidade in comunidades %}
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="{{ comunidade.get_absolute_url }}">{{ comunidade }}</a>
+                                            <a class="mobile-submenu-item" href="{{ comunidade.get_absolute_url }}">{{ comunidade }}</a>
                                         </li>
                                         {% endfor %}
                                     </ul>
@@ -93,60 +96,41 @@
                             </div>
                         </div>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
-                        <a href="{% url 'content:comunidades' %}">Imóveis</a>
+                    <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
+                         <button class="button-sub-menu" onclick="window.location.href='{% url 'partners' %}'">Imóveis </button>
+                        <!--<a href="{% url 'partners' %}">Imóveis</a>-->
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
                                     <ul>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="#">Item1</a>
+                                            <a class="mobile-submenu-item" href="#">Item1</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
-                                            <a href="#">Item2</a>
+                                            <a class="mobile-submenu-item" href="#">Item2</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                            <a href="#">Item3</a>
+                                            <a class="mobile-submenu-item" href="#">Item3</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
-                                            <a href="#">Item4</a>
+                                            <a class="mobile-submenu-item" href="#">Item4</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
-                        <a href="{% url 'partners' %}">Imóveis2</a>
-                        <div class="nav-sub-wrap ord-nav">
-                            <div class="nsw">
-                                <div class="nav-sub-menus">
-                                    <ul>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="#">Item1</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
-                                            <a href="#">Item2</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                            <a href="#">Item3</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
-                                            <a href="#">Item4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="menu-item menu-item-root menu-item-type-taxonomy menu-item-object-category">
+                        <button class="button-sub-menu" onclick="window.location.href='{% url 'content:noticias' %}'">Notícias </button>
+                        <!--<a href="{% url 'content:noticias' %}">Notícias</a>-->
                     </li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56">
-                        <a href="{% url 'content:noticias' %}">Notícias</a>
+                    <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
+                        <button class="button-sub-menu" onclick="window.location.href='{% url 'faq' %}'">Dúvidas </button>
+                        <!--<a href="{% url 'faq' %}">Dúvidas</a>-->
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
-                        <a href="{% url 'faq' %}">Dúvidas</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
-                        <a href="{% url 'contact' %}">Contato</a>
+                    <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
+                        <button class="button-sub-menu" onclick="window.location.href='{% url 'contact' %}'">Contato </button>
+                        <!--<a href="{% url 'contact' %}">Contato</a>-->
                     </li>
                 </ul>
 
@@ -212,6 +196,18 @@
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/foundation.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+                // Mobile Menu hide and show
+                $('#menu-mobile ul li').mouseenter(function() {
+                    $(this).children('div').show();
+                });
+
+                $('#menu-mobile ul li').mouseleave(function(){
+                     $(this).children('div').hide();
+                });
+        });
+    </script>
 
 </body>
 

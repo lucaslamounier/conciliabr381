@@ -199,29 +199,5 @@ jQuery(function($) {
 
     }
 
-
-    jQuery(document).ready(function(){
-
-        jQuery('.acf-map').each(function(){
-
-            render_map( jQuery(this) );
-
-        });
-
-        /* CONFIGURA A BUSCA POR AREA CULTURAL - só aparece se o campo artistas estiver marcado */
-        $("#areacultural").hide();
-        $( 'select[name="post_type"]').change(function() {
-            var campo = $('select[name="post_type"] option:selected').val();
-            if(campo=="artista") {
-                $("#areacultural").show();
-            } else {
-                $("#areacultural").hide();
-                $('select[name="category_name"]').val('');
-
-            }
-        })
-
-    });
-
 });
 

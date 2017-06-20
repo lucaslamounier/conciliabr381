@@ -435,6 +435,11 @@ a.view_all_noticia:hover {
 .main-ul-nav ul li:hover a {
     box-shadow: 0 -4px 0 #0091ea inset;
 }
+
+.menu-item-root{
+    border-bottom: 2px solid #0091ea;
+    border-top: 2px solid #0091ea;
+}
 .single-comunidade .main-ul-nav ul li.menu-item-18 a {
     box-shadow: 0 -4px 0 #5d6fae inset !important;
 }
@@ -1886,6 +1891,19 @@ a.button-parallax:hover {
         transform: translateX(0%);
     }
 }
+
+.mobile-submenu-item {
+    color: #fff !important;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.vco-menubar {
+    display: none;
+}
+
+
+
 /* Página de noticias */
 
 #tile_banner_rotativo > div.owl-stage-outer > div > div.owl-item.active.center > div > a > span.title {
@@ -2056,6 +2074,18 @@ a.button-parallax:hover {
 #prev.disabled {
     opacity: 0.2;
 }
+
+.button-sub-menu {
+    width: 100%;
+    text-align: left;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+}
+
+.nav-sub-wrap{
+    display: none;
+}
 /********************** END TIMELINR ************************************/
 
 .partners-row {
@@ -2214,6 +2244,46 @@ a.button-parallax:hover {
         margin-top: 1.5em;
     }
 
+   .mobile-tab-bar {
+        -webkit-backface-visibility: hidden;
+        /*background: url("../img/background-images/favela3.jpg") center;
+        background-color: #444; */
+        color: #fff;
+        height: 6.8125rem;
+        position: relative;
+        border-top: 2px solid #0091ea;
+   }
+
+   .tab-bar-section.middle {
+        top: 1.5rem;
+    }
+
+    .left-small {
+        width: 2.8125rem;
+        height: 2.8125rem;
+        position: absolute;
+        top: 0;
+        border-right: none;
+        left: 0;
+        top: 1.5rem;
+    }
+
+   .mobile-right-small {
+        position: absolute;
+        top: 1.4rem;
+        right: 12px;
+        border-left: none;
+        width: 3.8125rem;
+   }
+
+   #timeline {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: none;
+        position: relative;
+        background: url(../img/icons-timelinr/rodovia.gif) left 50px repeat-x;
+   }
 }
 
 /********************** END MOBILE CSS ******************************/

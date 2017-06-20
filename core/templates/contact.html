@@ -26,7 +26,8 @@
 
                       <div class="col-md-9">
                          <label for="{{ field.auto_id }}" style="font-size: 20px;">{{ field.label }}</label>
-                        {% render_field field class='form-control' %}
+                        {% render_field field class='form-control' placeholder='Informe seu {{ field.label }}' %}
+
                         {% for error in field.errors  %}
                               <span class="help-block">{{ error }}</span>
                         {% endfor %}
