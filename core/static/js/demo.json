@@ -15,13 +15,13 @@
         }, {
             "text": {
                 "headline": "Vila Pica Pau",
-                "text": "<p>Localizada no bairro Jardim Vitória, Região Noroeste de Belo Horizonte, a comunidade Pica-Pau surgiu a partir do retalhamento da antiga \"Fazenda do Barreiro\" e tem em seu entorno 0,40% da população de Belo Horizonte.</p><p>A Vila possui poucos serviços básicos e sofre com problemas de segurança, saúde e moradia. Problemas como falta de saneamento, exclusões social, política e digital, entre outras mazelas, que infelizmente são problemas comuns. Estes têm sido os principais alvos de queixas da população local.</p>"
+                "text": "<p>Localizada no bairro Jardim Vitória, Região Noroeste de Belo Horizonte, a comunidade Pica-Pau surgiu a partir do retalhamento da antiga \"Fazenda do Barreiro\" e tem em seu entorno 0,40% da população de Belo Horizonte.</p>"
             },
             "location": {
                 "name": "Vila Pica Pau, Belo Horizonte - MG",
                 "lat": -19.840888,
                 "lon": -43.885106,
-                "zoom": 15,
+                "zoom": 17,
                 "line": false
             },
             "media": {
@@ -32,13 +32,13 @@
         },{
             "text": {
                 "headline": "Vila da Paz",
-                "text": "<p>A Vila da Paz, está localizada na Região da Pampulha e é uma das 27 vilas que contornam o Anel Rodoviário. São mais de 3 mil famílias tendo que lidar diariamente com poluição, barulho, trepidações e diversos problemas. E muitas vezes até com acidentes fatais.</p><p>Os principais problemas enfrentados pelas famílias são de saúde, segurança e o esgoto a céu aberto, correndo entre as casas. O altíssimo barulho devido ao grande número de veículos que trafegam pelo local, também é um grande empecilho na vida dos moradores.</p>"
+                "text": "<p>A Vila da Paz, está localizada na Região da Pampulha e é uma das 27 vilas que contornam o Anel Rodoviário. São mais de 3 mil famílias tendo que lidar diariamente com poluição, barulho, trepidações e diversos problemas. E muitas vezes até com acidentes fatais.</p>"
             },
             "location": {
                 "name": "Vila da Paz, Belo Horizonte - MG",
                 "lat": -19.869775,
                 "lon": -43.941161,
-                "zoom": 13,
+                "zoom": 17,
                 "line": false
             },
             "media": {
@@ -49,13 +49,13 @@
         }, {
             "text": {
                 "headline": "Vila da Luz",
-                "text": "<p>O nome é sugestivo e remete a um local belo: Vila da Luz. No entanto, a área é uma ilha cercada de perigos, pela sua localização no final do Anel Rodoviário. Há cerca de 15 anos, 500 famílias sobrevivem no local, exposta a todo momento, aos riscos de atropelamentos e incêndios.</p><p>Sem qualquer tipo de infraestrutura, as casas de alvenaria e madeira da Vila da Luz foram erguidas sobre caixas de passagem de cabos de eletricidade da Cemig. O amontoado de moradias improvisados desenha becos, que desembocam em um córrego poluído.</p><p>Não há dados oficiais sobre o número de atropelamentos no local, mas é difícil encontrar alguém na Vila da Luz que não tenha perdido um parente ou amigo, inclusive crianças, em acidentes. Diariamente, os moradores são obrigados a cruzar a via para trabalhar, estudar ou até mesmo fazer compras.</p>"
+                "text": "<p>O nome é sugestivo e remete a um local belo: Vila da Luz. No entanto, a área é uma ilha cercada de perigos, pela sua localização no final do Anel Rodoviário. Há cerca de 15 anos, 500 famílias sobrevivem no local, exposta a todo momento, aos riscos de atropelamentos e incêndios.</p>"
             },
             "location": {
                     "name": "Vila da Luz, Belo Horizonte - MG",
                     "lat": -19.856361,
                     "lon": -43.893376,
-                    "zoom": 16,
+                    "zoom": 17,
                     "line": false
             },
             "media": {
@@ -66,19 +66,19 @@
         }, {
             "text": {
                 "headline": "Vila Bom Destino",
-                "text": "<p>A Comunidade Bom Destino pertence ao município de Santa Luzia, na Grande BH. É um dos bairros mais isolados do município a cerca de 20 Km do centro da cidade. Seu acesso rodoviário passa por Sabará e, por isso, é uma Vila muitas vezes confundida como sendo desta outra cidade. O bairro é dividido em duas seções e cortado pela BR-381.</p><p>Na parte alta da vila Bom Destino é possível ver um bairro formado por centenas de casas de alvenaria, a maioria feita com o suor das famílias que moram ali. Só há asfalto nas ruas principais, por onde passam os coletivos. A comunidade está entre as quatro Vilas prioritárias do Programa.</p><p>Segundo a Fundação João Pinheiro e pelo Instituto de Pesquisa Econômica Aplicada, o bairro está entre os oito com o menor Índice de Desenvolvimento Humano Municipal (IDHM) da região metropolitana. Em escala que vai de 0 a 1 (do pior para o melhor, respectivamente), o IDHM é de 0,597, o que corresponde ao nível “baixo” de desenvolvimento humano.</p>"
+                "text": "<p>A Comunidade Bom Destino pertence ao município de Santa Luzia, na Grande BH. É um dos bairros mais isolados do município a cerca de 20 Km do centro da cidade. Seu acesso rodoviário passa por Sabará e, por isso, é uma Vila muitas vezes confundida como sendo desta outra cidade. O bairro é dividido em duas seções e cortado pela BR-381.</p>"
             },
             "location": {
                 "name": "Vila Bom Destino, Belo Horizonte - MG",
                 "lat": -19.824345,
                 "lon": -43.831612,
-                "zoom": 12,
-                "line": true
+                "zoom": 14,
+                "line": false
             },
             "media": {
-                    "url":              "/static/img/timeline-images/2015_01_15_visita_peritos_jud_vila_bom_destino.jpg",
-                    "credit":               "",
-                    "caption":          ""
+                    "url":  "/static/img/timeline-images/2015_01_15_visita_peritos_jud_vila_bom_destino.jpg",
+                    "credit": "",
+                    "caption": ""
                 }
         }]
     }
