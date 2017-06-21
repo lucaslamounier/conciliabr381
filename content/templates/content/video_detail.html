@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Vídeo | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+
+
+<!-- Import plugin -->
+<link href="{% static 'plugins/youmax-classic/css/youmax.min.css' %}" rel="stylesheet" type="text/css" />
+<script src="{% static 'plugins/youmax-classic/js/youmax.min.js' %}"></script>
+<!-- end imports -->
+<section class="section-about">
+    <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Início</a></li>
+          <li><a href="#">Acervo</a></li>
+          <li><a href="{% url 'content:videos' %}">Vídeos</a></li>
+          <li class="active">{{playlist}}</li>
+        </ol>
+    </div>
+</section>
+
+<style>
+    .youmax{
+            background-color: #FFF;
+    }
+
+    .yl-header {
+                background-color: rgba(101, 93, 93, 0);
+    }
+
+    .yl-channel-name {
+        font-size: 1.8em;
+        color: #444;
+    }
+
+    .yl-load-more-button {
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+</style>
+<section class="section-about">
+    <div class="row">
+        <!--Youmax Container-->
+            <div class="youmax"></div>
+        <!-- ends -->
+    </div>
+</section>
+<section class="top-border-gray"></section>
+<!-- Youmax Call -->
+    <script>
+        $(document).ready(function(){
+
+            $(".youmax").youmax({
+                apiKey:"{{playlist.api_key}}",
+
+                channelLink:"{{playlist.channel_link}}",
+
+                {% if playlist.playlist_link %}
+                    playlistLink:"{{playlist.playlist_link}}",
+                {% endif %}
+
+                defaultTab:"{{playlist.get_default_tab_display}}",         //Uploads|Playlists|Featured
+                videoDisplayMode:"{{playlist.get_video_display_mode_display}}",       //popup|link|inline
+
+                maxResults:"{{playlist.max_results}}",
+                autoPlay:false,
+                displayFirstVideoOnLoad:true,       //for inline video display mode only
+
+
+                responsiveBreakpoints   :[600,900,2000,2500],
+
+                loadMoreText            :"<i class=\"fa fa-plus\"></i>&nbsp;&nbsp;Mostrar mais vídeos..",
+                previousButtonText      :"<i class=\"fa fa-angle-left\"></i>&nbsp;&nbsp;Anterior",
+                nextButtonText          :"Próximo&nbsp;&nbsp;<i class=\"fa fa-angle-right\"></i>",
+                loadingText             :"Carregando...",
+                //allDoneText             :"<i class=\"fa fa-times\"></i>&nbsp;&nbsp;All done..",
+                allDoneText             : "",
+
+                hideHeader              :false,
+                hideTabs                :true,
+                hideLoadingMechanism    :false,
+
+
+            });
+        });
+    </script>
+<!-- ends -->
+
+{% endblock %}

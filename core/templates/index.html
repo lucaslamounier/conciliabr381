@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load thumbnail %}
+
 {% block content %}
 
 
@@ -70,9 +72,9 @@
                 <div class="col-sm-4">
                     <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
                         {% if noticia.has_image %}
-                            <picture>
-                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">
-                            </picture>
+                            <!--<picture>-->
+                              <img src="{{noticia.image|thumbnail_url:'home_news'}}" alt="{{noticia}}" style="width:auto;">
+                            <!--</picture>-->
                          {% endif %}
                         <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
                         <p> {{noticia.sub_title |truncatechars_html:100}} </p>

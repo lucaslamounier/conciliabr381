@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Noticia, Comunidade, Album, Photo, Timeline
+from .models import Noticia, Comunidade, Album, Photo, Timeline, YoutubeChannel
 from tinymce.widgets import TinyMCE
 from django.core.urlresolvers import reverse
 
@@ -69,7 +69,24 @@ class TimelineAdmin(admin.ModelAdmin):
         obj.save()
 
 
+class YoutubeChannelAdmin(admin.ModelAdmin):
+
+    list_display = ['title', 'channel_link', 'created_at']
+    search_fields = ['title']
+
+    def save_model(self, request, obj, form, change):
+        """ auto create slug field for url pathner """
+        if getattr(obj, 'slug', None) is None:
+            try:
+                obj.slug = obj.title.replace(' ', '-')
+            except Exception as err:
+                print(err)
+                obj.slug = obj.title
+        obj.save()
+
+
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Album, AlbumAdmin)
 admin.site.register(Timeline, TimelineAdmin)
+admin.site.register(YoutubeChannel, YoutubeChannelAdmin)

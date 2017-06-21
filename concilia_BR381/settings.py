@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # libs
     'widget_tweaks',
     'tinymce',
+    'easy_thumbnails',
     # apps
     'core',
     'content',
@@ -176,6 +177,15 @@ DATABASES['default'].update(db_from_env)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
+
+# Thumbnails
+THUMBNAIL_ALIASES = {
+    '': {
+        'timeline_images': {'size': (250, 220), 'crop': True},
+        'home_news': {'size': (300, 200), 'crop': True},
+    },
+}
+
 
 
 # Local Settings

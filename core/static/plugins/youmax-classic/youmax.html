@@ -1,0 +1,137 @@
+<!--...............................................................................
+Youmax Classic v1.0 by Jake H. from CodeHandling
+................................................................................-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width">
+
+    <!-- Youmax Scripts -->
+    <link href="./css/youmax.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./js/youmax.min.js"></script>
+    <!-- ends -->
+
+    <style>
+
+        body {
+        	margin:0px;
+        	box-sizing: border-box;
+        }
+
+        #your-page-column {
+            width: 70%;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .support {
+            display: inline-block;
+            background-color: #009688;
+            color: white;
+            padding: 1em;
+            font-size: 1.2em;
+            font-family: Calibri;
+            margin: 4em auto;
+            text-align: left;
+            width: 18em;
+        }
+
+        .support .fa-group {
+            font-size: 2.2em;
+            float: left;
+            margin-right: 0.3em;
+        }
+
+        .footer i {
+            color: #E91E63;
+        }
+
+        .footer {
+            margin: 4em auto;
+            font-family: Calibri;
+            font-size: 1em;
+        }   
+
+    </style>
+
+</head>
+
+<body>
+
+    <br>
+
+    <div id="your-page-column" class="not-a-part-of-youmax-plugin">
+
+        <!--
+        Are you serious about your website?
+        Then get Youmax PRO here
+        https://codecanyon.net/item/youmax-grow-your-youtube-and-vimeo-business/9989505?ref=codehandling
+        -->
+
+        <a href="https://codecanyon.net/item/youmax-grow-your-youtube-and-vimeo-business/9989505?ref=codehandling">
+            <div class="support">
+                <i class="fa fa-group"></i>Are you serious about your website?<br>Then get Youmax PRO here! <i class="fa fa-bolt"></i>
+            </div>
+        </a>
+
+	
+        <!--Youmax Container-->
+        <div class="youmax"></div>
+        <!-- ends -->
+
+        <div class="footer">Made with <i class="fa fa-heart"></i> by codehandling</div>
+
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    <!-- Youmax Call -->
+    <script>
+
+        $(document).ready(function(){
+
+            $(".youmax").youmax({
+                apiKey:"AIzaSyAlhAqP5RS7Gxwg_0r_rh9jOv_5WfaJgXw",
+
+                channelLink:"https://www.youtube.com/user/crashcourse",
+                playlistLink:"https://www.youtube.com/playlist?list=PL6_h4dV9kuuIOBDKgxu3q9DpvvJFZ6fB5",
+                
+                defaultTab:"Uploads",         //Uploads|Playlists|Featured
+                videoDisplayMode:"popup",       //popup|link|inline
+
+                maxResults:"9",
+                autoPlay:false,
+                displayFirstVideoOnLoad:true,       //for inline video display mode only
+                
+
+                responsiveBreakpoints   :[600,900,2000,2500],
+
+                loadMoreText            :"<i class=\"fa fa-plus\"></i>&nbsp;&nbsp;Show me more videos..",
+                previousButtonText      :"<i class=\"fa fa-angle-left\"></i>&nbsp;&nbsp;Previous",
+                nextButtonText          :"Next&nbsp;&nbsp;<i class=\"fa fa-angle-right\"></i>",
+                loadingText             :"loading...",
+                allDoneText             :"<i class=\"fa fa-times\"></i>&nbsp;&nbsp;All done..",
+
+                hideHeader              :false,
+                hideTabs                :false,
+                hideLoadingMechanism    :false,
+
+
+            });
+        });
+
+
+    </script>
+    <!-- ends -->
+
+</body>
+</html>

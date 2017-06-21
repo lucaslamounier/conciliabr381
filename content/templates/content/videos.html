@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Vídeos | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+<section class="section-about">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;">VÍDEOS</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for channel in channels %}
+            <div class="small-12 medium-6 columns">
+                <h4>
+                    <a href="{{ channel.get_absolute_url }}">
+                        <div class="col-sm-12">
+                        <img class="img-responsive img-thumbnail img-channnel" src="{{channel.image.url}}">
+                        </div>
+                        <span>{{channel}}</span>
+                    </a>
+                </h4>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="top-border-gray"></section>
+
+{% endblock %}

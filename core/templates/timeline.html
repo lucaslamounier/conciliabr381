@@ -1,5 +1,10 @@
 {% load static %}
+
+{% load thumbnail %}
+
+
 <script src="{% static 'js/jquery.timelinr-0.9.6.js' %}"></script>
+
 <div class="row">
 	<h1 class="text-header-page" style="text-align: center; margin-right: 0;">Linha do Tempo do Programa</h1>
 
@@ -16,8 +21,9 @@
 				<li id="{{event.pk}}">
 					{% if event.has_image %}
                         <div>
-                            <img class="img-responsive image-timeline" src="{{event.image.url}}"/>
-                        </div>
+                            <!--<img class="img-responsive image-timeline" src="{{event.image.url}}"/>-->
+                        	  <img class="img-responsive image-timeline" src="{{event.image|thumbnail_url:'timeline_images'}}"/>
+						</div>
                          <div>
                             <h1>{{event.title}}</h1>
                             <p>{{event.text }}</p>

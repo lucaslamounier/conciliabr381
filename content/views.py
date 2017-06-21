@@ -2,8 +2,9 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.views import generic
-from .models import Noticia, Comunidade
+from .models import Noticia, Comunidade, YoutubeChannel
 from django.db.models import Q
+
 
 # Página de Notícias
 class NewsListView(generic.ListView):
@@ -42,5 +43,25 @@ class CommunityView(TemplateView):
     template_name = 'content/communitys.html'
 
 
+# Página de comunidades
+class VideosView(generic.ListView):
+    model = YoutubeChannel
+    template_name = 'content/videos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        context['channels'] = YoutubeChannel.objects.all()
+        return context
+
+
+def youtube_playlist_view(request, slug):
+    play_list = YoutubeChannel.objects.get(slug=slug)
+    context = {
+        'playlist': play_list,
+    }
+    return render(request, 'content/video_detail.html', context)
+
+
 news = NewsListView.as_view()
 community = CommunityView.as_view()
+videos = VideosView.as_view()
