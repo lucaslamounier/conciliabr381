@@ -23,6 +23,12 @@
                 </h4>
             </div>
         {% endfor %}
+
+        {% if channels.count == 0 %}
+            <div class="small-12 medium-6 columns">
+                <h4>Nenhuma galeria encontrada :(</h4>
+            </div>
+        {% endif %}
     </div>
 </section>
 <section class="top-border-gray"></section>
