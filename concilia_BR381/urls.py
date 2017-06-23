@@ -36,7 +36,10 @@ urlpatterns = [
     url(r'^manual-marca/$', views.manual_marca, name='manual_marca'),
     url(r'^conteudos/', include('content.urls', namespace='content')),
     url(r'^admin/', admin.site.urls),
+    # Plugins URLs
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
+    url("^(?P<username>[\w\._-]+)/music/", include("audiotracks.urls")),
 
 ]
 

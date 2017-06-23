@@ -8,13 +8,6 @@
 
 {% block content %}
 
-<section>
-    <div class="row">
-        {% include "carousel.html" %}
-    </div>
-</section>
-
-
 <section class="section-noticia height-500">
      <div class="row d-flex justify-content-start">
         {% if noticias.count > 0 %}
@@ -22,13 +15,23 @@
 
                 <div class="col-sm-4">
                     <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
-                        {% if noticia.has_image %}
-                            <picture>
-                              <img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">
-                            </picture>
-                         {% endif %}
-                        <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
+                        <h3 class="hui-highlight-title">{{noticia.title |truncatechars_html:100}} </h3>
+                        <h4 class="subheader">
+                            <small>
+                                <i class="fi-clock"></i>
+                                Postado em {{noticia.published_at|date:"d/m/Y" }} por {{noticia.author}}
+                            </small>
+                        </h4>
+                        <!--{% if noticia.has_image %}-->
+                            <!--<picture>-->
+                              <!--<img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">-->
+                            <!--</picture>-->
+                         <!--{% endif %}-->
+                        <!--<p class="hui-highlight-title"> </p>-->
                         <p> {{noticia.sub_title |truncatechars_html:100}} </p>
+                        <p class="text-right">
+                                <a href="{% url 'content:noticia' noticia.pk %}" class="">Continue lendo →</a>
+                        </p>
                     </a>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}

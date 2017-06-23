@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %} Galeria de Fotos | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+
+<section class="section-about" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;">Álbuns</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {% for galeria in galeria_fotos %}
+            <div class="col-sm-4">
+                <div class="view photo-list-album-view awake" style="transform: translate(0px, 8px);width: 279px;height: 279px;background-image: url(&quot;//c1.staticflickr.com/3/2909/14330932132_a54ddbd86e.jpg&quot;);">
+                    <a class="interaction-view avatar photo-list-album album ginormous" href="{{galeria.get_absolute_url}}" title="{{galeria}}" >
+                        <div class="photo-list-album-interaction dark has-actions">
+                            <a class="overlay" href="{{galeria.get_absolute_url}}"></a>
+                            <div class="interaction-bar">
+                                <div class="metadata">
+                                    <h4 class="album-title">{{galeria}}</h4>
+
+                                    {% if galeria.photo_count == 1 %}
+                                        <span class="album-photo-count secondary">{{galeria.photo_count}} foto</span>
+                                    {% endif %}
+
+                                    {% if galeria.photo_count > 1 %}
+                                    <span class="album-photo-count secondary">{{galeria.photo_count}} fotos</span>
+                                    {% else %}
+                                    <span class="album-photo-count secondary">0 fotos</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="top-border-gray"></section>
+
+
+
+<!--<section>-->
+    <!--<div class="row">-->
+        <!--<ul>-->
+            <!--<li class="sub-page"><a href="{% url 'photologue:pl-gallery-archive' %}">Date views</a></li>-->
+            <!--<li class="sub-page"><a href="{% url 'photologue:gallery-list' %}">List views</a></li>-->
+            <!--<li class="sub-page"><a href="{% url 'photologue:pl-photo-archive' %}">Date views</a></li>-->
+            <!--<li class="sub-page"><a href="{% url 'photologue:photo-list' %}">List views</a></li>-->
+        <!--</ul>-->
+
+    <!--</div>-->
+<!--</section>-->
+<!--<section class="top-border-gray"></section>-->
+{% endblock %}

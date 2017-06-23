@@ -5,23 +5,25 @@
 {% endblock  %}
 
 {% block content %}
+<section class="section-about">
+    <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Início</a></li>
+          <li><a href="{% url 'content:noticias' %}">Notícias</a></li>
+          <li><a href="{% url 'content:noticia' noticia.pk %}">{{ noticia }}</a></li>
+        </ol>
+    </div>
+</section>
 
 <div class="row">
     <div class="column small-12">
         <h1 style="color: black;">{{ noticia }}</h1>
         <article>
-
-
             <div class="mc-column mc-show-later">
                 <div class="content-meta-info">
                     <p class="content-meta-info__from">
-                        <span itemprop="creator">Por {{noticia.author}} </span>
-                        <meta itemprop="publisher" content="G1">
-
-                        <br />
-                        Publicado em
-                            <time itemprop="datePublished" datetime="{{noticia.published_at}}">{{noticia.published_at}}</time>
-                        </p>
+                        <span>Por {{noticia.author}} </span>  Publicado em {{noticia.published_at|date:"d/m/Y" }}
+                    </p>
                 </div>
             </div>
             {% if noticia.image %}
@@ -41,4 +43,5 @@
         </article>
     </div>
 </div>
+<section class="top-border-gray"></section>
 {% endblock  %}

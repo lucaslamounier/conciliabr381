@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 import dj_database_url
+#from photologue.sitemaps import GallerySitemap, PhotoSitemap
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,15 +42,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # libs
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
+    # Libs
+    'photologue',
+    'sortedm2m',
     'widget_tweaks',
     'tinymce',
     'easy_thumbnails',
-    # apps
+    'audiotracks',
+    # Apps
     'core',
     'content',
 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +89,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'concilia_BR381.wsgi.application'
 
@@ -183,9 +193,77 @@ THUMBNAIL_ALIASES = {
     '': {
         'timeline_images': {'size': (250, 220), 'crop': True},
         'home_news': {'size': (300, 200), 'crop': True},
+        'home_videos': {'size': (470, 290), 'crop': True},
     },
 }
 
+# AUDIO TRACK SETTINGS
+
+AUDIOTRACKS_PER_PAGE = 5
+
+# Photologue config
+
+# sitemaps = {
+#     'photologue_galleries': GallerySitemap,
+#     'photologue_photos': PhotoSitemap,
+#
+# }
+
+# LOGGING CONFIGURATION
+# A logging configuration that writes log messages to the console.
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': True,
+#     # Formatting of messages.
+#     'formatters': {
+#         # Don't need to show the time when logging to console.
+#         'console': {
+#             'format': '%(levelname)s %(name)s.%(funcName)s (%(lineno)d) %(message)s'
+#         }
+#     },
+#     # The handlers decide what we should do with a logging message - do we email
+#     # it, ditch it, or write it to a file?
+#     'handlers': {
+#         # Writing to console. Use only in dev.
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'console'
+#         },
+#         # Send logs to /dev/null.
+#         'null': {
+#             'level': 'DEBUG',
+#             'class': 'logging.NullHandler',
+#         },
+#     },
+#     # Loggers decide what is logged.
+#     'loggers': {
+#         '': {
+#             # Default (suitable for dev) is to log to console.
+#             'handlers': ['console'],
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#         'photologue': {
+#             # Default (suitable for dev) is to log to console.
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'propagate': False,
+#         },
+#         # logging of SQL statements. Default is to ditch them (send them to
+#         # null). Note that this logger only works if DEBUG = True.
+#         'django.db.backends': {
+#             'handlers': ['null'],
+#             'level': 'DEBUG',
+#             'propagate': False,
+#         },
+#     }
+# }
+
+# Don't display logging messages to console during unit test runs.
+# if len(sys.argv) > 1 and sys.argv[1] == 'test':
+#     LOGGING['loggers']['']['handlers'] = ['null']
+#     LOGGING['loggers']['photologue']['handlers'] = ['null']
 
 
 # Local Settings

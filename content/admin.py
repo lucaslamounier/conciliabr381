@@ -87,6 +87,6 @@ class YoutubeChannelAdmin(admin.ModelAdmin):
 
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
-admin.site.register(Album, AlbumAdmin)
+# admin.site.register(Album, AlbumAdmin)
 admin.site.register(Timeline, TimelineAdmin)
 admin.site.register(YoutubeChannel, YoutubeChannelAdmin)

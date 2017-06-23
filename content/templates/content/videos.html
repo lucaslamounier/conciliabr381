@@ -2,6 +2,8 @@
 
 {% block title %} Vídeos | {{ block.super }} {% endblock %}
 
+{% load thumbnail %}
+
 {% block content %}
 
 <section class="section-about">
@@ -16,7 +18,7 @@
                 <h4>
                     <a href="{{ channel.get_absolute_url }}">
                         <div class="col-sm-12">
-                        <img class="img-responsive img-thumbnail img-channnel" src="{{channel.image.url}}">
+                        <img class="img-responsive img-thumbnail img-channnel" src="{{channel.image|thumbnail_url:'home_videos' }}">
                         </div>
                         <span>{{channel}}</span>
                     </a>

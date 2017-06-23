@@ -12,3 +12,8 @@ pyparsing==2.2.0
 pytz==2017.2
 six==1.10.0
 easy-thumbnails==2.4.1
+django-sortedm2m==1.4.0
+django-taggit==0.22.1
+django-audiotracks==0.2.5
+
+

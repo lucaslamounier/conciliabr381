@@ -248,3 +248,4 @@ class Timeline(models.Model):
         except Exception as err:
             print(u"Não foi possivel verificar o arquivo: ", err)
             return False
+
