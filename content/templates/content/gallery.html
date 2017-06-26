@@ -12,10 +12,12 @@
         </div>
     </div>
     <div class="row">
-
         {% for galeria in galeria_fotos %}
             <div class="col-sm-4">
-                <div class="view photo-list-album-view awake" style="transform: translate(0px, 8px);width: 279px;height: 279px;background-image: url(&quot;//c1.staticflickr.com/3/2909/14330932132_a54ddbd86e.jpg&quot;);">
+                {% if galeria.photo_count != 0 %}
+                <div class="view photo-list-album-view awake"
+                     style="transform: translate(0px, 8px);width: 279px;height: 279px;background-image: url({{galeria.photos.latest.image.url}});">
+                {% endif %}
                     <a class="interaction-view avatar photo-list-album album ginormous" href="{{galeria.get_absolute_url}}" title="{{galeria}}" >
                         <div class="photo-list-album-interaction dark has-actions">
                             <a class="overlay" href="{{galeria.get_absolute_url}}"></a>
@@ -28,9 +30,11 @@
                                     {% endif %}
 
                                     {% if galeria.photo_count > 1 %}
-                                    <span class="album-photo-count secondary">{{galeria.photo_count}} fotos</span>
-                                    {% else %}
-                                    <span class="album-photo-count secondary">0 fotos</span>
+                                        <span class="album-photo-count secondary">{{galeria.photo_count}} fotos</span>
+                                    {% endif %}
+
+                                    {% if galeria.photo_count == 0 %}
+                                        <span class="album-photo-count secondary">0 fotos</span>
                                     {% endif %}
                                 </div>
                             </div>
