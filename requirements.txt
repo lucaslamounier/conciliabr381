@@ -4,7 +4,7 @@ bpython==0.16
 curtsies==0.2.11
 dj-database-url==0.4.1
 Django==1.11
-django-audiotracks==0.2.5
+git+https://github.com/amarandon/django-audiotracks.git
 django-sortedm2m==1.4.0
 django-taggit==0.22.1
 django-tinymce==2.6.0
