@@ -26,6 +26,7 @@ admin.site.index_title = 'Painel administrativo do site'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^acervo/$', views.acervo, name='acervo'),
     url(r'^contato/$', views.contact, name='contact'),
     url(r'^sobre/$', views.about, name='about'),
     url(r'^duvidas/$', views.duvida, name='faq'),

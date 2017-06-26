@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.views import generic
+from django.views.generic.detail import DetailView
 from .models import Noticia, Comunidade, YoutubeChannel
 from django.db.models import Q
 from photologue.models import Gallery
@@ -12,7 +13,7 @@ class NewsListView(generic.ListView):
     model = Noticia
     template_name = 'content/news.html'
     context_object_name = 'noticias'
-    paginate_by = 6
+    paginate_by = 12
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
@@ -64,6 +65,11 @@ class GaleryListVew(generic.ListView):
     paginate_by = 20
 
 
+class GalleryDetailView(DetailView):
+    queryset = Gallery.objects.on_site().is_public()
+    template_name = 'content/gallery_detail.html'
+
+
 def youtube_playlist_view(request, slug):
     play_list = YoutubeChannel.objects.get(slug=slug)
     context = {
@@ -76,3 +82,4 @@ news = NewsListView.as_view()
 community = CommunityView.as_view()
 videos = VideosView.as_view()
 galeria = GaleryListVew.as_view()
+geleria_detalhe = GalleryDetailView.as_view()

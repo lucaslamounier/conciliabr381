@@ -16,6 +16,20 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.links-uteis:hover {
+    color: #ffbb00;
+}
+
+.links-uteis:visited {
+    color: #fff;
+}
+
+.links-uteis:active {
+    color: blue;
+}
+
+
 .title-community {
     margin-top: 50px;
     font-size: 55px;
@@ -44,7 +58,8 @@
     color: white;
     font-size: 2.2em;
     font-weight: 300;
-    line-height: 42px;
+    /* line-height: 42px; */
+    /* margin: 0 0 32px 0; */
     margin: 0 0 32px 0;
 }
 .links-uteis {
@@ -933,7 +948,7 @@ footer .social-network.gplus > a {
 .photo-list-album-view {
     position: absolute;
     background-repeat: no-repeat;
-    background-position: 50%;
+    /*background-position: 50%;*/
     background-color: #fff;
     opacity: 0;
     transition: opacity .1s linear;
@@ -941,7 +956,7 @@ footer .social-network.gplus > a {
 }
 
 .photo-list-album-view .interaction-view.photo-list-album {
-    background: linear-gradient(0deg,rgba(0,0,0,.9) 0,transparent 50%,transparent);
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.49) 0,transparent 50%,rgba(12, 12, 12, 0));
     margin: inherit;
     width: 100%;
     height: 100%;
@@ -958,13 +973,6 @@ div.photo-list-album-interaction {
     background-color: transparent;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-}
-
-.photo-list-album-view .interaction-view.photo-list-album {
-    background: linear-gradient(0deg,rgba(0,0,0,.9) 0,transparent 50%,transparent);
-    margin: inherit;
-    width: 100%;
-    height: 100%;
 }
 
 .photo-list-album-view .interaction-view {
@@ -1019,11 +1027,12 @@ div.photo-list-album-interaction .album-photo-count, div.photo-list-album-intera
 }
 
 div.photo-list-album-interaction .album-title {
-    text-shadow: 0 1px 1px #000;
+    text-shadow: 0 2px 2px #000;
     line-height: 40px;
     word-break: break-word;
     margin: 0;
     color: white;
+    font-weight: bold;
 }
 
 .fluid h4 {
@@ -1033,18 +1042,116 @@ div.photo-list-album-interaction .album-title {
 }
 
 
+.image-min-size {
+    min-width: 220px;
+    min-height: 165px;
+}
 
+.photo-list-photo-view.awake {
+    display: block;
+}
 
-
-
-
-
-
-
-
+.photo-list-photo-view {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #fff;
+    background-size: cover;
+    display: none;
+}
 
 /** =Paginate links Styles
  ******************************************* **/
+
+
+ /***** IMage galery css */
+
+ .masonry {
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -moz-column-gap: 30px;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
+  -moz-column-fill: initial;
+  -webkit-column-fill: initial;
+  column-fill: initial;
+}
+.masonry .brick {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.masonry .brick img {
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.masonry .brick:hover img {
+  opacity: .75;
+}
+.masonry.bordered {
+  -moz-column-rule: 1px solid #eee;
+  -webkit-column-rule: 1px solid #eee;
+  column-rule: 1px solid #eee;
+  -moz-column-gap: 50px;
+  -webkit-column-gap: 50px;
+  column-gap: 50px;
+}
+.masonry.bordered .brick {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+.masonry.gutterless {
+  -moz-column-gap: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+}
+.masonry.gutterless .brick {
+  margin-bottom: 0;
+}
+
+.span {
+  -moz-column-span: all;
+  -webkit-column-span: all;
+  column-span: all;
+  *margin: 30px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .intro {
+    letter-spacing: 1px;
+  }
+
+  .wrapper {
+    width: 80%;
+    padding: 2em;
+  }
+
+  .masonry {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 85%;
+    padding: 1.5em;
+  }
+
+  .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+ /**/
 
 .page-numbers {
     float: left;

@@ -40,8 +40,10 @@ urlpatterns = [
         RedirectView.as_view(
             url=reverse_lazy('photologue:pl-gallery-archive'), permanent=True),
         name='pl-photologue-root'),
+
     url(r'^gallery/(?P<slug>[\-\d\w]+)/$',
         GalleryDetailView.as_view(), name='pl-gallery'),
+
     url(r'^gallerylist/$',
         GalleryListView.as_view(),
         name='gallery-list'),

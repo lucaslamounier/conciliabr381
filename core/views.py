@@ -57,6 +57,11 @@ class CriteriosRegrasView(TemplateView):
     template_name = 'criterios_regras.html'
 
 
+# Página Criterios e regras
+class AcervoView(TemplateView):
+    template_name = 'acervo.html'
+
+
 # Página de contatos
 def contact(request):
     success = False
@@ -81,3 +86,4 @@ conselho_executivo = ConselhoExecutivoView.as_view()
 manual_marca = ManualMarcaView.as_view()
 plano_providencias = PlanoProvidenciaView.as_view()
 criterios_regras = CriteriosRegrasView.as_view()
+acervo = AcervoView.as_view()

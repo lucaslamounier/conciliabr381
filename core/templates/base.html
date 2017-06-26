@@ -41,7 +41,7 @@
                 </section>
 
                 <section class="middle tab-bar-section">
-                    <h1 class="title" style="font-size: 1.7rem;">Concilia BR 381 e Anel</h1>
+                    <a href="{% url 'index' %}"><h1 class="title" style="font-size: 1.7rem;">Concilia BR 381 e Anel</h1></a>
                 </section>
 
                 <section class="left-small">
@@ -78,9 +78,6 @@
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'content:comunidades' %}'">Comunidades </button>
-
-                        <!--<a href="{% url 'content:comunidades' %}">Comunidades</a>-->
-
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
@@ -122,15 +119,14 @@
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-taxonomy menu-item-object-category">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'content:noticias' %}'">Notícias </button>
-                        <!--<a href="{% url 'content:noticias' %}">Notícias</a>-->
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'faq' %}'">Dúvidas </button>
-                        <!--<a href="{% url 'faq' %}">Dúvidas</a>-->
+
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'contact' %}'">Contato </button>
-                        <!--<a href="{% url 'contact' %}">Contato</a>-->
+
                     </li>
                 </ul>
 

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% load thumbnail %}
+
+{% load static %}
+
+{% block title %}{{ gallery.title }}{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/smartphoto.min.css' %}" />
+<script src="{% static 'js/smartphoto.js' %}"></script>
+
+<section class="section-about" style="margin-bottom: 0px;">
+    <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Início</a></li>
+          <li><a href="#">Acervo</a></li>
+		  <li><a href="{% url 'content:galeria' %}">Fotos</a></li>
+          <li><a href="{% url 'content:galery-detail' gallery.slug %}">{{ gallery.title }}</a></li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;">{{ gallery.title }}</h1>
+			<p class="muted"><small>{% trans "Publicado em" %} {{ gallery.date_added }}</small></p>
+        </div>
+    </div>
+</section>
+
+	{% if gallery.description %}
+	<section>
+		<div class="row">
+			<div class="col-sm-12" style=" text-align: justify; padding-bottom: 50px;">
+				<p>{{ gallery.description|safe }}</p>
+			</div>
+		</div>
+	</section>
+	{% endif %}
+
+<section>
+	<div class="row view photo-list-view photostream" >
+		<ul class="masonry">
+		{% for photo in gallery.public %}
+			<!--<li class="">-->
+			<li class="brick">
+				<a href="{{ photo.image.url}}" class="js-img-viwer" data-caption="{{ photo.title }}" data-id="{{ photo.title }}">
+					<img src="{{ photo.image|thumbnail_url:'galery_detail'}}"   alt="{{ photo.title }}" />
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+</section>
+<section  class="section-about">
+		<div class="row">
+			<!--<div class="col-sm-12" style="text-align: center;">-->
+				<!--<div><a href="{% url 'content:galeria' %}" class="btn btn-default">{% trans "Ver todos os álbuns" %}</a></div>-->
+			<!--</div>-->
+		</div>
+</section>
+
+<div class="line-separator-gray"></div>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var photo = new smartPhoto(".js-img-viwer");
+
+		/* Events
+        photo.on('change',function(){
+            console.log('change');
+        });
+        photo.on('close',function(){
+            console.log('close');
+        });
+        photo.on('swipestart',function(){
+            console.log('swipestart');
+        });
+        photo.on('swipeend',function(){
+            console.log('swipeend');
+        });
+        photo.on('loadall',function(){
+            console.log('loadall');
+        });
+        photo.on('zoomin',function(){
+            console.log('zoomin');
+        });
+        photo.on('zoomout',function(){
+            console.log('zoomout');
+        });
+        photo.on('open',function(){
+            console.log('open');
+        });
+
+        */
+	});
+</script>
+{% endblock %}

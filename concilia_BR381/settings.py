@@ -194,12 +194,16 @@ THUMBNAIL_ALIASES = {
         'timeline_images': {'size': (250, 220), 'crop': True},
         'home_news': {'size': (300, 200), 'crop': True},
         'home_videos': {'size': (470, 290), 'crop': True},
+        'galery_detail': {'size': (220, 165), 'crop': True},
     },
 }
 
 # AUDIO TRACK SETTINGS
 
 AUDIOTRACKS_PER_PAGE = 5
+
+# YOUTUBE API
+YOUTUBE_API_KEY = 'AIzaSyApRzZncaa999A5WClkrCpCAXleNDec4Zc'
 
 # Photologue config
 
