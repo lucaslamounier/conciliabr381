@@ -45,15 +45,15 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     # Libs
-    'photologue',
     'sortedm2m',
     'widget_tweaks',
     'tinymce',
     'easy_thumbnails',
-    'audiotracks',
-    # Apps
+
+    # Local Apps
     'core',
     'content',
+    'photologue',
 
 ]
 
@@ -197,10 +197,6 @@ THUMBNAIL_ALIASES = {
         'galery_detail': {'size': (220, 165), 'crop': True},
     },
 }
-
-# AUDIO TRACK SETTINGS
-
-AUDIOTRACKS_PER_PAGE = 5
 
 # YOUTUBE API
 YOUTUBE_API_KEY = 'AIzaSyApRzZncaa999A5WClkrCpCAXleNDec4Zc'

@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import os
 from django.db import models
 from tinymce.models import HTMLField
 from django.conf import settings
@@ -97,6 +98,12 @@ class Noticia(models.Model):
                 return False
         except Exception as err:
             print(u"Não foi possivel verificar o arquivo: ", err)
+            return False
+
+    def exists_image_in_path(self):
+        if os.path.exists(self.image.path):
+            return True
+        else:
             return False
 
 
@@ -215,6 +222,12 @@ class YoutubeChannel(models.Model):
     def get_absolute_url(self):
         return reverse('content:youtube_playlist', kwargs={'slug': self.slug})
 
+    def exists_image_in_path(self):
+        if os.path.exists(self.image.path):
+            return True
+        else:
+            return False
+
 
 class Timeline(models.Model):
     """ Modelo para eventos da linha do tempo - Página index """
@@ -247,5 +260,11 @@ class Timeline(models.Model):
                 return False
         except Exception as err:
             print(u"Não foi possivel verificar o arquivo: ", err)
+            return False
+
+    def exists_image_in_path(self):
+        if os.path.exists(self.image.path):
+            return True
+        else:
             return False
 

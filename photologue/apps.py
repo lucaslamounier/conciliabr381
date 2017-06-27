@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 class PhotologueConfig(AppConfig):
     name = 'photologue'
-    verbose_name = u'App Galeria de Fotos '
+    verbose_name = u'Galeria de Fotos'

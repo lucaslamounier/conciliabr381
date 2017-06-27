@@ -57,11 +57,18 @@
 .title-links-uteis {
     color: white;
     font-size: 2.2em;
-    font-weight: 300;
+    /* font-weight: 300; */
     /* line-height: 42px; */
     /* margin: 0 0 32px 0; */
-    margin: 0 0 32px 0;
+    /* margin: 0 0 32px 0; */
+    margin-top: 35px;
 }
+
+.image-legend-description {
+    font-size: 13px;
+    font-weight: normal;
+}
+
 .links-uteis {
     color: white;
     font-weight: bold;
@@ -1498,6 +1505,16 @@ a.button-index:hover {
     font-weight: bold;
     margin-right: 1.5em;
 }
+
+.text-header-page-timeline {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #444;
+    font-weight: bold;
+    margin-right: 1.5em;
+    font-family: initial;
+}
+
 /* Antigo styles */
 
 * {
@@ -2177,7 +2194,7 @@ a.button-parallax:hover {
     width: 900px;
     height: 450px;
     overflow: hidden;
-    margin: 100px auto;
+    /*margin: 100px auto;*/
     position: relative;
     background: url('../img/icons-timelinr/rodovia.gif') left 50px repeat-x;
 }
@@ -2327,7 +2344,7 @@ a.button-parallax:hover {
 }
 
 .section-index-map {
-    min-height: 600px;
+    min-height: 515px;
     margin-top: 120px;
 }
 

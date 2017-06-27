@@ -17,7 +17,7 @@
     <div class="row">
         <ol class="breadcrumb">
           <li><a href="{% url 'index' %}">Início</a></li>
-          <li><a href="#">Acervo</a></li>
+          <li><a href="{% url 'acervo' %}">Acervo</a></li>
 		  <li><a href="{% url 'content:galeria' %}">Fotos</a></li>
           <li><a href="{% url 'content:galery-detail' gallery.slug %}">{{ gallery.title }}</a></li>
         </ol>

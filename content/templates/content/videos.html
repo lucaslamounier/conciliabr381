@@ -18,7 +18,11 @@
                 <h4>
                     <a href="{{ channel.get_absolute_url }}">
                         <div class="col-sm-12">
-                        <img class="img-responsive img-thumbnail img-channnel" src="{{channel.image|thumbnail_url:'home_videos' }}">
+                           {% if channel.exists_image_in_path %}
+                        	   <img class="img-responsive img-thumbnail img-channnel" src="{{channel.image|thumbnail_url:'home_videos' }}">
+							{% else %}
+							   <img class="img-responsive img-thumbnail img-channnel" src="{% static 'img/img_nao_disponivel.png' %}"/>
+							{% endif %}
                         </div>
                         <span>{{channel}}</span>
                     </a>
