@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Noticia, Comunidade, Album, Photo, Timeline, YoutubeChannel
-from tinymce.widgets import TinyMCE
-from django.core.urlresolvers import reverse
+from .models import (
+        Noticia, Comunidade, Album,
+        Photo, Timeline, YoutubeChannel,
+        Faq, CategoryFaq
+)
+
 
 
 class PropertyImageInline(admin.StackedInline):
@@ -85,8 +88,32 @@ class YoutubeChannelAdmin(admin.ModelAdmin):
         obj.save()
 
 
+class FaqAdmin(admin.ModelAdmin):
+
+    list_display = ['question', 'answer', 'category', 'created']
+    search_fields = ['question']
+
+    def save_model(self, request, obj, form, change):
+        if getattr(obj, 'slug', None) is None:
+            obj.slug = obj.question.lower().replace(' ', '-')
+        obj.save()
+
+
+class CategoryFaqAdmin(admin.ModelAdmin):
+
+    list_display = ['name', 'created']
+    search_fields = ['name']
+
+    def save_model(self, request, obj, form, change):
+        if getattr(obj, 'slug', None) is None:
+            obj.slug = obj.name.lower().replace(' ', '-')
+        obj.save()
+
+
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 # admin.site.register(Album, AlbumAdmin)
 admin.site.register(Timeline, TimelineAdmin)
 admin.site.register(YoutubeChannel, YoutubeChannelAdmin)
+admin.site.register(Faq, FaqAdmin)
+admin.site.register(CategoryFaq, CategoryFaqAdmin)

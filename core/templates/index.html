@@ -13,14 +13,13 @@
         </div>
 
     <div class="col-sm-3">
-                    <p class="text-upper text-font-17 justfy-text" style="margin-top: 60px;">
-                        O <b>Concilia BR-381 e anel (Programa Judicial de Conciliação para remoção e
-                        reassentamento humanizados de famílias do anel rodoviário e br-381)</b> foi
-                        criado em função da necessidade de revitalização desas rodovias. É uma
-                        iniciativa da justiça federal e do departamento nacional de infraestrutura de transportes (DNIT). Em parceria com Ministério Público Federal (MPF),
-                        Defensoria pública da união (DPU), Companhia urbanizadora e de habitação
-                        de belo horizonte (urbel) e comunidade de moradores em área de risco de
-                        belo horizonte (cmar).
+                    <p class="text-home-index justfy-text" style="margin-top: 50px;">
+                        O <b>Concilia BR-381 e Anel - Programa Judicial de Conciliação para Remoção e
+                        Reassentamento Humanizados de Famílias do Anel Rodoviário e BR-381 - </b> foi
+                        criado em função da necessidade de revitalização dessas rodovias. É uma
+                        iniciativa da Justiça Federal e do Departamento Nacional de Infraestrutura de Transportes (DNIT), em parceria com Ministério Público Federal (MPF),
+                        Defensoria Pública da União (DPU), Companhia Urbanizadora e de Habitação
+                        de Belo Horizonte (URBEL) e Associação das Comunidades de Moradores de Áreas de Risco de Belo Horizonte (CMAR).
                     </p>
         </div>
 
@@ -74,13 +73,12 @@
                 <div class="col-sm-4">
                     <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
                         {% if noticia.image and noticia.has_image %}
-                              <img src="{{noticia.image|thumbnail_url:'home_news'}}" alt="{{noticia}}" style="width:auto;">
+                              <img src="{{noticia.image|thumbnail_url:'home_news'}}" alt="{{noticia}}" style="width:300px;height: 200px;">
                          {% endif %}
                         {% if noticia.image and not noticia.exists_image_in_path %}
                                <img src="{% static 'img/img_nao_disponivel.png' %}"/>
                         {% endif %}
                         <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
-                        <p> {{noticia.sub_title |truncatechars_html:100}} </p>
                     </a>
                 </div>
             {% endfor %}

@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import View, TemplateView
 from django.views import generic
 from django.views.generic.detail import DetailView
-from .models import Noticia, Comunidade, YoutubeChannel
+from .models import Noticia, Comunidade, YoutubeChannel, CategoryFaq
 from django.db.models import Q
 from photologue.models import Gallery
 
@@ -78,8 +78,16 @@ def youtube_playlist_view(request, slug):
     return render(request, 'content/video_detail.html', context)
 
 
+# Página de dúvidas
+class PerguntasFrequentesView(generic.ListView):
+    queryset = CategoryFaq.objects.all()
+    context_object_name = 'categorias_perguntas_frequentes'
+    template_name = 'content/perguntas_frequentes.html'
+
+
 news = NewsListView.as_view()
 community = CommunityView.as_view()
 videos = VideosView.as_view()
 galeria = GaleryListVew.as_view()
 geleria_detalhe = GalleryDetailView.as_view()
+perguntas_frequentes = PerguntasFrequentesView.as_view()

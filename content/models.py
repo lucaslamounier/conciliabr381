@@ -268,3 +268,45 @@ class Timeline(models.Model):
         else:
             return False
 
+
+class CategoryFaq(models.Model):
+
+    name = models.CharField('Nome da categoria', max_length=100)
+    slug = models.SlugField('Identificador', max_length=100, editable=False, null=True, blank=True)
+
+    created = models.DateTimeField('Criado em', auto_now_add=True)
+    modified = models.DateTimeField('Modificado em', auto_now=True)
+
+    class Meta:
+        verbose_name = 'Categoria de perguntas frequentes'
+        verbose_name_plural = 'Categorias de perguntas frequentes'
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+    # def get_absolute_url(self):
+    #     return reverse('catalog:category', kwargs={'slug': self.slug})
+
+
+class Faq(models.Model):
+
+    question = models.CharField('Pergunta', max_length=500, help_text=u"Pergunta que será apresentada no site")
+    answer = models.TextField('Resposta', max_length=1000, help_text=u"Resposta para a pergunta que será apresentada no site")
+    category = models.ForeignKey('content.CategoryFaq', related_name='perguntas_frequentes', verbose_name='Categoria')
+
+    slug = models.SlugField('Identificador', max_length=100, editable=False, null=True, blank=True)
+    created = models.DateTimeField('Criado em', auto_now_add=True)
+    modified = models.DateTimeField('Modificado em', auto_now=True)
+
+    class Meta:
+        verbose_name = 'Pergunta Frequente'
+        verbose_name_plural = 'Perguntas Frequentes'
+        ordering = ['question']
+
+    def __str__(self):
+        return self.question
+
+    # def get_absolute_url(self):
+    #     return reverse('catalog:category', kwargs={'slug': self.slug})
+
