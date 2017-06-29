@@ -43,7 +43,7 @@
 	</section>
 	{% endif %}
 
-<section>
+<section class="section-about">
 	<div class="row view photo-list-view photostream" >
 		<ul class="masonry">
 		{% for photo in gallery.public %}
@@ -57,15 +57,7 @@
 		</ul>
 	</div>
 </section>
-<section  class="section-about">
-		<div class="row">
-			<!--<div class="col-sm-12" style="text-align: center;">-->
-				<!--<div><a href="{% url 'content:galeria' %}" class="btn btn-default">{% trans "Ver todos os álbuns" %}</a></div>-->
-			<!--</div>-->
-		</div>
-</section>
 
-<div class="line-separator-gray"></div>
 <script>
 	document.addEventListener('DOMContentLoaded',function(){
 		var photo = new smartPhoto(".js-img-viwer");

@@ -31,7 +31,26 @@
                         </div>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19">
-                        <a href="{% url 'content:comunidades' %}">Comunidades</a>
+                        <a href="">Comunidades</a>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="{% url 'content:comunidades' %}">Comunidades Seladas</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="">CMAR</a>
+                                        </li>
+                                        {% for comunidade in comunidades %}
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
+                                            <a href="{{comunidade.get_absolute_url}}">{{comunidade}}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
                         <a href="">Imóveis</a>

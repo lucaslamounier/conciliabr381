@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
 import os
 from django.db import models
-from tinymce.models import HTMLField
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from redactor.fields import RedactorField
 from builtins import str
 
 
@@ -54,20 +54,25 @@ class Noticia(models.Model):
 
     title = models.CharField(u'Título', max_length=500)
     sub_title = models.CharField(u'Subtítulo', max_length=500)
-    text = HTMLField(verbose_name='texto')
+
+    text = RedactorField(
+        verbose_name=u'Texto', allow_file_upload=True,
+        allow_image_upload=True, null=True, blank=True
+    )
     published_at = models.DateTimeField(u'Data de publicação', null=True)
     expired_at = models.DateTimeField(u'Data de expiração da notícia', null=True, blank=True)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
     image = models.ImageField(
-        upload_to='noticias/images', verbose_name='Imagem',
+        upload_to='noticias/images', verbose_name='Imagem de capa para a Notícia',
         null=True, blank=True
     )
-    legend_image = models.CharField('Legenda da imagem', max_length=200, null=True, blank=True)
+    legend_image = models.CharField('Creditos da imagem de capa para a Notícia', max_length=200, null=True, blank=True)
     tag = models.CharField('Tags para facilitar a busca no site', max_length=100, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
     notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
-    album = models.ForeignKey(Album, verbose_name='Album de Fotos', related_name='album_noticia', blank=True, null=True)
+    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True)
+
 
     class Meta:
         verbose_name = u'Notícia'
@@ -111,7 +116,10 @@ class Comunidade(models.Model):
     ''' Modelo para comunidades '''
 
     title = models.CharField('Nome da Vila ou Comunidade', max_length=500)
-    about = HTMLField(verbose_name='Sobre')
+    text = RedactorField(
+        verbose_name=u'Sobre a comunidade', allow_file_upload=True,
+        allow_image_upload=True, null=True, blank=True
+    )
     lat_long = models.CharField('Informe as coordenadas: Latitude e Longitude obtidas através do googleMaps',
                                 max_length=500, blank=True, null=False)
     album = models.ForeignKey(Album, verbose_name='Album de Fotos', related_name='album', blank=True, null=True)

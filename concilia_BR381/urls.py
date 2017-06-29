@@ -37,8 +37,9 @@ urlpatterns = [
     url(r'^conteudos/', include('content.urls', namespace='content')),
     url(r'^admin/', admin.site.urls),
     # Plugins URLs
-    url(r'^tinymce/', include('tinymce.urls')),
+    # url(r'^tinymce/', include('tinymce.urls')),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
+    url(r'^redactor/', include('redactor.urls')),
 
 ]
 

@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
     <link rel="stylesheet" href="{% static 'foundation-icons/foundation-icons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}" />
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-
 </head>
 
 <body>
@@ -61,11 +59,12 @@
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                             <a class="mobile-submenu-item" href="{% url 'about' %}">O que é</a>
                                         </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a class="mobile-submenu-item" href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
-                                        </li>
+
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                             <a class="mobile-submenu-item" href="{% url 'partners' %}">Parceiros</a>
+                                        </li>
+                                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="mobile-submenu-item" href="{% url 'conselho_executivo' %}">Comitê Executivo</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                                             <a class="mobile-submenu-item" href="{% url 'manual_marca' %}">Manual da marca</a>
@@ -179,7 +178,7 @@
             <div class="rodape_end_background">
 
                 <div class="row" style="text-align: center;">
-                    <p style="margin-top: 45px;font-weight: 500;">&copy; Copyright 2017 Concilia BR-381 e Anel</p>
+                    <p style="margin-top: 40px;font-weight: bold; color: white;">&copy; Copyright 2017 Concilia BR-381 e Anel</p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 from django.contrib import admin
 from .models import (
         Noticia, Comunidade, Album,
@@ -21,6 +22,10 @@ class NoticiaAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         if getattr(obj, 'author', None) is None:
                 obj.author = request.user
+        if getattr(obj, 'slug', None) is None:
+            text = re.sub(r'[^a-zA-Z0-9 ]', r'', obj.title)
+            obj.slug = text.lower().replace(' ', '-')
+            import pdb; pdb.set_trace()
         obj.save()
 
 

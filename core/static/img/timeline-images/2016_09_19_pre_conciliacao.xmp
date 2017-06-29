@@ -13,7 +13,7 @@
    xmp:Rating="0"
    xmp:ModifyDate="2016-09-19T11:35:50.00"
    xmp:CreateDate="2016-09-19T11:35:50.00"
-   xmp:MetadataDate="2017-05-29T17:27:18-03:00"
+   xmp:MetadataDate="2017-06-28T11:36:25-03:00"
    tiff:Make="Canon"
    tiff:Model="Canon EOS REBEL T5i"
    tiff:Orientation="1"
@@ -51,7 +51,7 @@
    photoshop:EmbeddedXMPDigest="AD0ACF660F79AC49FD004B2DD3BC0461"
    xmpMM:DocumentID="73B482E1958C411CCCAF2654E384A405"
    xmpMM:OriginalDocumentID="73B482E1958C411CCCAF2654E384A405"
-   xmpMM:InstanceID="xmp.iid:54355d2c-526b-46fc-866b-ac31d2c69343"
+   xmpMM:InstanceID="xmp.iid:58171e94-3a73-4b56-b5b1-24941f67a155"
    dc:format="image/x-canon-cr2"
    crs:RawFileName="2016_09_19_pre_conciliacao.CR2"
    crs:Version="9.7"
@@ -177,6 +177,12 @@
       stEvt:action="saved"
       stEvt:instanceID="xmp.iid:54355d2c-526b-46fc-866b-ac31d2c69343"
       stEvt:when="2017-05-29T17:27:18-03:00"
+      stEvt:softwareAgent="Adobe Photoshop Camera Raw 9.7 (Macintosh)"
+      stEvt:changed="/metadata"/>
+     <rdf:li
+      stEvt:action="saved"
+      stEvt:instanceID="xmp.iid:58171e94-3a73-4b56-b5b1-24941f67a155"
+      stEvt:when="2017-06-28T11:36:25-03:00"
       stEvt:softwareAgent="Adobe Photoshop Camera Raw 9.7 (Macintosh)"
       stEvt:changed="/metadata"/>
     </rdf:Seq>
