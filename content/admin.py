@@ -2,16 +2,14 @@
 import re
 from django.contrib import admin
 from .models import (
-        Noticia, Comunidade, Album,
-        Photo, Timeline, YoutubeChannel,
+        Noticia, Comunidade, Timeline, YoutubeChannel,
         Faq, CategoryFaq
 )
 
 
-
-class PropertyImageInline(admin.StackedInline):
-    model = Photo
-    extra = 1
+# class PropertyImageInline(admin.StackedInline):
+#     model = Photo
+#     extra = 1
 
 
 class NoticiaAdmin(admin.ModelAdmin):
@@ -23,9 +21,8 @@ class NoticiaAdmin(admin.ModelAdmin):
         if getattr(obj, 'author', None) is None:
                 obj.author = request.user
         if getattr(obj, 'slug', None) is None:
-            text = re.sub(r'[^a-zA-Z0-9 ]', r'', obj.title)
+            text = re.sub(r'[^a-zA-Z0-9 ]', r' ', obj.title)
             obj.slug = text.lower().replace(' ', '-')
-            import pdb; pdb.set_trace()
         obj.save()
 
 
@@ -33,36 +30,16 @@ class ComunidadeAdmin(admin.ModelAdmin):
 
     list_display = ['title', 'author', 'created_at', 'updated_at']
     search_fields = ['title']
+    #prepopulated_fields = {"slug": ("title",)}
 
     def save_model(self, request, obj, form, change):
         if getattr(obj, 'author', None) is None:
             obj.author = request.user
         if getattr(obj, 'title', None) is None:
             obj.slug = obj.title
-        obj.save()
-
-
-class AlbumAdmin(admin.ModelAdmin):
-
-    list_display = ['name', 'author', 'date_created']
-    search_fields = ['name']
-    inlines = [PropertyImageInline, ]
-
-    def save_model(self, request, obj, form, change):
-        obj.slug = obj.name
-        if getattr(obj, 'author', None) is None:
-            obj.author = request.user
-        obj.save()
-
-
-class PhotoAdmin(admin.ModelAdmin):
-
-    list_display = ['title', 'legend', 'album', 'author', 'date_created']
-    search_fields = ['title']
-
-    def save_model(self, request, obj, form, change):
-        if getattr(obj, 'author', None) is None:
-            obj.author = request.user
+        if getattr(obj, 'slug', None) is None:
+            text = re.sub(r'[^a-zA-Z0-9 ]', r' ', obj.title)
+            obj.slug = text.lower().replace(' ', '-')
         obj.save()
 
 
@@ -117,7 +94,6 @@ class CategoryFaqAdmin(admin.ModelAdmin):
 
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
-# admin.site.register(Album, AlbumAdmin)
 admin.site.register(Timeline, TimelineAdmin)
 admin.site.register(YoutubeChannel, YoutubeChannelAdmin)
 admin.site.register(Faq, FaqAdmin)

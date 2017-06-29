@@ -1846,6 +1846,119 @@ div.panel {
 
 /* Página de noticias */
 
+
+
+.news-premium__title {
+     font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+    margin-left: 1.5rem;
+    color: #ff6c00;
+    font-weight: bold;
+}
+
+.hui-premium__link {
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+
+.news-premium__title__inferior {
+    font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    letter-spacing: -.035em;
+    letter-spacing: -.04em;
+    color: #ff6c00;
+    font-weight: bold;
+}
+
+.news-premium__title__inferior_with_image {
+    font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    letter-spacing: -.035em;
+    letter-spacing: -.04em;
+    color: #ff6c00;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.hui-premium__divider:before {
+    background-color: #e1e1e1;
+    height: 1px;
+    content: "";
+    display: block;
+}
+
+.hui-premium__divider {
+    margin-bottom: 1.5rem;
+}
+
+
+.hui-hover-effect__target:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity .35s;
+    transition: opacity .35s;
+}
+
+.hui-premium__link {
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+.hui-hover-effect__target {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hui-premium--has-photo .hui-premium__title {
+    -ms-flex-preferred-size: 51%;
+    flex-basis: 51%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************** Página de noticias old */
+
 #tile_banner_rotativo > div.owl-stage-outer > div > div.owl-item.active.center > div > a > span.title {
     display: block;
     margin: 0.450em 0 0.450em 0;
