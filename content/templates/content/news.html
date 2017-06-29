@@ -20,12 +20,6 @@
                                 Postado em {{noticia.published_at|date:"d/m/Y" }} por {{noticia.author}}
                             </small>
                         </h4>
-                        <!--{% if noticia.has_image %}-->
-                            <!--<picture>-->
-                              <!--<img src="{{noticia.image.url}}" class="img-responsive img-thumbnail" alt="{{noticia}}" style="width:auto;">-->
-                            <!--</picture>-->
-                         <!--{% endif %}-->
-                        <!--<p class="hui-highlight-title"> </p>-->
                         <p> {{noticia.sub_title |truncatechars_html:100}} </p>
                         <p class="text-right">
                                 <a href="{% url 'content:noticia' noticia.pk %}" class="">Continue lendo →</a>
@@ -40,14 +34,17 @@
 
         {% endif %}
 
-        {% if noticias_home_page.count == 0 %}
-                <div class="col-sm-12">
-                     <p>Nenhum registro encontrado.</p>
+        {% if noticias.count == 0 %}
+                <div class="center-text col-sm-12">
+                     <h1>Não foi encontrado nenhuma notícia cadastrada.</h1>
                 </div>
         {% endif %}
         </div>
 </section>
-{% pagination request paginator page_obj %}
+
+{% if noticias.count > 12 %}
+    {% pagination request paginator page_obj %}
+{% endif %}
 
 <script>
     $('.owl-carousel-noticia').owlCarousel({

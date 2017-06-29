@@ -182,9 +182,9 @@ class YoutubeChannel(models.Model):
 
     slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True)
 
-    api_key = models.CharField(u'API Key', max_length=500,
-                               help_text=u"API KEY do google, veja como obte-lá " \
-                                         "https://developers.google.com/youtube/v3/getting-started")
+    # api_key = models.CharField(u'API Key', max_length=500,
+    #                            help_text=u"API KEY do google, veja como obte-lá " \
+    #                                      "https://developers.google.com/youtube/v3/getting-started")
 
     channel_link = models.CharField(u'Link do canal', max_length=500,
                                     help_text=u"Link do canal no youtube, exemplo: " \

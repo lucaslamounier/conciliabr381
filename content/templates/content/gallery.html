@@ -40,6 +40,11 @@
                 </div>
             {% endif %}
         {% endfor %}
+        {% if galeria_fotos.count == 0 %}
+                <div class="center-text col-sm-12">
+                    <h1>Nenhum álbum de fotos encontrado :(</h1>
+                </div>
+        {% endif %}
     </div>
 </section>
 
