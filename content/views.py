@@ -13,14 +13,34 @@ class NewsListView(generic.ListView):
     model = Noticia
     template_name = 'content/news.html'
     context_object_name = 'noticias'
-    paginate_by = 12
+    paginate_by = 13
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['noticias'] = Noticia.objects.all().order_by('-published_at')
-    #     #context['noticias'] = Noticia.objects.filter(image='').order_by('-published_at')
-    #     #context['noticias_carrousel'] = Noticia.objects.filter(~Q(image='')).order_by('-published_at')
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['noticias_destaque_center'] = context['noticias'][:7]
+        context['noticias_destaque_left'] = context['noticias'][7:10]
+        context['noticias_destaque_right'] = context['noticias'][10:13]
+        context['noticias_destaque_center_with_image'] = self.get_noticia_destaque_image(context['noticias_destaque_center'])
+        noticias_destaque = []
+
+        for obj in context['noticias_destaque_center']:
+            if obj not in context['noticias_destaque_center_with_image']:
+                noticias_destaque.append(obj)
+
+        context['noticias_destaque_center'] = noticias_destaque
+        context['noticias_destaque_top'] = context['noticias_destaque_center'][0]
+        context['noticias_destaque_center'].pop(0)
+        return context
+
+    def get_noticia_destaque_image(self, obj):
+        noticias = []
+        for item in obj:
+            if len(noticias) == 3:
+                break
+            if item.has_image():
+                noticias.append(item)
+        return noticias
+
 
 # Página de Notícia
 def noticia(request, pk):

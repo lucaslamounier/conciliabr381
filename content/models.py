@@ -12,7 +12,7 @@ class Noticia(models.Model):
     ''' Modelo para noticias '''
 
     title = models.CharField(u'Título', max_length=500)
-    sub_title = models.CharField(u'Subtítulo', max_length=500)
+    sub_title = models.CharField(u'Subtítulo', max_length=500, null=True, blank=True)
 
     text = RedactorField(
         verbose_name=u'Texto', allow_file_upload=True,
@@ -30,13 +30,12 @@ class Noticia(models.Model):
     tag = models.CharField('Tags para facilitar a busca no site', max_length=100, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
     notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
-    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True)
-
+    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True, unique=True)
 
     class Meta:
         verbose_name = u'Notícia'
         verbose_name_plural = u'Notícias'
-        ordering = ['title']
+        ordering = ['-published_at', 'legend_image']
 
     def __str__(self):
         return self.title
@@ -84,7 +83,7 @@ class Comunidade(models.Model):
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
-    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True)
+    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True, unique=True)
     # slug = models.SlugField(_('Identificador'),
     #                         unique=True,
     #                         max_length=250,

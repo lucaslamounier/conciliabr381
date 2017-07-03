@@ -1,7 +1,142 @@
+/*
+    CONCILIA BR-381 E ANEL STYLES
+
+
+
+*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
-#map img,
-.acf-map img,
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h3 {
+    font-weight: normal
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+.top-border {
+    background: #ff6c00;
+    height: 0.1rem;
+}
+.top-border-gray {
+    background: rgb(244, 244, 244);
+    height: 2px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.background-middle {
+    height: 150px;
+    padding-top: 40px
+}
+.bg-m-1 {
+    background: url("./img/bg_middle1.jpg") center
+}
+.bg-m-2 {
+    background: url("./img/bg_middle2.jpg") center
+}
+.background-middle-index {
+    background: url("../img/comunidades_fotos/vila_da_luz.jpg") center;
+}
+/*.bg-m-3 { background: url("../img/bg_middle3.jpg") center }*/
+
+.bg-m-3 {
+    background: url('../img/favela.jpg');
+    background-repeat: repeat-x;
+}
+.bg-m-4 {
+    background: url("./img/bg_middle4.jpg") center
+}
+.bg-m-5 {
+    background: url("./img/bg_middle5.jpg") center
+}
+.bg-m-6 {
+    background: url("./img/bg_middle6.jpg") center
+}
+.background-middle h1 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    color: #106677;
+    background: #ffffff;
+    display: inline;
+    padding: 10px;
+    margin: 0 0 0 260px
+}
+.bg-stripe {
+    background: url("./img/bg.png") no-repeat
+}
+header {
+    padding: 0
+}
+header h1,
+header h2 {
+    font-size: 1.8em;
+    height: 40px;
+}
+.rodape-apoio {
+    display: inline-block;
+    width: 200px;
+}
+.rodape-parceiros {
+    display: inline-block;
+    width: 200px;
+}
+header h1 a,
+header h2 a {
+    width: 200px;
+    height: 190px;
+    text-indent: -9999px;
+    position: absolute;
+}
+.bx-wrapper .bx-viewport {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0;
+    box-shadow: none;
+    left: -5px;
+    transform: translateZ(0px);
+}
+div.bxslider1 {
+    margin: 0;
+    padding: 0
+}
+div.bxslider1 > div {
+    max-height: 263px;
+    overflow: hidden
+}
+.image {
+    display: inline-block;
+    height: auto;
+}
+
+.concilia-blue {
+    color: #0091ea !important;
+    font-weight: bold;
+}
+
+.concilia-magenta {
+    color: #ec407a !important;
+    font-weight: bold;
+}
+
+.concilia-orange {
+    color: #ff6c00 !important;
+}
+
+.concilia-green {
+    color: #398e3d !important;
+     font-weight: bold;
+}
+
 #flatads-main-map img {
     max-width: none;
 }
@@ -57,10 +192,6 @@
 .title-links-uteis {
     color: white;
     font-size: 2.2em;
-    /* font-weight: 300; */
-    /* line-height: 42px; */
-    /* margin: 0 0 32px 0; */
-    /* margin: 0 0 32px 0; */
     margin-top: 35px;
 }
 
@@ -77,11 +208,6 @@
 .block-noticia-itens {
     min-height: 250px;
     padding-top: 40px;
-    /*
-    display: -webkit-flex;
-    display: flex;
-     -webkit-justify-content: flex-start;
-    justify-content: flex-start;*/
 }
 #flatads-main-map {
     margin-bottom: 0;
@@ -153,8 +279,6 @@
     width: 50%;
     display: inline-block;
     float: left;
-    /* text-align: center; */
-
     margin-left: 10px;
 }
 .marker-content .close,
@@ -195,8 +319,6 @@
 .marker-info {
     width: 230px;
     padding: 0;
-    /*background-color: rgba(52,73,94,0.9);*/
-
     position: relative;
     bottom: 0;
     color: #fff;
@@ -246,124 +368,7 @@
     background-color: #268bce;
     text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    /*color: #ffbb00;*/
-}
-h3 {
-    font-weight: normal
-}
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    color: black;
-}
-.top-border {
-    /*background: #ffbb00; */
-    background: #ff6c00;
-    height: 0.1rem;
-}
-.top-border-gray {
-    background: rgb(244, 244, 244);
-    height: 2px;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.background-middle {
-    height: 150px;
-    padding-top: 40px
-}
-.bg-m-1 {
-    background: url("./img/bg_middle1.jpg") center
-}
-.bg-m-2 {
-    background: url("./img/bg_middle2.jpg") center
-}
-.background-middle-index {
-    background: url("../img/comunidades_fotos/vila_da_luz.jpg") center;
-}
-/*.bg-m-3 { background: url("../img/bg_middle3.jpg") center }*/
 
-.bg-m-3 {
-    background: url('../img/favela.jpg');
-    background-repeat: repeat-x;
-}
-.bg-m-4 {
-    background: url("./img/bg_middle4.jpg") center
-}
-.bg-m-5 {
-    background: url("./img/bg_middle5.jpg") center
-}
-.bg-m-6 {
-    background: url("./img/bg_middle6.jpg") center
-}
-.background-middle h1 {
-    font-size: 1.9rem;
-    text-transform: uppercase;
-    color: #106677;
-    background: #ffffff;
-    display: inline;
-    padding: 10px;
-    margin: 0 0 0 260px
-}
-.bg-stripe {
-    background: url("./img/bg.png") no-repeat
-}
-header {
-    padding: 0
-}
-header h1,
-header h2 {
-    font-size: 1.8em;
-    /*color: #28b293;*/
-
-    height: 40px;
-}
-.rodape-apoio {
-    display: inline-block;
-    width: 200px;
-}
-.rodape-parceiros {
-    display: inline-block;
-    width: 200px;
-}
-header h1 a,
-header h2 a {
-    /* background: url(../img/concilia.png) no-repeat center -15px #fff; */
-
-    width: 200px;
-    height: 190px;
-    text-indent: -9999px;
-    position: absolute;
-    /* z-index: 9999; */
-    /* display: block; */
-    /* color: #28b293; */
-}
-.bx-wrapper .bx-viewport {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 0;
-    box-shadow: none;
-    left: -5px;
-    transform: translateZ(0px);
-}
-div.bxslider1 {
-    margin: 0;
-    padding: 0
-}
-div.bxslider1 > div {
-    max-height: 263px;
-    overflow: hidden
-}
-.image {
-    display: inline-block;
-    height: auto;
-}
 .view-all-noticia {
     float: right;
     font-size: 1.2em;
@@ -1648,6 +1653,7 @@ body .primary-button {
     font-size: 1.475rem;
     line-height: 1.25;
     color: #444;
+    padding-right: 25px;
 }
 
 .label-icones-casas-numero {
@@ -1842,120 +1848,6 @@ div.panel {
 .link-text-patner:hover {
     color: #c4170c;
 }
-
-
-/* Página de noticias */
-
-
-
-.news-premium__title {
-     font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
-    font-size: 3.5rem;
-    line-height: 1.1;
-    letter-spacing: -.03em;
-    margin-left: 1.5rem;
-    color: #ff6c00;
-    font-weight: bold;
-}
-
-.hui-premium__link {
-    color: inherit;
-    display: block;
-    position: relative;
-}
-
-
-.news-premium__title__inferior {
-    font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
-    font-size: 1.375rem;
-    line-height: 1.25;
-    letter-spacing: -.035em;
-    letter-spacing: -.04em;
-    color: #ff6c00;
-    font-weight: bold;
-}
-
-.news-premium__title__inferior_with_image {
-    font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
-    font-size: 1.375rem;
-    line-height: 1.25;
-    letter-spacing: -.035em;
-    letter-spacing: -.04em;
-    color: #ff6c00;
-    font-weight: bold;
-    margin-top: 0.5rem;
-}
-
-.hui-premium__divider:before {
-    background-color: #e1e1e1;
-    height: 1px;
-    content: "";
-    display: block;
-}
-
-.hui-premium__divider {
-    margin-bottom: 1.5rem;
-}
-
-
-.hui-hover-effect__target:after {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0;
-    -webkit-transition: opacity .35s;
-    transition: opacity .35s;
-}
-
-.hui-premium__link {
-    color: inherit;
-    display: block;
-    position: relative;
-}
-
-.hui-hover-effect__target {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.hui-premium--has-photo .hui-premium__title {
-    -ms-flex-preferred-size: 51%;
-    flex-basis: 51%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: center;
-    align-self: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ********************** Página de noticias old */
 

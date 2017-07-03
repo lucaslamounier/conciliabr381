@@ -2,6 +2,8 @@
 
 {% load pagination %}
 
+{% load noticias_homepage %}
+
  {% load static %}
 
 {% block title %} Notícias | {{ block.super }} {% endblock %}
@@ -10,502 +12,130 @@
 
 
 <link rel="stylesheet" href="{% static 'css/noticias.css' %}" />
-<section class="section-about">
-  <div class="row hui-spacing home-top-news hui-premium__wrapper home-analytics-area home-analytics-id-A" data-first-lazyload="">
+<section class="section-about home-body">
 
-    <div class="column medium-11 large-5 hui-premium__wrapper-collumn--side areatemplate_destaques_direita_1_topo_globo_com_2016">
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-photo
-        clearfix
-        hui-premium--has-related
-        hui-color-sports
-        ">
-        <a data-video-id="" data-resume-at="" data-short-url="http://globoesporte.globo.com/futebol/copa-das-confederacoes/jogo/29-06-2017/alemanha-mexico/" data-title="Alemanha passa fácil pelo México e avança para final contra Chile" data-img="http://s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" href="http://globoesporte.globo.com/futebol/copa-das-confederacoes/jogo/29-06-2017/alemanha-mexico/" title="Alemanha passa fácil pelo México e avança para final contra Chile (Reuters)" class="hui-premium__link
-          hui-highlight__link
-          hui-hover-effect__trigger
-          ">
-          <picture class="
-            hui-premium__photo-container hui-hover-effect__target
-            ">
-            <!--[if IE 9]>
-            <video style="display: none;">
-              <![endif]-->
-              <source data-media-query="large" srcset="http://s2.glbimg.com/HjpYWiSYe78KBXEdrPBoRmcGQwE=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" data-srcset="http://s2.glbimg.com/HjpYWiSYe78KBXEdrPBoRmcGQwE=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-              <source data-media-query="medium" srcset="http://s2.glbimg.com/SGOtWCxM382vFbhSvz92myB_lfk=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" data-srcset="http://s2.glbimg.com/SGOtWCxM382vFbhSvz92myB_lfk=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-              <source data-media-query="small" srcset="http://s2.glbimg.com/2KN4x_YCUJ0w4WECY4V_Nn45C-A=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" data-srcset="http://s2.glbimg.com/2KN4x_YCUJ0w4WECY4V_Nn45C-A=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" media="(max-width: 38.6875em)">
-              <source data-media-query="xlarge" srcset="http://s2.glbimg.com/q32-GWeBa3lx0J1Gzqssne8JYXg=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" data-srcset="http://s2.glbimg.com/q32-GWeBa3lx0J1Gzqssne8JYXg=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-              <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/Jjrs2TxvbuthCdNpauvMPVUMb4I=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" data-srcset="http://s2.glbimg.com/Jjrs2TxvbuthCdNpauvMPVUMb4I=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg" media="(min-width: 99.375em)">
-              <!--[if IE 9]>
-            </video>
-            <![endif]--><img class="hui-premium__photo hui-lazy" alt="Alemanha passa fácil pelo México e avança para final contra Chile (Reuters)" title="Alemanha passa fácil pelo México e avança para final contra Chile (Reuters)" src="http://s2.glbimg.com/2KN4x_YCUJ0w4WECY4V_Nn45C-A=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/9TvC20mhR1jXhMk4J0P31PlmejI=/306x39:2034x1010/267x150/s.glbimg.com/es/ge/f/original/2017/06/29/2017-06-29t192142z_971157262_rc1a256ab690_rtrmadp_3_soccer-confederations-ger-mex.jpg">
-          </picture>
-          <p class="hui-premium__title">Alemanha passa fácil pelo México e avança para final contra Chile</p>
-        </a>
-        <ul class="hui-premium__related-container">
-          <li class="hui-premium__related"><a href="http://globoesporte.globo.com/futebol/copa-das-confederacoes/noticia/chilenos-fazem-barulho-ganham-apoio-russo-e-vao-invadir-sao-petersburgo.ghtml" title="Chilenos preparam 'invasão'" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-            Chilenos preparam 'invasão'
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-photo
-        clearfix
-        hui-color-sports
-        ">
-        <a data-video-id="" data-resume-at="" data-short-url="http://globoesporte.globo.com/futebol/times/botafogo/noticia/montillo-da-adeus-ao-botafogo-e-confirma-aposentadoria-do-futebol.ghtml" data-title="Montillo dá adeus ao Bota e se aposenta" data-img="http://s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" href="http://globoesporte.globo.com/futebol/times/botafogo/noticia/montillo-da-adeus-ao-botafogo-e-confirma-aposentadoria-do-futebol.ghtml" title="Montillo dá adeus ao Bota e se aposenta (Reprodução)" class="hui-premium__link
-          hui-highlight__link
-          hui-hover-effect__trigger
-          ">
-          <picture class="
-            hui-premium__photo-container hui-hover-effect__target
-            ">
-            <!--[if IE 9]>
-            <video style="display: none;">
-              <![endif]-->
-              <source data-media-query="large" srcset="http://s2.glbimg.com/6pRSBa254GzCWg1q8PWJjk2tQ2A=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" data-srcset="http://s2.glbimg.com/6pRSBa254GzCWg1q8PWJjk2tQ2A=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-              <source data-media-query="medium" srcset="http://s2.glbimg.com/nIBX4yBz4P3wwlLvziwH0OD_v_I=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" data-srcset="http://s2.glbimg.com/nIBX4yBz4P3wwlLvziwH0OD_v_I=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-              <source data-media-query="small" srcset="http://s2.glbimg.com/7Z5-4GhRzo5QKO2o4AtCv_qXjTk=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" data-srcset="http://s2.glbimg.com/7Z5-4GhRzo5QKO2o4AtCv_qXjTk=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" media="(max-width: 38.6875em)">
-              <source data-media-query="xlarge" srcset="http://s2.glbimg.com/DNBEpSezdPeQUR-ziLptGRS8jMM=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" data-srcset="http://s2.glbimg.com/DNBEpSezdPeQUR-ziLptGRS8jMM=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-              <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/Qs9jhbfRXL-OovgosqQfDzGO0WQ=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" data-srcset="http://s2.glbimg.com/Qs9jhbfRXL-OovgosqQfDzGO0WQ=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg" media="(min-width: 99.375em)">
-              <!--[if IE 9]>
-            </video>
-            <![endif]--><img class="hui-premium__photo hui-lazy" alt="Montillo dá adeus ao Bota e se aposenta (Reprodução)" title="Montillo dá adeus ao Bota e se aposenta (Reprodução)" src="http://s2.glbimg.com/7Z5-4GhRzo5QKO2o4AtCv_qXjTk=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/lEafCsYeQz3LcbiTO9vZR3x9y3E=/261x127:1506x826/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/montillo_HZkioh4.jpg">
-          </picture>
-          <p class="hui-premium__title">Montillo dá adeus ao Bota e se aposenta</p>
-        </a>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-related
-        hui-color-sports
-        ">
-        <a href="http://globoesporte.globo.com/futebol/times/vasco/noticia/vasco-anuncia-a-contratacao-do-lateral-esquerdo-ramon.ghtml" title="Vasco anuncia Ramon e lateral se desculpa por fala: 'Fui ingrato'" class="hui-premium__link
-          hui-highlight__link
-          ">
-          <p class="hui-premium__title">Vasco anuncia Ramon e lateral se desculpa por fala: 'Fui ingrato'</p>
-        </a>
-        <ul class="hui-premium__related-container">
-          <li class="hui-premium__related"><a href="http://globoesporte.globo.com/futebol/times/vasco/noticia/vasco-negocia-para-ampliar-o-contrato-de-martin-silva-ate-2020.ghtml" title="Vasco tenta renovar com Silva" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-            Vasco tenta renovar com Silva
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
-    </div>
+    <div class="row hui-spacing home-top-news hui-premium__wrapper">
 
-   <div class="column medium-2 large-2 show-for-medium hui-premium__divider hui-premium__divider--vertical-medium">
-      &nbsp;
-    </div>
 
-      <div class="column large-14 hui-premium__wrapper-collumn--main">
-      <div class="areatemplate_destaques_esquerda_topo_globo_com_2016">
-        <div class="hui-premium
-          hui-premium-manchete
-          home-analytics-id-P
-          home-analytics-area
-          hui-premium--has-related
-          hui-color-journalism">
-          <a href="http://g1.globo.com/politica/noticia/temer-e-notificado-pela-camara-sobre-denuncia-da-pgr-por-corrupcao-passiva.ghtml" title="Câmara notifica Temer sobre denúncia por corrupção passiva" class="hui-premium__link
-            hui-highlight__link
-            ">
-            <p class="hui-premium__title">Câmara notifica Temer sobre denúncia por corrupção passiva</p>
-          </a>
-          <ul class="hui-premium__related-container">
-            <li class="hui-premium__related"><a href="http://g1.globo.com/politica/noticia/maia-defende-analise-rapida-da-denuncia-contra-temer-mas-sem-atropelos.ghtml" title="Maia defende análise rápida, mas 'sem atropelos' da denúncia " class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-              Maia defende análise rápida, mas 'sem atropelos' da denúncia
-              </a>
-            </li>
-            <li class="hui-premium__related"><a href="http://g1.globo.com/politica/noticia/oposicao-quer-que-stf-mande-maia-analisar-pedidos-de-cassacao-de-temer.ghtml" title="Oposição vai ao STF para que Maia analise pedidos de impeachment" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-              Oposição vai ao STF para que Maia analise pedidos de impeachment
-              </a>
-            </li>
-          </ul>
+        <div class="column medium-11  large-5 left-destaque">
+
+            {% for destaque in noticias_destaque_left %}
+            <div class="hui-premium hui-premium--has-photo clearfix hui-premium--has-related hui-color-sports">
+                <a href="http://globoesporte.globo.com/futebol/copa-das-confederacoes/noticia/campeoes-retornam-para-a-alemanha-com-a-taca-da-copa-das-confederacoes.ghtml"
+                   title="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
+                   class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
+                    {% if destaque.image %}
+                    <picture class="hui-premium__photo-container hui-hover-effect__target">
+                     <img class="hui-premium__photo hui-lazy"
+                          alt="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
+                          title="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
+                          src="{{destaque.image.url}}" />
+                    </picture>
+                    {% endif %}
+                    <p class="hui-premium__title concilia-blue">{{destaque}}</p>
+                </a>
+            </div>
+            <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
+           {% endfor %}
         </div>
-        <div class="hui-premium__divider ">&nbsp;</div>
-      </div>
-      <div class="areatemplate_destaques_esquerda_inferior_globo_com_2016">
-        <div class="row hui-premium-multiple__container">
-          <div class="hui-premium-multiple__list">
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-color-journalism
-              ">
-              <a href="http://g1.globo.com/politica/noticia/beneficios-podem-ser-revistos-ao-se-delator-nao-cumprir-deveres-decide-stf.ghtml" title="Benefício de delator pode ser revisto, diz STF" class="hui-premium__link
-                hui-highlight__link
-                ">
-                <p class="hui-premium__title">Benefício de delator pode ser revisto, diz STF</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-color-journalism
-              ">
-              <a href="http://g1.globo.com/politica/noticia/reforma-trabalhista-com-quorum-baixo-urgencia-nao-e-votada-em-plenario.ghtml" title="Senado adia voto sobre urgência em reforma" class="hui-premium__link
-                hui-highlight__link
-                ">
-                <p class="hui-premium__title">Senado adia voto sobre urgência em reforma</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-color-journalism
-              ">
-              <a href="https://oglobo.globo.com/brasil/moro-transfere-ex-secretario-de-cabral-para-prisao-no-rio-21535057" title="Moro transfere ex-secretário de Cabral para o Rio (Gabriel de Paiva / Agência O Globo)" class="hui-premium__link
-                hui-highlight__link
-                ">
-                <p class="hui-premium__title">Moro transfere ex-secretário de Cabral para o Rio</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-          </div>
-        </div>
-        <div class="row hui-premium-multiple__container">
-          <div class="hui-premium-multiple__list">
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-premium--has-photo
-              clearfix
-              hui-color-journalism
-              ">
-              <a data-video-id="" data-resume-at="" data-short-url="http://g1.globo.com/distrito-federal/noticia/jovem-de-15-anos-que-invadiu-palacio-do-alvorada-so-foi-detido-no-3-andar.ghtml" data-title="Jovem invasor do Alvorada pegou carro escondido" data-img="http://s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" href="http://g1.globo.com/distrito-federal/noticia/jovem-de-15-anos-que-invadiu-palacio-do-alvorada-so-foi-detido-no-3-andar.ghtml" title="Jovem invasor do Alvorada pegou carro escondido (Reprodução)" class="hui-premium__link
-                hui-highlight__link
-                hui-hover-effect__trigger
-                ">
-                <picture class="
-                  hui-premium__photo-container hui-hover-effect__target
-                  ">
-                  <!--[if IE 9]>
-                  <video style="display: none;">
-                    <![endif]-->
-                    <source data-media-query="large" srcset="http://s2.glbimg.com/BSSRhO5bs0OUsTJ_AxPjJnL-LIs=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" data-srcset="http://s2.glbimg.com/BSSRhO5bs0OUsTJ_AxPjJnL-LIs=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-                    <source data-media-query="medium" srcset="http://s2.glbimg.com/Q0Qqv0TWGsVbDYcPxdhqoJxFz1k=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" data-srcset="http://s2.glbimg.com/Q0Qqv0TWGsVbDYcPxdhqoJxFz1k=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-                    <source data-media-query="small" srcset="http://s2.glbimg.com/uwr85ahRhiJbDvv8AUcpJDuLhzc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" data-srcset="http://s2.glbimg.com/uwr85ahRhiJbDvv8AUcpJDuLhzc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" media="(max-width: 38.6875em)">
-                    <source data-media-query="xlarge" srcset="http://s2.glbimg.com/DrUPq-iu9Fk59mbiIvVT5iIOyXg=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" data-srcset="http://s2.glbimg.com/DrUPq-iu9Fk59mbiIvVT5iIOyXg=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-                    <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/s7-ncGUS9MXUtmR3NjoFYBn-zf0=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" data-srcset="http://s2.glbimg.com/s7-ncGUS9MXUtmR3NjoFYBn-zf0=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg" media="(min-width: 99.375em)">
-                    <!--[if IE 9]>
-                  </video>
-                  <![endif]--><img class="hui-premium__photo hui-lazy" alt="Jovem invasor do Alvorada pegou carro escondido (Reprodução)" title="Jovem invasor do Alvorada pegou carro escondido (Reprodução)" src="http://s2.glbimg.com/uwr85ahRhiJbDvv8AUcpJDuLhzc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg">
-                </picture>
-                <p class="hui-premium__title">Jovem invasor do Alvorada pegou carro escondido</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-premium--has-photo
-              clearfix
-              hui-color-journalism
-              ">
-              <a data-video-id="" data-resume-at="" data-short-url="http://g1.globo.com/rio-de-janeiro/noticia/pms-do-rj-assaltaram-boca-de-fumo-e-venderam-armas-ao-trafico-shoppings-do-crime-diz-policial.ghtml" data-title="PMs alugavam armas e vendiam droga, diz polícia" data-img="http://s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" href="http://g1.globo.com/rio-de-janeiro/noticia/pms-do-rj-assaltaram-boca-de-fumo-e-venderam-armas-ao-trafico-shoppings-do-crime-diz-policial.ghtml" title="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)" class="hui-premium__link
-                hui-highlight__link
-                hui-hover-effect__trigger
-                ">
-                <picture class="
-                  hui-premium__photo-container hui-hover-effect__target
-                  ">
-                  <!--[if IE 9]>
-                  <video style="display: none;">
-                    <![endif]-->
-                    <source data-media-query="large" srcset="http://s2.glbimg.com/k6nO0x8d5W0Rro2-XwWUA-iqbQQ=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" data-srcset="http://s2.glbimg.com/k6nO0x8d5W0Rro2-XwWUA-iqbQQ=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-                    <source data-media-query="medium" srcset="http://s2.glbimg.com/ImP6Otl7FDB7-SlDvi6TQGtxYX4=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" data-srcset="http://s2.glbimg.com/ImP6Otl7FDB7-SlDvi6TQGtxYX4=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-                    <source data-media-query="small" srcset="http://s2.glbimg.com/zyw9anRWyCIblBDApswdNUfFKcw=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" data-srcset="http://s2.glbimg.com/zyw9anRWyCIblBDApswdNUfFKcw=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" media="(max-width: 38.6875em)">
-                    <source data-media-query="xlarge" srcset="http://s2.glbimg.com/JZtdb-MjyVNg5ucyYuFjwkLOTao=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" data-srcset="http://s2.glbimg.com/JZtdb-MjyVNg5ucyYuFjwkLOTao=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-                    <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/egT-WNG76ZIO8BxDpDUFmOsANM0=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" data-srcset="http://s2.glbimg.com/egT-WNG76ZIO8BxDpDUFmOsANM0=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg" media="(min-width: 99.375em)">
-                    <!--[if IE 9]>
-                  </video>
-                  <![endif]--><img class="hui-premium__photo hui-lazy" alt="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)" title="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)" src="http://s2.glbimg.com/zyw9anRWyCIblBDApswdNUfFKcw=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg">
-                </picture>
-                <p class="hui-premium__title">PMs alugavam armas e vendiam droga, diz polícia</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-            <div class="hui-premium
-              column medium-8 hui-premium-multiple hui-premium-triplo
-              home-analytics-id-S
-              home-analytics-area
-              hui-premium--has-photo
-              clearfix
-              hui-color-journalism
-              ">
-              <a data-video-id="" data-resume-at="" data-short-url="https://oglobo.globo.com/rio/alerj-aprova-teto-de-gastos-rio-ja-pode-receber-socorro-do-governo-federal-21535120" data-title="No RJ, aval a teto de gastos libera ajuda federal" data-img="http://s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" href="https://oglobo.globo.com/rio/alerj-aprova-teto-de-gastos-rio-ja-pode-receber-socorro-do-governo-federal-21535120" title="No RJ, aval a teto de gastos libera ajuda federal (Antônio Werneck/O Globo)" class="hui-premium__link
-                hui-highlight__link
-                hui-hover-effect__trigger
-                ">
-                <picture class="
-                  hui-premium__photo-container hui-hover-effect__target
-                  ">
-                  <!--[if IE 9]>
-                  <video style="display: none;">
-                    <![endif]-->
-                    <source data-media-query="large" srcset="http://s2.glbimg.com/ceGSXqhGcYw67ieV1M2_KjtAymI=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" data-srcset="http://s2.glbimg.com/ceGSXqhGcYw67ieV1M2_KjtAymI=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-                    <source data-media-query="medium" srcset="http://s2.glbimg.com/mB-VJO_QLlrZ_y4aW3ys2SSw8tc=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" data-srcset="http://s2.glbimg.com/mB-VJO_QLlrZ_y4aW3ys2SSw8tc=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-                    <source data-media-query="small" srcset="http://s2.glbimg.com/rAiYiYbA3VCsIPq0p_Wk4vaM3b4=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" data-srcset="http://s2.glbimg.com/rAiYiYbA3VCsIPq0p_Wk4vaM3b4=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" media="(max-width: 38.6875em)">
-                    <source data-media-query="xlarge" srcset="http://s2.glbimg.com/0Mc4AedAl1KRxxZWO8K7DLy6dWI=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" data-srcset="http://s2.glbimg.com/0Mc4AedAl1KRxxZWO8K7DLy6dWI=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-                    <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/Ra0HZ4clmzwDtMW6sm5hMLh8XYs=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" data-srcset="http://s2.glbimg.com/Ra0HZ4clmzwDtMW6sm5hMLh8XYs=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg" media="(min-width: 99.375em)">
-                    <!--[if IE 9]>
-                  </video>
-                  <![endif]--><img class="hui-premium__photo hui-lazy" alt="No RJ, aval a teto de gastos libera ajuda federal (Antônio Werneck/O Globo)" title="No RJ, aval a teto de gastos libera ajuda federal (Antônio Werneck/O Globo)" src="http://s2.glbimg.com/rAiYiYbA3VCsIPq0p_Wk4vaM3b4=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/s4eHwmww733HGKon-oz6Y81sKac=/73x127:583x413/267x150/s.glbimg.com/en/ho/f/original/2017/06/29/alerj.jpg">
-                </picture>
-                <p class="hui-premium__title">No RJ, aval a teto de gastos libera ajuda federal</p>
-              </a>
-            </div>
-            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-    <!--<div class="column medium-2 large-1 show-for-medium hui-premium__divider hui-premium__divider&#45;&#45;vertical-medium">-->
-      <!--&nbsp;-->
-    <!--</div>-->
-    <div class="column medium-11 large-5 hui-premium__wrapper-collumn--side areatemplate_destaques_direita_2_topo_globo_com_2016">
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-photo
-        clearfix
-        hui-premium--has-related
-        hui-color-entertainment
-        ">
-        <a data-video-id="" data-resume-at="" data-short-url="http://gshow.globo.com/novelas/a-forca-do-querer/vem-por-ai/noticia/ivana-diz-que-nao-se-ve-como-mulher.ghtml" data-title="'Força': Ivana diz não se ver como mulher" data-img="http://s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" href="http://gshow.globo.com/novelas/a-forca-do-querer/vem-por-ai/noticia/ivana-diz-que-nao-se-ve-como-mulher.ghtml" title="'Força': Ivana diz não se ver como mulher (TV Globo)" class="hui-premium__link
-          hui-highlight__link
-          hui-hover-effect__trigger
-          ">
-          <picture class="
-            hui-premium__photo-container hui-hover-effect__target
-            ">
-            <!--[if IE 9]>
-            <video style="display: none;">
-              <![endif]-->
-              <source data-media-query="large" srcset="http://s2.glbimg.com/3n0W_L4KZN8JRVC264t88te7WjU=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" data-srcset="http://s2.glbimg.com/3n0W_L4KZN8JRVC264t88te7WjU=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-              <source data-media-query="medium" srcset="http://s2.glbimg.com/-NA42r_Ja9M_3BykaZed-GnE4Sc=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" data-srcset="http://s2.glbimg.com/-NA42r_Ja9M_3BykaZed-GnE4Sc=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-              <source data-media-query="small" srcset="http://s2.glbimg.com/FrGF_bwsnZXxx-0pQ30lJ9a-LQE=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" data-srcset="http://s2.glbimg.com/FrGF_bwsnZXxx-0pQ30lJ9a-LQE=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" media="(max-width: 38.6875em)">
-              <source data-media-query="xlarge" srcset="http://s2.glbimg.com/PE6wF949khp88Uotw-YrAw-lfBE=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" data-srcset="http://s2.glbimg.com/PE6wF949khp88Uotw-YrAw-lfBE=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-              <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/trJK8xu6QqW6zc5rr7t8CjnIhvk=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" data-srcset="http://s2.glbimg.com/trJK8xu6QqW6zc5rr7t8CjnIhvk=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg" media="(min-width: 99.375em)">
-              <!--[if IE 9]>
-            </video>
-            <![endif]--><img class="hui-premium__photo hui-lazy" alt="'Força': Ivana diz não se ver como mulher (TV Globo)" title="'Força': Ivana diz não se ver como mulher (TV Globo)" src="http://s2.glbimg.com/FrGF_bwsnZXxx-0pQ30lJ9a-LQE=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/5Xyufi5_A9cKWQsNLX9wYY2f-2s=/37x58:1409x829/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/N/u/aYlEYwQgORpYwIZQ7ERw/ivana.jpg">
-          </picture>
-          <p class="hui-premium__title">'Força': Ivana diz não se ver como mulher</p>
-        </a>
-        <ul class="hui-premium__related-container">
-          <li class="hui-premium__related"><a href="http://kogut.oglobo.globo.com/noticias-da-tv/novelas/noticia/2017/06/forca-do-querer-joyce-pedira-o-divorcio.html" title="Joyce pede separação" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-            Joyce pede separação
-            </a>
-          </li>
-          <li class="hui-premium__related"><a href="http://gshow.globo.com/novelas/a-forca-do-querer/vem-por-ai/noticia/zeca-ficara-cara-a-cara-com-a-mae.ghtml" title="Zeca vai reencontrar a mãe" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-            Zeca vai reencontrar a mãe
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-related
-        hui-color-entertainment
-        ">
-        <a href="http://gshow.globo.com/novelas/novo-mundo/vem-por-ai/noticia/leopoldina-vai-atras-de-domitila.ghtml" title="'Mundo': Leopoldina vai atrás de Domitila (Ellen Soares/Gshow)" class="hui-premium__link
-          hui-highlight__link
-          ">
-          <p class="hui-premium__title">'Mundo': Leopoldina vai atrás de Domitila</p>
-        </a>
-        <ul class="hui-premium__related-container">
-          <li class="hui-premium__related"><a href="https://extra.globo.com/tv-e-lazer/telinha/novo-mundo-dom-pedro-arruma-uma-nova-amante-21531216.html" title="D.Pedro conquista 2ª amante" class="hui-highlight__link hui-premium__related-link hui-premium__related-title">
-            D.Pedro conquista 2ª amante
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
-      <div class="hui-premium
-        home-analytics-id-S
-        home-analytics-area
-        hui-premium--has-photo
-        clearfix
-        hui-color-entertainment
-        ">
-        <a data-video-id="" data-resume-at="" data-short-url="http://gshow.globo.com/tv/noticia/fatima-arrasa-cantando-evidencias-e-xororo-elogia-ja-pode-participar-do-popstar.ghtml" data-title="Fátima anima a web cantando 'Evidências' com Chitão e Xororó" data-img="http://s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" href="http://gshow.globo.com/tv/noticia/fatima-arrasa-cantando-evidencias-e-xororo-elogia-ja-pode-participar-do-popstar.ghtml" title="Fátima anima a web cantando 'Evidências' com Chitão e Xororó (Gshow)" class="hui-premium__link
-          hui-highlight__link
-          hui-hover-effect__trigger
-          ">
-          <picture class="
-            hui-premium__photo-container hui-hover-effect__target
-            ">
-            <!--[if IE 9]>
-            <video style="display: none;">
-              <![endif]-->
-              <source data-media-query="large" srcset="http://s2.glbimg.com/lOKn7NbDSTA3AHjlhzSZSQsCB9I=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" data-srcset="http://s2.glbimg.com/lOKn7NbDSTA3AHjlhzSZSQsCB9I=/206x116/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" media="(min-width: 62.5em) and (max-width: 85.5625em)">
-              <source data-media-query="medium" srcset="http://s2.glbimg.com/vULUW68iEYHY2ABgSZ0E6Kea3rU=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" data-srcset="http://s2.glbimg.com/vULUW68iEYHY2ABgSZ0E6Kea3rU=/186x105/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" media="(min-width: 38.75em) and (max-width: 62.4375em)">
-              <source data-media-query="small" srcset="http://s2.glbimg.com/0lafwEqUyEMHnH6oKDgbJxXy1Uc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" data-srcset="http://s2.glbimg.com/0lafwEqUyEMHnH6oKDgbJxXy1Uc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" media="(max-width: 38.6875em)">
-              <source data-media-query="xlarge" srcset="http://s2.glbimg.com/FeKvoxUuoQ6hw2CMJwh59MKyGHc=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" data-srcset="http://s2.glbimg.com/FeKvoxUuoQ6hw2CMJwh59MKyGHc=/235x133/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" media="(min-width: 85.625em) and (max-width: 99.3125em)">
-              <source data-media-query="xxlarge" srcset="http://s2.glbimg.com/zItD8EC7Y7est2sa65EMBmVek00=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" data-srcset="http://s2.glbimg.com/zItD8EC7Y7est2sa65EMBmVek00=/240x135/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg" media="(min-width: 99.375em)">
-              <!--[if IE 9]>
-            </video>
-            <![endif]--><img class="hui-premium__photo hui-lazy" alt="Fátima anima a web cantando 'Evidências' com Chitão e Xororó (Gshow)" title="Fátima anima a web cantando 'Evidências' com Chitão e Xororó (Gshow)" src="http://s2.glbimg.com/0lafwEqUyEMHnH6oKDgbJxXy1Uc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/1RbxB2b_dUaNRSdpUgjH5ZrRUVk=/0x0:690x387/267x150/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2017/z/7/OECO5KRAqkt9Adr1uB6g/meme-fatima-e-dupla.jpg">
-          </picture>
-          <p class="hui-premium__title">Fátima anima a web cantando 'Evidências' com Chitão e Xororó</p>
-        </a>
-      </div>
-      <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
+
+
+
+        <!-- Divisor vertical -->
+        <div class="column large-1 hui-premium__divider hui-premium__divider--vertical-medium"></div>
+        <!-- -->
+
+        <!-- Seção de destaque -->
+        <div class="column large-12  hui-premium__wrapper-collumn--main">
+
+                 {% if noticias_destaque_top %}
+                    <div>
+                    <div class="hui-premium hui-premium-manchete hui-premium--has-related hui-color-journalism">
+                        <a href="{{noticias_destaque_top.get_absolute.url}}"
+                           title="{{noticias_destaque_top}}" class="hui-premium__link">
+                            <p class="news-premium__title">{{noticias_destaque_top}}</p>
+                        </a>
+                    </div>
+                    <div class="hui-premium__divider">&nbsp;</div>
+                </div>
+                 {% endif %}
+            <div>
+                <div class="row hui-premium-multiple__container">
+                    <div class="hui-premium-multiple__list">
+                     {% for noticia in noticias_destaque_center %}
+                        <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-color-journalism">
+                            <a href="{{noticia.get_absolute.url}}"
+                               title="{{noticia}}" class="hui-premium__link hui-highlight__link">
+                                <p class="news-premium__title__inferior">{{noticia}}</p>
+                            </a>
+                        </div>
+                        <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
+                      {% endfor %}
+                    </div>
+                </div>
+                <div class="row hui-premium-multiple__container">
+                     <div class="hui-premium__divider">&nbsp;</div>
+                    <div class="hui-premium-multiple__list">
+                        {% for destaque in noticias_destaque_center_with_image %}
+                            <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-premium--has-photo clearfix  hui-color-journalism">
+                                <a href="{{destaque.image.url}}"
+                                   title="{{destaque}}" class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
+                                    {% if destaque.image %}
+                                    <picture class="hui-premium__photo-container hui-hover-effect__target">
+                                       <img class="hui-premium__photo hui-lazy" alt="{{destaque}}"
+                                            title="{{destaque}}"
+                                            src="{{destaque.image.url}}" />
+                                    </picture>
+                                     {% endif %}
+                                    <p class="news-premium__title__inferior_with_image">{{destaque |truncatechars:60}}</p>
+
+                                </a>
+                            </div>
+                            <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim seção de destaque -->
+
+        <!-- Divisor vertical -->
+        <div class="column medium-2 large-1"></div>
+        <!-- fim divisor vertical -->
+
+        <div class="column medium-11 large-5 right-destaque hui-premium__wrapper-collumn--side">
+            {% for destaque in noticias_destaque_right %}
+
+                <div class="hui-premium hui-premium--has-photo clearfix hui-premium--has-related hui-color-entertainment">
+                    <a href="{{destaque.get_absolute_url}}"
+                       title="{{destaque}}"
+                       class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
+                        {% if destaque.image %}
+                        <picture class="hui-premium__photo-container hui-hover-effect__target">
+                          <img class="hui-premium__photo hui-lazy" alt="{{destaque}}"
+                               title="{{destaque}}"
+                               src="{{destaque.image.url}}" />
+                        </picture>
+                        {% endif %}
+                        <p class="news-premium__title__inferior_with_image concilia-green">{{destaque}}</p>
+                    </a>
+                </div>
+                {% if not forloop.last %}
+                 <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
+                {% endif %}
+
+            {% endfor %}
+        </div>
+
+
+
     </div>
-  </div>
 </section>
 
 
-<!--<section class="section-about">-->
-    <!--<div class="row">-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-9 col-md-offset-1">-->
-               <!--<div class="hui-premium hui-premium-manchete home-analytics-id-P home-analytics-area hui-premium&#45;&#45;has-related hui-color-journalism">-->
-                        <!--<a href="http://g1.globo.com/politica/noticia/denuncia-contra-temer-e-lida-no-plenario-da-camara.ghtml"-->
-                           <!--title="Denúncia contra Temer é lida no plenário da Câmara" class="hui-premium__link hui-highlight__link">-->
-                            <!--<p class="news-premium__title">Denúncia contra Temer é lida no plenário da Câmara</p>-->
-                        <!--</a>-->
-               <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-9 hui-premium__divider col-md-offset-1">&nbsp;</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-11 col-md-offset-1">-->
-                <!--<div class="col-md-3">-->
-                    <!--<a href="#">-->
-                        <!--<p class="news-premium__title__inferior">-->
-                            <!--AO VIVO: STF retoma análise sobre o caso JBS-->
-                        <!--</p>-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="col-md-3">-->
-                    <!--<a href="#">-->
-                         <!--<p class="news-premium__title__inferior">-->
-                            <!--Meirelles admite alta de impostos por meta fiscal-->
-                        <!--</p>-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="col-md-3">-->
-                     <!--<a href="#">-->
-                         <!--<p class="news-premium__title__inferior">-->
-                            <!--Meta central de inflação tem  o 1º corte em 14 anos-->
-                        <!--</p>-->
-                    <!--</a>-->
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-9 hui-premium__divider col-md-offset-1">&nbsp;</div>-->
-        <!--</div>-->
-         <!--<div class="row">-->
-            <!--<div class="col-md-11 col-md-offset-1">-->
-                <!--<div class="col-md-3">-->
-                    <!--<div class="hui-premium hui-premium-multiple hui-premium-triplo home-analytics-id-S home-analytics-area hui-premium&#45;&#45;has-photo clearfix hui-color-journalism">-->
-                        <!--<a href="http://g1.globo.com/rio-de-janeiro/noticia/pezao-diz-que-nao-tem-dinheiro-para-pagar-servidores-da-uerj.ghtml"-->
-                           <!--title="Intimado a pagar a Uerj, Pezão diz  não ter dinheiro (TV Globo)" class="hui-premium__link  hui-highlight__link hui-hover-effect__trigger ">-->
-                           <!--<picture class="hui-premium__photo-container hui-hover-effect__target">-->
-                                    <!--<img class="hui-premium__photo hui-lazy" alt="Intimado a pagar a Uerj, Pezão diz  não ter dinheiro (TV Globo)"-->
-                                         <!--title="Intimado a pagar a Uerj, Pezão diz  não ter dinheiro (TV Globo)"-->
-                                         <!--src="http://s2.glbimg.com/Rg_vHQeMBjGZnFo9r3C7zY-Q-tc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/MoOXol6dLFgOR5NSD5swYVf0-Js=/150x22:1080x544/267x150/i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2017/A/B/opdUT8Qpy0p6EuhrTqgw/gplay-rjtv-pezao-web.jpg">-->
-                           <!--</picture>-->
-                           <!--<p class="news-premium__title__inferior_with_image">Intimado a pagar a Uerj, Pezão diz não ter dinheiro</p>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-3">-->
-                   <!--<div class="hui-premium hui-premium-multiple hui-premium-triplo home-analytics-id-S home-analytics-area hui-premium&#45;&#45;has-photo clearfix hui-color-journalism">-->
-                         <!--<a href="http://g1.globo.com/rio-de-janeiro/noticia/pms-do-rj-assaltaram-boca-de-fumo-e-venderam-armas-ao-trafico-shoppings-do-crime-diz-policial.ghtml"-->
-                            <!--title="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)"-->
-                            <!--class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">-->
-                            <!--<picture class=" hui-premium__photo-container hui-hover-effect__target">-->
-                                     <!--<img class="hui-premium__photo hui-lazy" alt="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)"-->
-                                          <!--title="PMs alugavam armas e vendiam droga, diz polícia (Fernanda Rouvenat/G1)"-->
-                                          <!--src="http://s2.glbimg.com/zyw9anRWyCIblBDApswdNUfFKcw=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/VC2W0Bu4vtjku0RUIzSCu6bF4LY=/0x142:1280x862/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/o/R/4NyP9HRYGk1S8AgWXy2w/pmpreso.jpg">-->
-                            <!--</picture>-->
-                            <!--<p class="news-premium__title__inferior_with_image">PMs alugavam armas e vendiam droga, diz polícia</p>-->
-                         <!--</a>-->
-                   <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-3">-->
-                    <!--<div class="hui-premium hui-premium-multiple hui-premium-triplo home-analytics-id-S home-analytics-area hui-premium&#45;&#45;has-photo clearfix hui-color-journalism">-->
-                                <!--<a href="http://g1.globo.com/distrito-federal/noticia/jovem-de-15-anos-que-invadiu-palacio-do-alvorada-so-foi-detido-no-3-andar.ghtml"-->
-                                   <!--title="Jovem invasor do Alvorada pegou carro escondido (Reprodução)" class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">-->
-                                    <!--<picture class="hui-premium__photo-container hui-hover-effect__target">-->
-                                       <!--<img class="hui-premium__photo hui-lazy" alt="Jovem invasor do Alvorada pegou carro escondido (Reprodução)"-->
-                                            <!--title="Jovem invasor do Alvorada pegou carro escondido (Reprodução)"-->
-                                            <!--src="http://s2.glbimg.com/uwr85ahRhiJbDvv8AUcpJDuLhzc=/267x150/top/smart/filters:strip_icc()/s2.glbimg.com/NER1mMEEacSnkdVXpRXxfCd38WY=/0x0:1280x718/267x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/V/m/8rlhUcTP2BVkEavsFehQ/whatsapp-image-2017-06-29-at-06.02.38.jpeg">-->
-                                    <!--</picture>-->
-                                    <!--<p class="news-premium__title__inferior_with_image">Jovem invasor do Alvorada pegou carro escondido</p>-->
-                                <!--</a>-->
-                            <!--</div>-->
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-<!--</section>-->
-
-<!--<section class="section-noticia height-500">-->
-     <!--<div class="row d-flex justify-content-start">-->
-        <!--{% if noticias.count > 0 %}-->
-            <!--{% for noticia in noticias %}-->
-
-                <!--<div class="col-sm-4">-->
-                    <!--<a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">-->
-                        <!--<h3 class="hui-highlight-title">{{noticia.title |truncatechars_html:100}} </h3>-->
-                        <!--<h4 class="subheader">-->
-                            <!--<small>-->
-                                <!--<i class="fi-clock"></i>-->
-                                <!--Postado em {{noticia.published_at|date:"d/m/Y" }} por {{noticia.author}}-->
-                            <!--</small>-->
-                        <!--</h4>-->
-                        <!--<p> {{noticia.sub_title |truncatechars_html:100}} </p>-->
-                        <!--<p class="text-right">-->
-                                <!--<a href="{% url 'content:noticia' noticia.pk %}" class="">Continue lendo →</a>-->
-                        <!--</p>-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--{% if forloop.counter|divisibleby:3 %}-->
-                    <!--</div>-->
-                    <!--<div class="row">-->
-                <!--{% endif %}-->
-            <!--{% endfor %}-->
-
-        <!--{% endif %}-->
-
-        <!--{% if noticias.count == 0 %}-->
-                <!--<div class="center-text col-sm-12">-->
-                     <!--<h1>Não foi encontrado nenhuma notícia cadastrada.</h1>-->
-                <!--</div>-->
-        <!--{% endif %}-->
-        <!--</div>-->
-<!--</section>-->
-
-{% if noticias.count > 12 %}
+{% if noticias.count > 30 %}
     {% pagination request paginator page_obj %}
 {% endif %}
 
