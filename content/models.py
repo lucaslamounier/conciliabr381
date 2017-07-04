@@ -31,6 +31,8 @@ class Noticia(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
     notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
     slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True, unique=True)
+    is_public = models.BooleanField(('É Pública ?'), default=True, blank=True,
+                                    help_text=('Somente as notícias marcadas como públicas serão apresentadas no site.'))
 
     class Meta:
         verbose_name = u'Notícia'

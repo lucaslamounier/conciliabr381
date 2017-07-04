@@ -17,29 +17,49 @@ class NewsListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['noticias_destaque_center'] = context['noticias'][:7]
-        context['noticias_destaque_left'] = context['noticias'][7:10]
-        context['noticias_destaque_right'] = context['noticias'][10:13]
+        noticias = context['noticias']
+        noticias_destaque_center = []
+        noticias_destaque_left = []
+        noticias_destaque_right = []
+        top_news = []
+
+        if len(noticias) <= 7:
+            noticias_destaque_center = noticias
+        elif len(noticias) <= 10:
+            noticias_destaque_center = noticias[:7]
+            noticias_destaque_left = noticias[7:]
+        elif len(noticias) > 10:
+            noticias_destaque_center = noticias[:7]
+            noticias_destaque_left = noticias[7:10]
+            noticias_destaque_right = noticias[10:]
+
+        context['noticias_destaque_center'] = noticias_destaque_center
+        context['noticias_destaque_left'] = noticias_destaque_left
+        context['noticias_destaque_right'] = noticias_destaque_right
         context['noticias_destaque_center_with_image'] = self.get_noticia_destaque_image(context['noticias_destaque_center'])
-        noticias_destaque = []
 
-        for obj in context['noticias_destaque_center']:
+        for obj in noticias_destaque_center:
             if obj not in context['noticias_destaque_center_with_image']:
-                noticias_destaque.append(obj)
+                top_news.append(obj)
 
-        context['noticias_destaque_center'] = noticias_destaque
-        context['noticias_destaque_top'] = context['noticias_destaque_center'][0]
-        context['noticias_destaque_center'].pop(0)
+        context['noticias_destaque_center'] = top_news
+
+        if len(noticias_destaque_center):
+            context['noticias_destaque_top'] = noticias_destaque_center[0]
+            context['noticias_destaque_center'].pop(0)
         return context
 
     def get_noticia_destaque_image(self, obj):
         noticias = []
-        for item in obj:
-            if len(noticias) == 3:
-                break
-            if item.has_image():
-                noticias.append(item)
-        return noticias
+        if len(obj) == 7:
+            for item in obj:
+                if len(noticias) == 3:
+                    break
+                if item.has_image():
+                    noticias.append(item)
+            return noticias
+        else:
+            return noticias
 
 
 # Página de Notícia

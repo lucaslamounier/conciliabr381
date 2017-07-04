@@ -2,9 +2,7 @@
 
 {% load pagination %}
 
-{% load noticias_homepage %}
-
- {% load static %}
+{% load static %}
 
 {% block title %} Notícias | {{ block.super }} {% endblock %}
 
@@ -12,23 +10,29 @@
 
 
 <link rel="stylesheet" href="{% static 'css/noticias.css' %}" />
+<section>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="font-size: 4em; font-weight: 600;margin-top: 100px;">Notícias</h1>
+        </div>
+    </div>
+</section>
 <section class="section-about home-body">
-
+    {% if noticias|length > 0 %}
     <div class="row hui-spacing home-top-news hui-premium__wrapper">
-
-
+         {% if noticias_destaque_left|length > 0 %}
         <div class="column medium-11  large-5 left-destaque">
 
             {% for destaque in noticias_destaque_left %}
             <div class="hui-premium hui-premium--has-photo clearfix hui-premium--has-related hui-color-sports">
-                <a href="http://globoesporte.globo.com/futebol/copa-das-confederacoes/noticia/campeoes-retornam-para-a-alemanha-com-a-taca-da-copa-das-confederacoes.ghtml"
-                   title="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
+                <a href="{{destaque.get_absolute_url}}"
+                   title="{{destaque}}"
                    class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
                     {% if destaque.image %}
                     <picture class="hui-premium__photo-container hui-hover-effect__target">
                      <img class="hui-premium__photo hui-lazy"
-                          alt="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
-                          title="Campeões chegam à Alemanha com a taça das Confederações (Getty Images)"
+                          alt="{{destaque.image.title}}"
+                          title="{{destaque.image.legend_image}}"
                           src="{{destaque.image.url}}" />
                     </picture>
                     {% endif %}
@@ -38,20 +42,15 @@
             <div class="hui-premium__divider show-for-small-only">&nbsp;</div>
            {% endfor %}
         </div>
-
-
-
-
-
         <!-- Divisor vertical -->
         <div class="column large-1 hui-premium__divider hui-premium__divider--vertical-medium"></div>
         <!-- -->
+        {% endif %}
 
-        <!-- Seção de destaque -->
-        <div class="column large-12  hui-premium__wrapper-collumn--main">
-
+            <!-- Seção de destaque -->
+            <div class="column large-12 hui-premium__wrapper-collumn--main">
                  {% if noticias_destaque_top %}
-                    <div>
+                 <div>
                     <div class="hui-premium hui-premium-manchete hui-premium--has-related hui-color-journalism">
                         <a href="{{noticias_destaque_top.get_absolute.url}}"
                            title="{{noticias_destaque_top}}" class="hui-premium__link">
@@ -62,6 +61,7 @@
                 </div>
                  {% endif %}
             <div>
+                {% if noticias_destaque_center %}
                 <div class="row hui-premium-multiple__container">
                     <div class="hui-premium-multiple__list">
                      {% for noticia in noticias_destaque_center %}
@@ -75,8 +75,10 @@
                       {% endfor %}
                     </div>
                 </div>
+                {% endif %}
                 <div class="row hui-premium-multiple__container">
-                     <div class="hui-premium__divider">&nbsp;</div>
+                    <div class="hui-premium__divider">&nbsp;</div>
+                    {% if noticias_destaque_center_with_image %}
                     <div class="hui-premium-multiple__list">
                         {% for destaque in noticias_destaque_center_with_image %}
                             <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-premium--has-photo clearfix  hui-color-journalism">
@@ -96,15 +98,15 @@
                             <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
                         {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
         <!-- fim seção de destaque -->
-
+        {% if noticias_destaque_right|length > 0 %}
         <!-- Divisor vertical -->
         <div class="column medium-2 large-1"></div>
         <!-- fim divisor vertical -->
-
         <div class="column medium-11 large-5 right-destaque hui-premium__wrapper-collumn--side">
             {% for destaque in noticias_destaque_right %}
 
@@ -128,15 +130,18 @@
 
             {% endfor %}
         </div>
-
-
-
+        {% endif %}
     </div>
+    {% else %}
+        <div class="row">
+            <div class="col-sm-12" style="text-align: center;">
+                <h1>Nenhuma notícia encontrada :( </h1>
+            </div>
+        </div>
+    {% endif %}
 </section>
 
-
-{% if noticias.count > 30 %}
+{% if noticias|length > 0 %}
     {% pagination request paginator page_obj %}
 {% endif %}
-
 {% endblock %}

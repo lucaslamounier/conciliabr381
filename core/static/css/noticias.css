@@ -1,4 +1,12 @@
 
+ul.pagination li a {
+    color: #171616;
+}
+
+a:hover, a:focus {
+    color: #ab7905;
+}
+
 .row::before, .row::after {
     content: ' ';
     display: table;
