@@ -1,3 +1,4 @@
+media/
 db.rondon
 *.pyc
 core/__pycache__/*

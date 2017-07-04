@@ -28,9 +28,9 @@
                 <a href="{{destaque.get_absolute_url}}"
                    title="{{destaque}}"
                    class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
-                    {% if destaque.image %}
+                    {% if destaque.image and destaque.has_image %}
                     <picture class="hui-premium__photo-container hui-hover-effect__target">
-                     <img class="hui-premium__photo hui-lazy"
+                     <img class="hui-premium__photo noticia-destaque-image"
                           alt="{{destaque.image.title}}"
                           title="{{destaque.image.legend_image}}"
                           src="{{destaque.image.url}}" />
@@ -47,8 +47,8 @@
         <!-- -->
         {% endif %}
 
-            <!-- Seção de destaque -->
-            <div class="column large-12 hui-premium__wrapper-collumn--main">
+        <!-- Seção de destaque -->
+        <div class="column large-12 hui-premium__wrapper-collumn--main">
                  {% if noticias_destaque_top %}
                  <div>
                     <div class="hui-premium hui-premium-manchete hui-premium--has-related hui-color-journalism">
@@ -114,9 +114,9 @@
                     <a href="{{destaque.get_absolute_url}}"
                        title="{{destaque}}"
                        class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
-                        {% if destaque.image %}
+                        {% if destaque.image and destaque.has_image %}
                         <picture class="hui-premium__photo-container hui-hover-effect__target">
-                          <img class="hui-premium__photo hui-lazy" alt="{{destaque}}"
+                          <img class="hui-premium__photo noticia-destaque-image" alt="{{destaque}}"
                                title="{{destaque}}"
                                src="{{destaque.image.url}}" />
                         </picture>
