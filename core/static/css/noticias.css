@@ -7,6 +7,10 @@ a:hover, a:focus {
     color: #ab7905;
 }
 
+.noticia-destaque-image {
+   min-height: 127px;
+}
+
 .row::before, .row::after {
     content: ' ';
     display: table;

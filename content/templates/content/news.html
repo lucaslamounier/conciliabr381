@@ -68,7 +68,7 @@
                         <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-color-journalism">
                             <a href="{{noticia.get_absolute.url}}"
                                title="{{noticia}}" class="hui-premium__link hui-highlight__link">
-                                <p class="news-premium__title__inferior">{{noticia}}</p>
+                                <p class="news-premium__title__inferior">{{noticia |truncatechars:60 }}</p>
                             </a>
                         </div>
                         <div class="hui-premium__divider column show-for-small-only">&nbsp;</div>
@@ -86,7 +86,7 @@
                                    title="{{destaque}}" class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
                                     {% if destaque.image %}
                                     <picture class="hui-premium__photo-container hui-hover-effect__target">
-                                       <img class="hui-premium__photo hui-lazy" alt="{{destaque}}"
+                                       <img class="hui-premium__photo noticia-destaque-image" alt="{{destaque}}"
                                             title="{{destaque}}"
                                             src="{{destaque.image.url}}" />
                                     </picture>
