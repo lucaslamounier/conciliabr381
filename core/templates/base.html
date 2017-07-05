@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" " />
-    <title>{% block title %} Concilia BR 381 {% endblock %}</title>
+    <title>{% block title %} Concilia BR-381 e Anel {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -51,7 +51,6 @@
                 <ul class="off-canvas-list">
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <button class="button-sub-menu">O Programa </button>
-
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
@@ -64,27 +63,32 @@
                                             <a class="mobile-submenu-item" href="{% url 'partners' %}">Parceiros</a>
                                         </li>
                                          <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a class="mobile-submenu-item" href="{% url 'conselho_executivo' %}">Comitê Executivo</a>
+                                             <a href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                            <a class="mobile-submenu-item" href="{% url 'manual_marca' %}">Manual da marca</a>
+                                            <a href="{% url 'manual_marca' %}">Manual de identidade visual</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
                     </li>
+
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                        <button class="button-sub-menu" onclick="window.location.href='{% url 'content:comunidades' %}'">Comunidades </button>
+                        <button class="button-sub-menu">Comunidades </button>
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
                                     <ul>
-
-                                        {% for comunidade in comunidades %}
+                                       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <a href="{% url 'content:comunidades' %}">Comunidades Seladas</a>
+                                        </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a class="mobile-submenu-item" href="{{ comunidade.get_absolute_url }}">{{ comunidade }}</a>
+                                            <a href="">CMAR</a>
+                                        </li>
+                                        {% for comunidade in comunidades %}
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
+                                            <button class="button-sub-menu" onclick="window.location.href='{{comunidade.get_absolute_url}}'">{{comunidade}}</button>
                                         </li>
                                         {% endfor %}
                                     </ul>
@@ -92,24 +96,21 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
-                         <button class="button-sub-menu" onclick="window.location.href='{% url 'partners' %}'">Imóveis </button>
-                        <!--<a href="{% url 'partners' %}">Imóveis</a>-->
+                         <button class="button-sub-menu">Imóveis </button>
+                    </li>
+                    <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
+                        <button class="button-sub-menu">Providências</button>
                         <div class="nav-sub-wrap ord-nav">
                             <div class="nsw">
                                 <div class="nav-sub-menus">
                                     <ul>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a class="mobile-submenu-item" href="#">Item1</a>
+                                            <button class="button-sub-menu" onclick="window.location.href='{% url 'plano_providencias' %}'">Plano de Providências</button>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
-                                            <a class="mobile-submenu-item" href="#">Item2</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                            <a class="mobile-submenu-item" href="#">Item3</a>
-                                        </li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
-                                            <a class="mobile-submenu-item" href="#">Item4</a>
+                                            <button class="button-sub-menu" onclick="window.location.href='{% url 'criterios_regras' %}'">Critérios e Regras</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -118,6 +119,23 @@
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-taxonomy menu-item-object-category">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'content:noticias' %}'">Notícias </button>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                         <button class="button-sub-menu">Acervo </button>
+                        <div class="nav-sub-wrap ord-nav">
+                            <div class="nsw">
+                                <div class="nav-sub-menus">
+                                    <ul>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                            <button class="button-sub-menu" onclick="window.location.href='{% url 'content:galeria' %}'">Fotos</button>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+                                            <button class="button-sub-menu" onclick="window.location.href='{% url 'content:videos' %}'">Vídeos</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
                         <button class="button-sub-menu" onclick="window.location.href='{% url 'content:perguntas-frequentes' %}'">Dúvidas </button>

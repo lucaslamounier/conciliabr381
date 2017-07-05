@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}
     {{ noticia }} | {{ block.super }}
 {% endblock  %}
 
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'css/noticias.css' %}" />
+
 <section class="section-about">
     <div class="row">
         <ol class="breadcrumb">
@@ -14,15 +19,30 @@
         </ol>
     </div>
 </section>
+<div class="row content-head">
+    <div class="col-sm-12 medium-centered">
+        <h1 class="content-head__title">{{ noticia }}</h1>
+    </div>
+    {% if noticia.sub_title %}
+    <div class="col-sm-12 ">
+        <h2 class="content-head__subtitle">{{noticia.sub_title}}</h2>
+    </div>
+    {% endif %}
+    <div class="row content-share-bar">
+        <div class="col-sm-12 content-share-bar__container">
+            <div class="mc-show-later share-bar share-bar-container share-theme-minimal">
+              <hr class="header-divider">
+        </div>
+    </div>
+</div>
 
 <div class="row">
-    <div class="column small-12">
-        <h1 style="color: black;">{{ noticia }}</h1>
+    <div class="col-sm-12">
         <article>
             <div class="mc-column mc-show-later">
                 <div class="content-meta-info">
                     <p class="content-meta-info__from">
-                        <span>Por {{noticia.author}} </span>  Publicado em {{noticia.published_at|date:"d/m/Y" }}
+                        <span>Por {{noticia.author}} </span> <br /> Publicado em {{noticia.published_at|date:"d/m/Y" }}
                     </p>
                 </div>
             </div>

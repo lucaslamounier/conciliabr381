@@ -12,12 +12,13 @@
 <link rel="stylesheet" href="{% static 'css/noticias.css' %}" />
 <section>
     <div class="row">
-        <div class="col-sm-12">
-            <h1 style="font-size: 4em; font-weight: 600;margin-top: 100px;">Notícias</h1>
+        <div class="col-sm-12" style="text-align: center;">
+            <h1 class="header-title">Notícias</h1>
         </div>
     </div>
 </section>
 <section class="section-about home-body">
+
     {% if noticias|length > 0 %}
     <div class="row hui-spacing home-top-news hui-premium__wrapper">
          {% if noticias_destaque_left|length > 0 %}
@@ -36,6 +37,9 @@
                           src="{{destaque.image.url}}" />
                     </picture>
                     {% endif %}
+                    {% if destaque.image and not destaque.exists_image_in_path %}
+                        <img src="{% static 'img/img_nao_disponivel.png' %}"/>
+                    {% endif %}
                     <p class="hui-premium__title concilia-blue">{{destaque}}</p>
                 </a>
             </div>
@@ -43,30 +47,34 @@
            {% endfor %}
         </div>
         <!-- Divisor vertical -->
-        <div class="column large-1 hui-premium__divider hui-premium__divider--vertical-medium"></div>
+        <div class="column large-1 hui-premium__divider--vertical-medium"></div>
+        <!--<div style="border-left:1px solid #000;height:500px"></div>-->
+
         <!-- -->
         {% endif %}
 
         <!-- Seção de destaque -->
-        <div class="column large-12 hui-premium__wrapper-collumn--main">
+        <div class="column large-12 hui-premium__wrapper-collumn--main" style="margin-left: 5%;">
                  {% if noticias_destaque_top %}
                  <div>
                     <div class="hui-premium hui-premium-manchete hui-premium--has-related hui-color-journalism">
-                        <a href="{{noticias_destaque_top.get_absolute.url}}"
+                        <a href="{{noticias_destaque_top.get_absolute_url}}"
                            title="{{noticias_destaque_top}}" class="hui-premium__link">
                             <p class="news-premium__title">{{noticias_destaque_top}}</p>
                         </a>
                     </div>
-                    <div class="hui-premium__divider">&nbsp;</div>
+                     {% if noticias_destaque_center|length > 0 %}
+                        <div class="hui-premium__divider">&nbsp;</div>
+                     {% endif %}
                 </div>
                  {% endif %}
             <div>
-                {% if noticias_destaque_center %}
+                {% if noticias_destaque_center|length > 0 %}
                 <div class="row hui-premium-multiple__container">
                     <div class="hui-premium-multiple__list">
                      {% for noticia in noticias_destaque_center %}
                         <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-color-journalism">
-                            <a href="{{noticia.get_absolute.url}}"
+                            <a href="{{noticia.get_absolute_url}}"
                                title="{{noticia}}" class="hui-premium__link hui-highlight__link">
                                 <p class="news-premium__title__inferior">{{noticia |truncatechars:60 }}</p>
                             </a>
@@ -77,20 +85,26 @@
                 </div>
                 {% endif %}
                 <div class="row hui-premium-multiple__container">
-                    <div class="hui-premium__divider">&nbsp;</div>
                     {% if noticias_destaque_center_with_image %}
+                    <div class="hui-premium__divider">&nbsp;</div>
                     <div class="hui-premium-multiple__list">
                         {% for destaque in noticias_destaque_center_with_image %}
                             <div class="hui-premium column medium-8 hui-premium-multiple hui-premium-triplo hui-premium--has-photo clearfix  hui-color-journalism">
-                                <a href="{{destaque.image.url}}"
+                                <a href="{{destaque.get_absolute_url}}"
                                    title="{{destaque}}" class="hui-premium__link hui-highlight__link hui-hover-effect__trigger">
-                                    {% if destaque.image %}
+
+                                    {% if destaque.image and destaque.has_image %}
                                     <picture class="hui-premium__photo-container hui-hover-effect__target">
                                        <img class="hui-premium__photo noticia-destaque-image" alt="{{destaque}}"
                                             title="{{destaque}}"
                                             src="{{destaque.image.url}}" />
                                     </picture>
                                      {% endif %}
+
+                                     {% if destaque.image and not destaque.exists_image_in_path %}
+                                        <img src="{% static 'img/img_nao_disponivel.png' %}"/>
+                                     {% endif %}
+
                                     <p class="news-premium__title__inferior_with_image">{{destaque |truncatechars:60}}</p>
 
                                 </a>
@@ -105,7 +119,7 @@
         <!-- fim seção de destaque -->
         {% if noticias_destaque_right|length > 0 %}
         <!-- Divisor vertical -->
-        <div class="column medium-2 large-1"></div>
+        <div class="column medium-2 large-1  hui-premium__divider--vertical-medium"></div>
         <!-- fim divisor vertical -->
         <div class="column medium-11 large-5 right-destaque hui-premium__wrapper-collumn--side">
             {% for destaque in noticias_destaque_right %}
@@ -121,6 +135,10 @@
                                src="{{destaque.image.url}}" />
                         </picture>
                         {% endif %}
+
+                        {% if destaque.image and not destaque.exists_image_in_path %}
+                            <img src="{% static 'img/img_nao_disponivel.png' %}"/>
+                        {% endif %}
                         <p class="news-premium__title__inferior_with_image concilia-green">{{destaque}}</p>
                     </a>
                 </div>
@@ -131,13 +149,17 @@
             {% endfor %}
         </div>
         {% endif %}
+
     </div>
+
     {% else %}
+
         <div class="row">
             <div class="col-sm-12" style="text-align: center;">
                 <h1>Nenhuma notícia encontrada :( </h1>
             </div>
         </div>
+
     {% endif %}
 </section>
 

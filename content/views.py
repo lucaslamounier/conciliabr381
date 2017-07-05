@@ -63,17 +63,17 @@ class NewsListView(generic.ListView):
 
 
 # Página de Notícia
-def noticia(request, pk):
-    news = Noticia.objects.get(pk=pk)
+def noticia(request, slug):
+    noticia_detail = Noticia.objects.get(slug=slug)
     context = {
-        'noticia': news,
+        'noticia': noticia_detail,
     }
     return render(request, 'content/_noticia.html', context)
 
 
 # Página de comunidade
-def comunidade(request, pk):
-    community = Comunidade.objects.get(pk=pk)
+def comunidade(request, slug):
+    community = Comunidade.objects.get(slug=slug)
     context = {
         'comunidade': community,
     }

@@ -78,7 +78,7 @@
                         {% if noticia.image and not noticia.exists_image_in_path %}
                                <img src="{% static 'img/img_nao_disponivel.png' %}"/>
                         {% endif %}
-                        <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:100}} </p>
+                        <p class="hui-highlight-title"> {{noticia.title |truncatechars_html:58}} </p>
                     </a>
                 </div>
             {% endfor %}

@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from redactor.fields import RedactorField
 from photologue.models import Gallery
 from builtins import str
+from django.template.defaultfilters import slugify
 
 
 class Noticia(models.Model):
@@ -30,7 +31,8 @@ class Noticia(models.Model):
     tag = models.CharField('Tags para facilitar a busca no site', max_length=100, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
     notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
-    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True, unique=True)
+    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
+                            help_text="'slug' é um identificador único que será mostrado na url")
     is_public = models.BooleanField(('É Pública ?'), default=True, blank=True,
                                     help_text=('Somente as notícias marcadas como públicas serão apresentadas no site.'))
 
@@ -42,8 +44,13 @@ class Noticia(models.Model):
     def __str__(self):
         return self.title
 
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.title)
+        super(Noticia, self).save(*args, **kwargs)
+
     def get_absolute_url(self):
-        return reverse('content:noticia', kwargs={'pk': self.pk})
+        return reverse('content:noticia', kwargs={'slug': self.slug})
 
     def has_image(self):
         try:
@@ -85,22 +92,24 @@ class Comunidade(models.Model):
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False, null=True, blank=True)
-    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True, unique=True)
-    # slug = models.SlugField(_('Identificador'),
-    #                         unique=True,
-    #                         max_length=250,
-    #                         help_text=_('A "slug" is a unique URL-friendly title for an object.'))
+    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
+                            help_text="'slug' é um identificador único que será mostrado na url")
 
     class Meta:
         verbose_name = 'Comunidade/Vila'
         verbose_name_plural = 'Comunidades/Vilas'
         ordering = ['title']
 
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.title)
+        super(Comunidade, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('content:comunidade', kwargs={'pk': self.pk})
+        return reverse('content:comunidade', kwargs={'slug': self.slug})
 
     def has_album(self):
         try:
@@ -136,18 +145,15 @@ class YoutubeChannel(models.Model):
         (INLINE, 'inline'),
     )
 
-    title = models.CharField(u'Título', max_length=500)
+    title = models.CharField(u'Título', max_length=500,  null=False, blank=False)
 
     image = models.ImageField(
         upload_to='youtube_channel/images', verbose_name='Imagem de apresentação do canal',
         null=False, blank=False
     )
 
-    slug = models.SlugField('Identificador', max_length=500, null=True, editable=False, blank=True)
-
-    # api_key = models.CharField(u'API Key', max_length=500,
-    #                            help_text=u"API KEY do google, veja como obte-lá " \
-    #                                      "https://developers.google.com/youtube/v3/getting-started")
+    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
+                            help_text="'slug' é um identificador único que será mostrado na url")
 
     channel_link = models.CharField(u'Link do canal', max_length=500,
                                     help_text=u"Link do canal no youtube, exemplo: " \
@@ -176,6 +182,11 @@ class YoutubeChannel(models.Model):
         verbose_name = u'Galeria de vídeos do youtube'
         verbose_name_plural = 'Galerias de vídeos do youtube'
         ordering = ['created_at']
+
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.title)
+        super(YoutubeChannel, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title
@@ -243,7 +254,8 @@ class Timeline(models.Model):
 class CategoryFaq(models.Model):
 
     name = models.CharField('Nome da categoria', max_length=100)
-    slug = models.SlugField('Identificador', max_length=100, editable=False, null=True, blank=True)
+    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
+                            help_text="'slug' é um identificador único que será mostrado na url")
 
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
@@ -253,11 +265,13 @@ class CategoryFaq(models.Model):
         verbose_name_plural = 'Categorias de perguntas frequentes'
         ordering = ['name']
 
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.name)
+        super(CategoryFaq, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.name
-
-    # def get_absolute_url(self):
-    #     return reverse('catalog:category', kwargs={'slug': self.slug})
 
 
 class Faq(models.Model):
@@ -266,7 +280,8 @@ class Faq(models.Model):
     answer = models.TextField('Resposta', max_length=1000, help_text=u"Resposta para a pergunta que será apresentada no site")
     category = models.ForeignKey('content.CategoryFaq', related_name='perguntas_frequentes', verbose_name='Categoria')
 
-    slug = models.SlugField('Identificador', max_length=100, editable=False, null=True, blank=True)
+    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
+                            help_text="'slug' é um identificador único que será mostrado na url")
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
 
@@ -275,9 +290,10 @@ class Faq(models.Model):
         verbose_name_plural = 'Perguntas Frequentes'
         ordering = ['question']
 
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.question)
+        super(Faq, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.question
-
-    # def get_absolute_url(self):
-    #     return reverse('catalog:category', kwargs={'slug': self.slug})
-
