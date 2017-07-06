@@ -92,8 +92,6 @@ class Comunidade(models.Model):
     )
     lat = models.CharField('Latitude', max_length=100, blank=True, null=False)
     long = models.CharField('Longitude', max_length=100, blank=True, null=False)
-    kmz = models.FileField('kMZ', upload_to='Comunidades/KMZ/', blank=True, null=False,
-                           help_text="O KMZ será adicionado ao mapa da página de detalhe da comunidade/vila.")
     galery = models.ForeignKey(Gallery, verbose_name='Album de Fotos', related_name='galaria', blank=True, null=True)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
@@ -130,12 +128,6 @@ class Comunidade(models.Model):
     def get_lat_long(self):
         if self.lat and self.long:
             return {'lat': self.lat, 'lng': self.long}
-        else:
-            return False
-
-    def has_kmz(self):
-        if self.kmz.name != '':
-            return True
         else:
             return False
 

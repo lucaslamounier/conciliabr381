@@ -29,7 +29,7 @@ class ComunidadeAdmin(admin.ModelAdmin):
             'fields': ('title', 'slug', 'text')
         }),
         ('Localização', {
-            'fields': ('lat', 'long', 'kmz')
+            'fields': ('lat', 'long')
         }),
         ('Galaria de Fotos', {
             'fields': ('galery',)
