@@ -5,17 +5,66 @@
 {% endblock  %}
 
 {% block content %}
+<style>
+     #map {
+        height: 500px;
+        width: 100%;
+       }
 
-<div class="row">
-    <div class="column small-12 large-8">
-        <article>
-            <h1><strong>{{ comunidade }}</strong></h1>
-        </article>
+ </style>
+<section class="section-about">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="header-title">{{ comunidade }}</h1>
+        </div>
     </div>
-</div>
-<div class="row">
-        {{comunidade.about |safe }}
-</div>
+</section>
+
+<section>
+    <div class="row">
+       {{comunidade.text |safe }}
+    </div>
+</section>
+{% if comunidade.get_lat_long %}
+<section >
+    <div class="row" id="map">
+
+    </div>
+</section>
+
+<script>
+     function initMap() {
+
+        var latitude = parseFloat("{{comunidade.lat}}");
+        var longitude = parseFloat("{{comunidade.long}}");
+        var coords_comunidade = {lat: latitude, lng: longitude};
+        var icone = '/static/img/icones/pin.png';
+        var comunidade_name = '{{comunidade}}';
+
+        var icon = {
+            url: icone,
+        };
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(latitude, longitude),
+          zoom: 18,
+          mapTypeId: 'satellite', // Map types: roadmap, hybrid, terrain, satellite
+
+        });
+
+        var marker = new google.maps.Marker({
+          position: coords_comunidade,
+          map: map,
+          icon: icon,
+          //label: comunidade_name,
+        });
 
 
+     };
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPCEFB2GTWm_rCGIRbFmOy88OGTWuwupk&callback=initMap"
+    async defer></script>
+
+
+{% endif %}
 {% endblock  %}

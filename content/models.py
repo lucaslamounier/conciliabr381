@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
+import json
 from django.db import models
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -7,6 +8,7 @@ from redactor.fields import RedactorField
 from photologue.models import Gallery
 from builtins import str
 from django.template.defaultfilters import slugify
+
 
 
 class Noticia(models.Model):
@@ -80,6 +82,7 @@ class Noticia(models.Model):
 
 
 class Comunidade(models.Model):
+
     ''' Modelo para comunidades '''
 
     title = models.CharField('Nome da Vila ou Comunidade', max_length=500)
@@ -87,7 +90,10 @@ class Comunidade(models.Model):
         verbose_name=u'Sobre a comunidade', allow_file_upload=True,
         allow_image_upload=True, null=True, blank=True
     )
-    lat_long = models.CharField('Informe as coordenadas: Latitude e Longitude obtidas através do googleMaps', max_length=500, blank=True, null=False)
+    lat = models.CharField('Latitude', max_length=100, blank=True, null=False)
+    long = models.CharField('Longitude', max_length=100, blank=True, null=False)
+    kmz = models.FileField('kMZ', upload_to='Comunidades/KMZ/', blank=True, null=False,
+                           help_text="O KMZ será adicionado ao mapa da página de detalhe da comunidade/vila.")
     galery = models.ForeignKey(Gallery, verbose_name='Album de Fotos', related_name='galaria', blank=True, null=True)
     created_at = models.DateTimeField('Criado em', auto_now_add=True)
     updated_at = models.DateTimeField('Atualizado em', auto_now=True)
@@ -119,6 +125,18 @@ class Comunidade(models.Model):
                 return False
         except Exception as err:
             print(u"Não foi possivel verificar o arquivo: ", err)
+            return False
+
+    def get_lat_long(self):
+        if self.lat and self.long:
+            return {'lat': self.lat, 'lng': self.long}
+        else:
+            return False
+
+    def has_kmz(self):
+        if self.kmz.name != '':
+            return True
+        else:
             return False
 
 
@@ -254,9 +272,6 @@ class Timeline(models.Model):
 class CategoryFaq(models.Model):
 
     name = models.CharField('Nome da categoria', max_length=100)
-    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
-                            help_text="'slug' é um identificador único que será mostrado na url")
-
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
 
@@ -264,11 +279,6 @@ class CategoryFaq(models.Model):
         verbose_name = 'Categoria de perguntas frequentes'
         verbose_name_plural = 'Categorias de perguntas frequentes'
         ordering = ['name']
-
-    def save(self, *args, **kwargs):
-        if self.slug is None:
-            self.slug = slugify(self.name)
-        super(CategoryFaq, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
@@ -279,9 +289,6 @@ class Faq(models.Model):
     question = models.CharField('Pergunta', max_length=500, help_text=u"Pergunta que será apresentada no site")
     answer = models.TextField('Resposta', max_length=1000, help_text=u"Resposta para a pergunta que será apresentada no site")
     category = models.ForeignKey('content.CategoryFaq', related_name='perguntas_frequentes', verbose_name='Categoria')
-
-    slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,
-                            help_text="'slug' é um identificador único que será mostrado na url")
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
 
@@ -289,11 +296,6 @@ class Faq(models.Model):
         verbose_name = 'Pergunta Frequente'
         verbose_name_plural = 'Perguntas Frequentes'
         ordering = ['question']
-
-    def save(self, *args, **kwargs):
-        if self.slug is None:
-            self.slug = slugify(self.question)
-        super(Faq, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.question

@@ -24,6 +24,18 @@ class ComunidadeAdmin(admin.ModelAdmin):
     search_fields = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'slug', 'text')
+        }),
+        ('Localização', {
+            'fields': ('lat', 'long', 'kmz')
+        }),
+        ('Galaria de Fotos', {
+            'fields': ('galery',)
+        })
+    )
+
     def save_model(self, request, obj, form, change):
         if getattr(obj, 'author', None) is None:
             obj.author = request.user
@@ -52,14 +64,12 @@ class FaqAdmin(admin.ModelAdmin):
 
     list_display = ['question', 'answer', 'category', 'created']
     search_fields = ['question']
-    prepopulated_fields = {'slug': ('question',)}
 
 
 class CategoryFaqAdmin(admin.ModelAdmin):
 
     list_display = ['name', 'created']
     search_fields = ['name']
-    prepopulated_fields = {'slug': ('name',)}
 
 
 admin.site.register(Comunidade, ComunidadeAdmin)
