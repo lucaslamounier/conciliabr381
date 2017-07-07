@@ -3,7 +3,7 @@ import re
 from django.contrib import admin
 from .models import (
         Noticia, Comunidade, Timeline, YoutubeChannel,
-        Faq, CategoryFaq
+        Faq, CategoryFaq, AtaReuniao
 )
 
 
@@ -72,9 +72,16 @@ class CategoryFaqAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
+class AtaReuniaoAdmin(admin.ModelAdmin):
+
+    list_display = ['title', 'date_ata_reuniao', 'author']
+    search_fields = ['name']
+
+
 admin.site.register(Comunidade, ComunidadeAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Timeline, TimelineAdmin)
 admin.site.register(YoutubeChannel, YoutubeChannelAdmin)
 admin.site.register(Faq, FaqAdmin)
 admin.site.register(CategoryFaq, CategoryFaqAdmin)
+admin.site.register(AtaReuniao, AtaReuniaoAdmin)

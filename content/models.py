@@ -291,3 +291,25 @@ class Faq(models.Model):
 
     def __str__(self):
         return self.question
+
+
+class AtaReuniao(models.Model):
+
+    ''' Ata de reunião que será apresentada na aba conselho executivo '''
+
+    title = models.CharField(u'Título da ata de reunião', max_length=500)
+    description = models.TextField(verbose_name='Descrição', null=True, blank=True)
+    arquivo = models.FileField(upload_to='ata_reuniao/%Y/%m/%d/', null=False, blank=False)
+    date_ata_reuniao = models.DateField(u'Data da Ata de reunião', null=True, blank=True)
+    created = models.DateTimeField('Criado em', auto_now_add=True)
+    modified = models.DateTimeField('Modificado em', auto_now=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por',
+                               editable=False, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Ata de Reunião'
+        verbose_name_plural = 'Atas de Reuniões'
+        ordering = ['-date_ata_reuniao']
+
+    def __str__(self):
+        return self.title

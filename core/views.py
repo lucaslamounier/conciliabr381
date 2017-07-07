@@ -31,12 +31,6 @@ class AboutView(TemplateView):
 class PartnersView(TemplateView):
     template_name = 'partners.html'
 
-
-# Página do conselho executivo
-class ConselhoExecutivoView(TemplateView):
-    template_name = 'conselho_executivo.html'
-
-
 # Página do manual da marca
 class ManualMarcaView(TemplateView):
     template_name = 'manual_marca.html'
@@ -76,7 +70,6 @@ def contact(request):
 index = IndexView.as_view()
 about = AboutView.as_view()
 partners = PartnersView.as_view()
-conselho_executivo = ConselhoExecutivoView.as_view()
 manual_marca = ManualMarcaView.as_view()
 plano_providencias = PlanoProvidenciaView.as_view()
 criterios_regras = CriteriosRegrasView.as_view()

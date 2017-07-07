@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
 from core import views
+from content import views as conteudos_views
 from django.conf.urls.static import static
 
 admin.site.site_title = "Concilia BR-381 e Anel"
@@ -30,7 +31,7 @@ urlpatterns = [
     url(r'^contato/$', views.contact, name='contact'),
     url(r'^sobre/$', views.about, name='about'),
     url(r'^parceiros/$', views.partners, name='partners'),
-    url(r'^conselho-executivo/$', views.conselho_executivo, name='conselho_executivo'),
+    url(r'^conselho-executivo/$', conteudos_views.conselho_executivo, name='conselho_executivo'),
     url(r'^plano-de-providencias/$', views.plano_providencias, name='plano_providencias'),
     url(r'^criterios-e-regras/$', views.criterios_regras, name='criterios_regras'),
     url(r'^manual-marca/$', views.manual_marca, name='manual_marca'),

@@ -71,4 +71,73 @@
         </div>
     </div>
 </section>
+{% if atas_de_reunioes|length > 0 %}
+
+<section>
+     <div class="row">
+        <div class="col-sm-12">
+            <h1>Atas de Reuniões</h1>
+        </div>
+    </div>
+    <div class="row">
+         <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Documento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for ata in atas_de_reunioes %}
+                      <tr>
+                        <td>{{ata.title}}</td>
+                        <td>{{ata.description}}</td>
+                        <td>{{ata.date_ata_reuniao}}</td>
+                        <td class="center-text">
+                            <a target="_blank" href="{{ata.arquivo.url}}" >
+                               <img title="Clique aqui para visualizar a ata de reunião" width="30px" src="{% static 'img/icones/icon_document.svg' %}" />
+                            </a>
+                        </td>
+                      </tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+         </div>
+    </div>
+</section>
+
+{% else %}
+<section>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Atas de Reuniões</h1>
+        </div>
+    </div>
+    <div class="row">
+         <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Documento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="center-text">
+                    <td colspan="4"><b>Nenhuma ata de reunião encontrada.</b></td>
+                  </tr>
+                </tbody>
+              </table>
+         </div>
+    </div>
+</section>
+
+{% endif %}
+
 {% endblock  %}
