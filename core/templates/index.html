@@ -13,7 +13,7 @@
         </div>
 
     <div class="col-sm-5">
-                    <p class="text-home-index justfy-text" style="margin-top: 50px;">
+                    <p class="text-home-index justfy-text">
                         O <b>Concilia BR-381 e Anel - Programa Judicial de Conciliação para Remoção e
                         Reassentamento Humanizados de Famílias do Anel Rodoviário e BR-381 - </b> foi
                         criado em função da necessidade de revitalização dessas rodovias. É uma
@@ -38,19 +38,19 @@
     <div class="row">
         <div class="col-sm-12">
              <div class="icons-parallax">
-                    <span class="label-icones-casas"> <span class="Count label-icones-casas-numero">496</span>  <br /> PROCESSOS <br /> FINALIZADOS</span>
+                    <span class="label-icones-casas"> <span class="Count label-icones-casas-numero">123</span>  <br /> FAMÍLIAS NO <br /> ALUGUEL SOCIAL</span>
                     <img src="{% static 'img/icones/azul2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
-                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">245</span> <br /> FAMÍLIAS <br /> REALOCADAS</span>
+                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">1385</span> <br /> MORADIAS <br /> SELADAS</span>
                     <img src="{% static 'img/icones/amarelo2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
-                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">96</span> <br /> REMOÇÕES <br /> DE RISCO</span>
+                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">1151</span> <br /> ÍMÓVEIS<br /> PROSPECTADOS</span>
                     <img src="{% static 'img/icones/verde2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
             <div class="icons-parallax">
-                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">274</span> <br /> ATIVIDADES <br /> REALIZADAS</span>
+                    <span class="label-icones-casas"><span class="Count label-icones-casas-numero">108</span> <br /> INDENIZAÇÕES <br /> CONCLUÍDAS</span>
                     <img src="{% static 'img/icones/magenta2.png' %}" title="Concilia BR-381 e Anel" />
              </div>
         </div>
@@ -71,7 +71,7 @@
         {% if noticias_home_page.count > 0 %}
             {% for noticia in noticias_home_page %}
                 <div class="col-sm-4">
-                    <a href="{% url 'content:noticia' noticia.pk %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
+                    <a href="{% url 'content:noticia' noticia.slug %}" title="{{noticia.title}}" alt="{{noticia.title}}" style="text-decoration: none;">
                         {% if noticia.image and noticia.has_image %}
                               <img src="{{noticia.image|thumbnail_url:'home_news'}}" alt="{{noticia}}" style="width:300px;height: 200px;">
                          {% endif %}
@@ -110,29 +110,38 @@
         </div>
         <div class="col-sm-4 margin-top-50">
              <ul>
-                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">Cartilha Saneamento e vida saudável</a></li>
-                 <li><a target="_blank" href="http://www.cemig.com.br/pt-br/A_Cemig_e_o_Futuro/sustentabilidade/nossos_programas/Eficiencia_Energetica/Documents/CD-0028-15%20DICAS%20DE%20ENERGIA_CARTILHA%2015x21cm%2009-03_LOS_marca%20nova.pdf" class="links-uteis">Cartilha da economia de energia</a></li>
-                 <li><a target="_blank" href="http://www.prohomeimoveis.com.br/prohome-ambiental/cartilha-reciclagem-de-lixo/" class="links-uteis">Cartilha reciclagem de lixo</a></li>
-                 <li><a target="_blank" href="https://www.bhrecicla.com.br/#page-start" class="links-uteis">Compra e venda de sucatas e lixo eletrônico</a></li>
-                 <li><a target="_blank" href="http://www.bombeiros.mg.gov.br" class="links-uteis">Corpo de Bombeiros Militar de Minas Gerais</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">DNIT</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">DPU</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">MPF</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">JUSTIÇA FEDERAL</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">Ministério dos Transportes</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">Ministério da Justiça</a></li>
              </ul>
         </div>
         <div class="col-sm-4 margin-top-50">
               <!--<h3 class="title-links-uteis" style="opacity: 0;">LINKS ÚTEIS</h3>-->
               <ul>
-                 <li><a target="_blank" href="http://uaitec.mg.gov.br/inicio/cursos" class="links-uteis">Cursos gratuitos da Universidade aberta de Minas Gerais</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">URBEL</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">CMAR</a></li>
+                 <li><a target="_blank" href="http://www.nova381.org.br/site" class="links-uteis">Movimento Nova 381</a></li>
+                 <li><a target="_blank" href="http://www.servas.org.br" class="links-uteis">Serviço Voluntário de Assistência Social</a></li>
                  <li><a target="_blank" href="http://defesacivil.mg.gov.br/" class="links-uteis">Defesa Civil</a></li>
-                 <li><a target="_blank" href="http://www.ebc.com.br/noticias/meio-ambiente/2015/03/dez-dicas-para-economizar-agua-em-casa" class="links-uteis">Dicas para economizar água</a></li>
-                 <li><a target="_blank" href="http://www.dpu.def.br/moradia" class="links-uteis">Direito à moradia</a></li>
                  <li><a target="_blank" href="http://br381mg.com.br" class="links-uteis">Gestão Ambiental BR-381</a></li>
              </ul>
         </div>
          <div class="col-sm-4 margin-top-50">
              <ul>
-                 <li><a target="_blank" href="http://www.nova381.org.br/site" class="links-uteis">Movimento Nova 381</a></li>
-                 <li><a target="_blank" href="http://www.servas.org.br" class="links-uteis">Serviço Voluntário de Assistência Social</a></li>
-                 <li><a target="_blank" href="http://www.sebrae.com.br/sites/PortalSebrae/ideias" class="links-uteis">Sugestões e dicas para abrir o próprio negócio</a></li>
-                 <li><a target="_blank" href="http://www.favelaeissoai.com.br/o-projeto/" class="links-uteis">Vilas e favelas de Minas Gerais</a></li>
+                 <li><a target="_blank" href="http://uaitec.mg.gov.br/inicio/cursos" class="links-uteis">Cursos gratuitos da Universidade aberta de Minas Gerais</a></li>
+                 <li><a target="_blank" href="http://www.ebc.com.br/noticias/meio-ambiente/2015/03/dez-dicas-para-economizar-agua-em-casa" class="links-uteis">Dicas para economizar água</a></li>
+                 <li><a target="_blank" href="http://www.copasa.com.br/media2/PesquisaEscolar/COPASA_Agua.pdf" class="links-uteis">Cartilha Saneamento e vida saudável</a></li>
+                 <li><a target="_blank" href="http://www.cemig.com.br/pt-br/A_Cemig_e_o_Futuro/sustentabilidade/nossos_programas/Eficiencia_Energetica/Documents/CD-0028-15%20DICAS%20DE%20ENERGIA_CARTILHA%2015x21cm%2009-03_LOS_marca%20nova.pdf" class="links-uteis">Cartilha da economia de energia</a></li>
+                 <li><a target="_blank" href="http://www.prohomeimoveis.com.br/prohome-ambiental/cartilha-reciclagem-de-lixo/" class="links-uteis">Cartilha reciclagem de lixo</a></li>
+                 <!--<li><a target="_blank" href="https://www.bhrecicla.com.br/#page-start" class="links-uteis">Compra e venda de sucatas e lixo eletrônico</a></li>-->
+                 <li><a target="_blank" href="http://www.bombeiros.mg.gov.br" class="links-uteis">Corpo de Bombeiros Militar de Minas Gerais</a></li>
+
+                 <!--<li><a target="_blank" href="http://www.dpu.def.br/moradia" class="links-uteis">Direito à moradia</a></li>-->
+                 <!--r-->
+                 <!--<li><a target="_blank" href="http://www.favelaeissoai.com.br/o-projeto/" class="links-uteis">Vilas e favelas de Minas Gerais</a></li>-->
              </ul>
          </div>
         <!--<div class="col-sm-1 margin-top-50">-->

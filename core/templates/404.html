@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+   Página não encontrada | {{ block.super }}
+{% endblock  %}
+
+{% block content %}
+<section>
+    <div class="row">
+        <div class="col-sm-12 center-text">
+                <h1>Página não encontrada</h1>
+                <a href="{% url 'index' %}">
+                    <b><h3> Clique aqui voltar à página inícial do Concilia BR-381</h3></b>
+                </a>
+        </div>
+    </div>
+</section>
+{% endblock  %}

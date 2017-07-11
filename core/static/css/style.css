@@ -87,7 +87,7 @@ header {
 header h1,
 header h2 {
     font-size: 1.8em;
-    height: 40px;
+    /*height: 40px;*/
 }
 .rodape-apoio {
     display: inline-block;
@@ -152,6 +152,7 @@ div.bxslider1 > div {
 .img-contact-right {
     height: 400px;
     width: auto;
+    margin-top: 30px;
 }
 .section-about {
     margin-top: 50px;
@@ -973,10 +974,10 @@ footer .social-network.gplus > a {
 }
 
 .photo-list-album-view .interaction-view.photo-list-album {
-    background: linear-gradient(0deg,rgba(0, 0, 0, 0.49) 0,transparent 50%,rgba(12, 12, 12, 0));
+   /* background: linear-gradient(0deg,rgba(0, 0, 0, 0.49) 0,transparent 50%,rgba(12, 12, 12, 0));
     margin: inherit;
     width: 100%;
-    height: 100%;
+    height: 100%;*/
 }
 
 .photo-list-album-view .interaction-view {
@@ -1050,6 +1051,7 @@ div.photo-list-album-interaction .album-title {
     margin: 0;
     color: white;
     font-weight: bold;
+    font-size: 1.8rem;
 }
 
 .fluid h4 {
@@ -1522,7 +1524,7 @@ a.button-index:hover {
     color: #444;
     font-weight: bold;
     margin-right: 1.5em;
-    font-family: initial;
+    font-family: sans-serif;
 }
 
 /* Antigo styles */
@@ -1656,10 +1658,10 @@ body .primary-button {
 
 .text-home-index {
     letter-spacing: -0.035em;
-    margin-top: 30px;
+    margin-top: 75px;
     font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
     font-size: 1.475rem;
-    line-height: 1.25;
+    line-height: 1.65;
     color: #444;
     padding-right: 25px;
 }
@@ -1697,7 +1699,7 @@ body .primary-button {
     transform: translate(-50%, -30%);
     color: white;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: bold;
     line-height: 25px;
 }

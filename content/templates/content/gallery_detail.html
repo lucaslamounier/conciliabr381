@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="{% static 'css/smartphoto.min.css' %}" />
 <script src="{% static 'js/smartphoto.js' %}"></script>
 
+<!-- BREADCRUMB -->
 <section class="section-about" style="margin-bottom: 0px;">
     <div class="row">
         <ol class="breadcrumb">
@@ -23,7 +24,9 @@
         </ol>
     </div>
 </section>
+<!-- END BREADCRUMB -->
 
+<!-- Galery Title -->
 <section>
     <div class="row">
         <div class="col-sm-12">
@@ -32,63 +35,75 @@
         </div>
     </div>
 </section>
+<!-- END GALERY TITLE -->
 
-	{% if gallery.description %}
-	<section>
-		<div class="row">
-			<div class="col-sm-12" style=" text-align: justify; padding-bottom: 50px;">
-				<p>{{ gallery.description|safe }}</p>
-			</div>
+<!-- Galery Description -->
+{% if gallery.description %}
+<section>
+	<div class="row">
+		<div class="col-sm-12" style=" text-align: justify; padding-bottom: 50px;">
+			<p>{{ gallery.description|safe }}</p>
 		</div>
-	</section>
-	{% endif %}
-
-<section class="section-about">
-	<div class="row view photo-list-view photostream" >
-		<ul class="masonry">
-		{% for photo in gallery.public %}
-			<!--<li class="">-->
-			<li class="brick">
-				<a href="{{ photo.image.url}}" class="js-img-viwer" data-caption="{{ photo.title }}" data-id="{{ photo.title }}">
-					<img src="{{ photo.image|thumbnail_url:'galery_detail'}}"   alt="{{ photo.title }}" />
-				</a>
-			</li>
-		{% endfor %}
-		</ul>
 	</div>
 </section>
+{% endif %}
+<!-- End Galery Description -->
+<style>
+
+.module {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+}
+.module > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+}
+.module > header > h1 {
+	margin: 0px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+</style>
+
+<!-- Galery Itens -->
+<section>
+		<div class="row" style="margin-bottom: 20px;">
+		{% for photo in gallery.public %}
+			<div class="col-sm-4">
+				<a href="{{ photo.image.url}}" class="js-img-viwer" data-caption="{{ photo.title }}" data-id="{{ photo.title }}">
+					<div class="module" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); background-size: cover;">
+						<img src="{{photo.image.url}}" style="height: 100%;width: 100%;" alt="{{ photo.title }}" />
+					  <header>
+						<h1> {{ photo.title }} </h1>
+						{% if photo.credits_image %}
+							<h1>Foto de {{photo.credits_image}}</h1>
+						{% endif %}
+					  </header>
+					</div>
+				</a>
+			</div>
+			<!--</a>-->
+		{% if forloop.counter|divisibleby:3 %}
+		</div>
+		<div class="row" style="margin-bottom: 20px;">
+			{% endif %}
+		{% endfor %}
+		</div>
+</section>
+<!-- End Galery Itens -->
 
 <script>
 	document.addEventListener('DOMContentLoaded',function(){
 		var photo = new smartPhoto(".js-img-viwer");
-
-		/* Events
-        photo.on('change',function(){
-            console.log('change');
-        });
-        photo.on('close',function(){
-            console.log('close');
-        });
-        photo.on('swipestart',function(){
-            console.log('swipestart');
-        });
-        photo.on('swipeend',function(){
-            console.log('swipeend');
-        });
-        photo.on('loadall',function(){
-            console.log('loadall');
-        });
-        photo.on('zoomin',function(){
-            console.log('zoomin');
-        });
-        photo.on('zoomout',function(){
-            console.log('zoomout');
-        });
-        photo.on('open',function(){
-            console.log('open');
-        });
-
-        */
 	});
 </script>
 {% endblock %}

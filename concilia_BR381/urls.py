@@ -20,10 +20,16 @@ from django.contrib import admin
 from core import views
 from content import views as conteudos_views
 from django.conf.urls.static import static
+from django.conf.urls import (
+    handler400, handler403, handler404, handler500
+)
 
 admin.site.site_title = "Concilia BR-381 e Anel"
 admin.site.site_header = "Concilia BR-381 e Anel"
 admin.site.index_title = 'Painel administrativo do site'
+
+handler404 = views.page_not_found
+handler500 = 'core.views.server_error'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),

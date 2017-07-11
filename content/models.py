@@ -29,8 +29,8 @@ class Noticia(models.Model):
         upload_to='noticias/images', verbose_name='Imagem de capa para a Notícia',
         null=True, blank=True
     )
-    legend_image = models.CharField('Creditos da imagem de capa para a Notícia', max_length=200, null=True, blank=True)
-    tag = models.CharField('Tags para facilitar a busca no site', max_length=100, null=True, blank=True)
+    legend_image = models.CharField('Legenda da Imagem', max_length=200, null=True, blank=True)
+    credits_image = models.CharField('Creditos da imagem', max_length=200, null=True, blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Criado por', editable=False)
     notice_origin = models.CharField(u'Fonte da notícia', max_length=200, null=True, blank=True)
     slug = models.SlugField('Identificador', max_length=500, null=False, blank=False, unique=True,

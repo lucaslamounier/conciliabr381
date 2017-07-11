@@ -6,6 +6,8 @@ from django.contrib.auth import get_user_model
 from django.views.generic import View, TemplateView, ListView
 from content.models import Noticia, Timeline
 from django.db.models import Q
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 User = get_user_model()
 
@@ -65,6 +67,15 @@ def contact(request):
         'success': success,
     }
     return render(request, 'contact.html', context)
+
+
+# HTTP Error 404
+def page_not_found(request):
+    return render(request, '404.html')
+
+
+def server_error(request):
+    return render(request,  '500.html')
 
 
 index = IndexView.as_view()

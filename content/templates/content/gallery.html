@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-
-
 {% block title %} Galeria de Fotos | {{ block.super }} {% endblock %}
 
 {% block content %}
@@ -14,29 +12,33 @@
     <div class="row">
         {% for galeria in galeria_fotos %}
             {% if galeria.photo_count != 0 %}
-                <div class="col-sm-4">
-                      <div class="view photo-list-album-view awake"
-                         style="transform: translate(0px, 8px);width: 279px;height: 279px;background-image: url({{galeria.photos.latest.image.url}});">
-                          <a class="interaction-view avatar photo-list-album album ginormous" href="{% url 'content:galery-detail' galeria.slug %}" title="{{galeria}}" >
-                            <div class="photo-list-album-interaction dark has-actions">
-                                <a class="overlay" href="{% url 'content:galery-detail' galeria.slug %}"></a>
-                                <div class="interaction-bar">
-                                    <div class="metadata">
+                <div class="col-sm-6">
+                      <a href="{% url 'content:galery-detail' galeria.slug %}">
+                          <div class="view photo-list-album-view awake"
+                             style="transform: translate(0px, 8px);width: 95%;height: 290px;background-image: url({{galeria.photos.latest.image.url}});">
 
-                                        <h4 class="album-title">{{galeria}}</h4>
-                                        {% if galeria.photo_count == 1 %}
-                                            <span class="album-photo-count secondary">{{galeria.photo_count}} foto</span>
-                                        {% endif %}
+                              <a class="interaction-view avatar photo-list-album album ginormous" href="{% url 'content:galery-detail' galeria.slug %}" title="{{galeria}}" >
+                                  <div class="photo-list-album-interaction dark has-actions">
+                                    <a class="overlay" href="{% url 'content:galery-detail' galeria.slug %}">
+                                    <div class="interaction-bar">
+                                        <div class="metadata">
 
-                                        {% if galeria.photo_count > 1 %}
-                                            <span class="album-photo-count secondary">{{galeria.photo_count}} fotos</span>
-                                        {% endif %}
+                                            <h4 class="album-title">{{galeria}}</h4>
+                                            {% if galeria.photo_count == 1 %}
+                                                <span class="album-photo-count secondary">{{galeria.photo_count}} foto</span>
+                                            {% endif %}
 
+                                            {% if galeria.photo_count > 1 %}
+                                                <span class="album-photo-count secondary">{{galeria.photo_count}} fotos</span>
+                                            {% endif %}
+                                        </div>
                                     </div>
+                                        </a>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                              </a>
+
+                          </div>
+                      </a>
                 </div>
             {% endif %}
         {% endfor %}
@@ -47,5 +49,4 @@
         {% endif %}
     </div>
 </section>
-
 {% endblock %}
