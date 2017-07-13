@@ -3845,6 +3845,10 @@ screen and (-ms-high-contrast:active) {
 .page-footer__menu li {
     padding: 0
 }
+
+.col-offset2{
+   margin-left: 5%;
+}
 @media only screen and (min-width: 38.75em) {
     .page-footer__menu li {
         display: table-cell;
@@ -3869,6 +3873,30 @@ screen and (-ms-high-contrast:active) {
         margin-bottom: 42px;
     }
 
+}
+
+@media only screen and (max-width: 479px){
+    .hui-premium__divider:before {
+        background-color: #e1e1e1;
+        height: 1px;
+        content: None;
+        display: block;
+    }
+
+    .col-offset2{
+        margin-left: 0;
+    }
+
+
+    .news-premium__title {
+        font-family: opensans-bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+        font-size: 2.0rem;
+        line-height: 1.1;
+        letter-spacing: -.03em;
+        margin-left: 1.5rem;
+        color: #ff6c00;
+        font-weight: bold;
+    }
 }
 
 @media (min-width: 64rem){

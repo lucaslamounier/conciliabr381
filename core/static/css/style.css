@@ -964,9 +964,9 @@ footer .social-network.gplus > a {
 }
 
 .photo-list-album-view {
-    position: absolute;
+    /*position: absolute; */
     background-repeat: no-repeat;
-    /*background-position: 50%;*/
+    /* background-position: 50%; */
     background-color: #fff;
     opacity: 0;
     transition: opacity .1s linear;
@@ -1888,6 +1888,8 @@ div.panel {
     color: #fff;
     float: left;
 }
+
+
 /************* CSS TIMELINR *******************/
 
 .sociales {
@@ -2052,6 +2054,12 @@ div.panel {
     margin-top: 120px;
 }
 
+  .title-header-section{
+         font-size: 2.5em;
+         font-weight: 600;
+         text-transform: uppercase;
+    }
+
 
 /****************** MOBILE  CSS **************************/
 
@@ -2108,6 +2116,11 @@ div.panel {
         width: 239px;
         transform: translate(0, 0%);
     }
+
+     .section-border-bottom {
+        border-bottom: none;
+        margin-bottom: 0px;
+    }
 }
 
 
@@ -2137,7 +2150,14 @@ div.panel {
         width: 239px;
         transform: translate(0, 0%);
     }
+
+     .section-border-bottom {
+        border-bottom: none;
+        margin-bottom: 0px;
+    }
 }
+
+
 
 
 @media only screen and (max-width: 479px) {
@@ -2145,6 +2165,37 @@ div.panel {
     #internal-menu, #external-menu,  #big-map {
         display: none !important;
     }
+
+    .section-border-bottom {
+        border-bottom: none;
+        margin-bottom: 0px;
+    }
+
+    .title-sm-mobile{
+        font-size: 1.7rem;
+    }
+
+    .hui-premium__divider:before {
+        background-color: #e1e1e1;
+        height: 1px;
+        content: None;
+        display: block;
+    }
+
+    .section-about {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 10px;
+    }
+
+    .title-header-section{
+         font-size: 2.0rem;
+         font-weight: 600;
+         text-transform: uppercase;
+         padding-left: 1.0rem;
+
+    }
+
 
     .section-index-map {
         min-height: 600px;
@@ -2197,6 +2248,12 @@ div.panel {
         width: auto;
         height: 40px
         margin-top: 1.5em;
+    }
+
+   .img-contact-right {
+           height: 200px;
+        width: auto;
+        margin-top: 0;
     }
 
    .mobile-tab-bar {
