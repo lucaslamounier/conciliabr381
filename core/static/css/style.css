@@ -152,7 +152,6 @@ div.bxslider1 > div {
 .img-contact-right {
     height: 400px;
     width: auto;
-    margin-top: 30px;
 }
 .section-about {
     margin-top: 50px;
@@ -170,6 +169,13 @@ div.bxslider1 > div {
 .links-uteis:active {
     color: blue;
 }
+
+.list-alpha-numeric {
+    display: list-item;
+    list-style-type: lower-alpha;
+        font-weight: bold;
+}
+
 
 
 .title-community {

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Imóveis | {{ block.super }} {% endblock %}
+
+{% block content %}
+<section>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="header-title">IMÓVEIS</h1>
+        </div>
+    </div>
+    <div class="row">
+        <h1>BANCO DE IMÓVEIS</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="justfy-text">A etapa de 2017 do Concilia BR 381 e Anel, voltada ao reassentamento de 264 famílias, deu prioridade àquelas sob regime de aluguel social. Nesta etapa, foi usada, prioritariamente, em especial para as comunidades Vila da Paz, Vila da Luz, Vila Pica-pau e Vila Bom Retiro, a modalidade de compra assistida.</p>
+            <p class="justfy-text">Para contemplar as famílias da maneira mais eficiente e rápida possível, foi criado Banco de Imóveis que considerou aqueles disponíveis no mercado, no âmbito de algumas regiões no entorno da capital mineira, Belo Horizonte.  Os imóveis também obedecem a critérios mínimos básicos definidos para as necessidades das famílias após análise e avaliação dos seus cadastros.</p>
+            <p class="justfy-text">Nesse caso da etapa de 2017, as famílias tiveram a possibilidade de escolher entre tipos de unidade habitacional como apartamentos e/ou casas.</p>
+        </div>
+        <div class="col-sm-6">
+            <p>
+              <img style="width: 100%;" src="{% static 'img/imagens-paginas-internas/casinha.jpg' %}"/>
+            </p>
+             <p class="justfy-text">Levou-se em consideração, também, que muitas famílias usavam as dependências de suas moradias para estabelecer pequenos negócios, responsáveis pela geração de sua renda.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+     <div class="row">
+        <h1>LOCALIZAÇÃO DOS IMÓVEIS</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="justfy-text">Para a etapa de 2017 do Concilia BR 381 e Anel, ficou estabelecido que os imóveis destinados à compra assistida seriam os localizados na Região Metropolitana de Belo Horizonte ou no Colar Metropolitano da Região de Belo Horizonte, conforme relação dos municípios a seguir:</p>
+        </div>
+        <div class="col-sm-12">
+            <ul style="list-style-type: disc;">
+                <li>
+                    <p><b>Região Metropolitana de Belo Horizonte:</b> Baldim, Belo Horizonte, Betim, Brumadinho, Caeté, Capim Branco, Confins, Contagem, Esmeraldas, Florestal, Ibirité, Igarapé, Itaguara, Itatiaiuçu, Jaboticatubas, Juatuba, Lagoa Santa, Mário Campos, Mateus Leme, Matozinhos, Nova Lima, Nova União, Pedro Leopoldo, Raposos, Ribeirão das Neves, Rio Acima, Rio Manso, Sabará, Santa Luzia, São Joaquim de Bicas, São José da Lapa, Sarzedo, Taquaraçu de Minas e Vespasiano.</p>
+                </li>
+                <li>
+                    <p><b>Colar Metropolitano da Região de Belo Horizonte: </b>Barão de Cocais, Belo Vale, Bom Jesus do Amparo, Bonfim, Fortuna de Minas, Funilândia, Inhaúma, Itabirito, Itaúna, Moeda, Pará de Minas, Prudente de Morais, Santa Bárbara, São Gonçalo do Rio Abaixo, São José da Varginha e Sete Lagoas.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+     <div class="row">
+        <h1>CARACTERÍSTICAS DOS IMÓVEIS</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="justfy-text">Critérios e características necesários para fazer parte do Banco de Imóveis:</p>
+        </div>
+        <div class="col-sm-12">
+            <ul style="list-style-type: disc;">
+                <li>
+                    <p><b>Física: </b>estar em perfeitas condições de habitabilidade (iluminação, ventilação, salubridade, estrutural, geológico, entre outros);</p>
+                </li>
+                <li>
+                    <p><b>Jurídica: </b> possuir situação jurídica regular ou outra que possibilite a transferência de seu registro, conforme análise do Conselho Executivo do Programa;</p>
+                </li>
+                <li>
+                    <p><b>Sociocultural: </b> análise quanto à existência de equipamentos públicos/privados mínimos necessários na região;</p>
+                </li>
+                <li>
+                    <p><b>Financeira: </b> ter valor que contemple os parâmetros estabelecidos pelo estudo técnico elaborado pelo DNIT.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+     <div class="row">
+        <h1>DESTINAÇÃO DOS IMÓVEIS</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="justfy-text">O programa Concilia BR-381 e Anel  busca sempre o imóvel que mais se adeque à cada unidade familiar. Para nortear a melhor destinação, o programa busca atender os seguintes critérios:</p>
+        </div>
+        <div class="col-sm-12">
+            <ol type="A">
+                <li class="list-alpha-numeric">
+                    <p><b>número de dormitórios: </b>será considerado o número de pessoas por gênero e situação de cada indivíduo no grupo familiar.</p>
+                </li>
+                <li class="list-alpha-numeric">
+                    <p><b>tipologia: </b> prioridade à tipologia casa, em detrimento de apartamentos ou habitações coletivas, para as seguintes situações:</p>
+                    <ul style="list-style-type: disc; margin-left: 4.5rem;">
+                        <li><p class="justfy-text">famílias com pessoas com deficiência ou sofrimento mental, com indicativo de agravamento do quadro em função da possibilidade de residência verticalizada, ou mesmo provocar transtornos à vida coletiva/em condomínio;</p></li>
+                        <li><p class="justfy-text">famílias com idosos ou pessoas com deficiência ou mobilidade reduzida (não sendo possível, serão indicados às unidades verticalizadas, primeiro andar);</p></li>
+                        <li><p class="justfy-text">famílias com atividade de renda domiciliar, que não seja geradora de transtornos para o entorno e que seja incompatível com unidade verticalizada.</p></li>
+                    </ul>
+                </li>
+                <li class="list-alpha-numeric">
+                    <p><b>localização: </b> prioridade de escolha por determinada região para as famílias que atenderem ao maior número dos critérios abaixo:</p>
+                     <ul style="list-style-type: disc; margin-left: 4.5rem;">
+                        <li><p class="justfy-text">existência de membro da família em acompanhamento médico ou de instituição de assistência social ou educacional com especificidades que não sejam possíveis de garantir em outras regiões;</p></li>
+                        <li><p class="justfy-text">existência de idosos ou membros que possuam inserção na rede social de determinada região;</p></li>
+                        <li><p class="justfy-text">existência de familiares que prestem apoio ou assistência à família em determinada região;</p></li>
+                        <li><p class="justfy-text">vínculo profissional com determinada região;</p></li>
+                        <li><p class="justfy-text">existência de serviços na região de destino que sejam essenciais à inclusão social da família.</p></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section>
+     <div class="row">
+        <h1>ACESSO AOS IMÓVEIS</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="justfy-text">É facilitado por um registro fotográfico dos imóveis existentes no Banco de Imóveis para que as famílias tenham maior facilidade de visualização  durante o procedimento de escolha.</p>
+            <p class="justfy-text">Outra medida para faciliotar a escolha é a apresentação de uma relação dos equipamentos públicos na região dos imóveis escolhidos. </p>
+        </div>
+        <div class="col-sm-6">
+            <p class="justfy-text">O programa Concilia BR-381 conduzirá as famílias para visitação de até 3 (três) imóveis escolhidos por elas. Caso não haja eleição de nenhum dos imóveis visitados, a família passa por novo procedimento de escolha de imóvel.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

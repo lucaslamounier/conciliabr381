@@ -84,7 +84,6 @@ def comunidade(request, slug):
 class CommunityView(TemplateView):
     template_name = 'content/communitys.html'
 
-
 # Página de videos
 class VideosView(generic.ListView):
     model = YoutubeChannel

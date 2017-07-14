@@ -52,6 +52,13 @@ class CriteriosRegrasView(TemplateView):
 class AcervoView(TemplateView):
     template_name = 'acervo.html'
 
+# Página CMAR
+class CmarView(TemplateView):
+    template_name = 'cmar.html'
+
+# Página Imóveis
+class ImoveisView(TemplateView):
+    template_name = 'imoveis.html'
 
 # Página de contatos
 def contact(request):
@@ -85,3 +92,5 @@ manual_marca = ManualMarcaView.as_view()
 plano_providencias = PlanoProvidenciaView.as_view()
 criterios_regras = CriteriosRegrasView.as_view()
 acervo = AcervoView.as_view()
+cmar = CmarView.as_view()
+imoveis = ImoveisView.as_view()

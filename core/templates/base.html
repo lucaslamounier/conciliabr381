@@ -66,6 +66,9 @@
                                          <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                              <a href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
                                         </li>
+                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
+                                            <a target="_blank" href="http://portal.trf1.jus.br/sjmg/processual/anel-rodoviario/anel-rodoviario.htm">Ação Civil Pública</a>
+                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                                             <a href="{% url 'manual_marca' %}">Manual de identidade visual</a>
                                         </li>
@@ -85,7 +88,8 @@
                                             <a href="{% url 'content:comunidades' %}">Comunidades Seladas</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="">CMAR</a>
+                                             <button class="button-sub-menu" onclick="window.location.href='{% url 'cmar' %}'"
+                                                     title="CMAR - COMUNIDADE DE MORADORES EM ÁREAS DE RISCOS">CMAR</button>
                                         </li>
                                         {% for comunidade in comunidades %}
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
@@ -99,7 +103,7 @@
                     </li>
 
                     <li class="menu-item menu-item-root menu-item-type-post_type menu-item-object-page">
-                         <button class="button-sub-menu">Imóveis </button>
+                         <button class="button-sub-menu" onclick="window.location.href='{% url 'imoveis' %}'">Imóveis </button>
                     </li>
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
                         <button class="button-sub-menu">Providências</button>
@@ -147,7 +151,6 @@
 
                     </li>
                 </ul>
-
             </aside>
 
              <!-- Menu -->
@@ -195,7 +198,6 @@
             </footer>
             <a href="#" class="seta-cima"></a>
             <div class="rodape_end_background">
-
                 <div class="row" style="text-align: center;">
                     <p style="margin-top: 40px;font-weight: bold; color: white;">&copy; Copyright 2017 Concilia BR-381 e Anel</p>
                 </div>
@@ -205,7 +207,6 @@
     </div>
 
     <!-- Bibliotecas requeridas pelo sistema -->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/foundation.min.js' %}"></script>

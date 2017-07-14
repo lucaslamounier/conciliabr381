@@ -19,6 +19,9 @@
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
                                             <a href="{% url 'conselho_executivo' %}">Conselho Executivo</a>
                                         </li>
+                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
+                                            <a target="_blank" href="http://portal.trf1.jus.br/sjmg/processual/anel-rodoviario/anel-rodoviario.htm">Ação Civil Pública</a>
+                                         </li>
 
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
                                             <a href="{% url 'manual_marca' %}">Manual de identidade visual</a>
@@ -38,7 +41,7 @@
                                             <a href="{% url 'content:comunidades' %}">Comunidades Seladas</a>
                                         </li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                            <a href="">CMAR</a>
+                                            <a href="{% url 'cmar' %}" title="CMAR - COMUNIDADE DE MORADORES EM ÁREAS DE RISCOS">CMAR</a>
                                         </li>
                                         {% for comunidade in comunidades %}
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2780">
@@ -51,7 +54,7 @@
                         </div>
                     </li>
                     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
-                        <a href="">Imóveis</a>
+                        <a href="{% url 'imoveis' %}">Imóveis</a>
                     </li>
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54">
                         <a href="">PROVIDÊNCIAS</a>
